@@ -1,0 +1,15 @@
+C:\Users\II novbe\Desktop\Task\Task-Directory-27.10.2023\Task-Directory-27.10.2023\bin\Debug\net6.0\Task-Directory-27.10.2023.exe
+C:\Users\II novbe\Desktop\Task\Task-Directory-27.10.2023\Task-Directory-27.10.2023\bin\Debug\net6.0\Task-Directory-27.10.2023.deps.json
+C:\Users\II novbe\Desktop\Task\Task-Directory-27.10.2023\Task-Directory-27.10.2023\bin\Debug\net6.0\Task-Directory-27.10.2023.runtimeconfig.json
+C:\Users\II novbe\Desktop\Task\Task-Directory-27.10.2023\Task-Directory-27.10.2023\bin\Debug\net6.0\Task-Directory-27.10.2023.dll
+C:\Users\II novbe\Desktop\Task\Task-Directory-27.10.2023\Task-Directory-27.10.2023\bin\Debug\net6.0\Task-Directory-27.10.2023.pdb
+C:\Users\II novbe\Desktop\Task\Task-Directory-27.10.2023\Task-Directory-27.10.2023\obj\Debug\net6.0\Task-Directory-27.10.2023.csproj.AssemblyReference.cache
+C:\Users\II novbe\Desktop\Task\Task-Directory-27.10.2023\Task-Directory-27.10.2023\obj\Debug\net6.0\Task-Directory-27.10.2023.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\II novbe\Desktop\Task\Task-Directory-27.10.2023\Task-Directory-27.10.2023\obj\Debug\net6.0\Task-Directory-27.10.2023.AssemblyInfoInputs.cache
+C:\Users\II novbe\Desktop\Task\Task-Directory-27.10.2023\Task-Directory-27.10.2023\obj\Debug\net6.0\Task-Directory-27.10.2023.AssemblyInfo.cs
+C:\Users\II novbe\Desktop\Task\Task-Directory-27.10.2023\Task-Directory-27.10.2023\obj\Debug\net6.0\Task-Directory-27.10.2023.csproj.CoreCompileInputs.cache
+C:\Users\II novbe\Desktop\Task\Task-Directory-27.10.2023\Task-Directory-27.10.2023\obj\Debug\net6.0\Task-Directory-27.10.2023.dll
+C:\Users\II novbe\Desktop\Task\Task-Directory-27.10.2023\Task-Directory-27.10.2023\obj\Debug\net6.0\refint\Task-Directory-27.10.2023.dll
+C:\Users\II novbe\Desktop\Task\Task-Directory-27.10.2023\Task-Directory-27.10.2023\obj\Debug\net6.0\Task-Directory-27.10.2023.pdb
+C:\Users\II novbe\Desktop\Task\Task-Directory-27.10.2023\Task-Directory-27.10.2023\obj\Debug\net6.0\Task-Directory-27.10.2023.genruntimeconfig.cache
+C:\Users\II novbe\Desktop\Task\Task-Directory-27.10.2023\Task-Directory-27.10.2023\obj\Debug\net6.0\ref\Task-Directory-27.10.2023.dll
