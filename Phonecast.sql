@@ -58,3 +58,17 @@ Join Method
 on Reminder.MethodId= Method.Id
 Where Method.Platforms ='telegram'
 
+Create function FormatPhoneNumber(@phoneNumber nvarchar(50))
+Returns nvarchar (50)
+as
+Begin
+Declare @FixedPhoneNumber as nvarchar(50) 
+Select @FixedPhoneNumber = FORMAT( cast (@phoneNumber as numeric ),'+### (##) ###-##-##') Where LEN(@phoneNumber) >10
+Select @FixedPhoneNumber = FORMAT( cast (@phoneNumber as numeric ),'+994 (##) ###-##-##') Where LEN(@phoneNumber) = 10
+Return @FixedPhoneNumber
+End
+
+insert into Users Values('esed','ab','33',[dbo].FormatPhoneNumber('055 345 45 45'))
+
+Select Users.PhoneNumber as PN From Users
+select [dbo].FormatPhoneNumber('055 345 45 45')
