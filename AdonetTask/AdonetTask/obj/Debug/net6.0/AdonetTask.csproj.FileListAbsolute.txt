@@ -1,0 +1,4 @@
+C:\Users\Asus\Desktop\Task\AdonetTask\AdonetTask\obj\Debug\net6.0\AdonetTask.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\Task\AdonetTask\AdonetTask\obj\Debug\net6.0\AdonetTask.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\Task\AdonetTask\AdonetTask\obj\Debug\net6.0\AdonetTask.AssemblyInfo.cs
+C:\Users\Asus\Desktop\Task\AdonetTask\AdonetTask\obj\Debug\net6.0\AdonetTask.csproj.CoreCompileInputs.cache
