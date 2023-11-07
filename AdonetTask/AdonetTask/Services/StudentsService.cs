@@ -3,7 +3,7 @@ using BB205_Ado.net.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
-//using System.Linq;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -48,6 +48,7 @@ namespace BB205_Ado.net.Services
         public List<Student> GetAll()
         {
             string command = "SELECT * FROM Students";
+
             DataTable table = _database.Query(command);
             List<Student> students = new List<Student>();
             foreach (DataRow item in table.Rows)

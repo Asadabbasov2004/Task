@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\AdonetTask",
+    "\\AdonetTask\\AdonetTask",
+    "\\AdonetTask\\AdonetTask\\obj",
+    "\\AdonetTask\\AdonetTask\\Services"
   ],
-  "SelectedNode": "\\Phonecast.sql",
+  "SelectedNode": "\\AdonetTask\\AdonetTask\\Services\\StudentsService.cs",
   "PreviewInSolutionExplorer": false
 }
