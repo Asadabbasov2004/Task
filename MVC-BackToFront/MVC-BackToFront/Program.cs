@@ -12,7 +12,9 @@ namespace MVC_BackToFront
                 pattern:"{controller}/{action}/{id?}"
                 );
 
+            app.UseStaticFiles();
             app.Run();
+
         }
     }
 }

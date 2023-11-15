@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\Desktop\\MVC-BackToFront\\MVC-BackToFront\\MVC-BackToFront.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\Task\\MVC-BackToFront\\MVC-BackToFront\\MVC-BackToFront.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\Desktop\\MVC-BackToFront\\MVC-BackToFront\\MVC-BackToFront.csproj": {
+    "C:\\Users\\Asus\\Desktop\\Task\\MVC-BackToFront\\MVC-BackToFront\\MVC-BackToFront.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\MVC-BackToFront\\MVC-BackToFront\\MVC-BackToFront.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Task\\MVC-BackToFront\\MVC-BackToFront\\MVC-BackToFront.csproj",
         "projectName": "MVC-BackToFront",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\MVC-BackToFront\\MVC-BackToFront\\MVC-BackToFront.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\MVC-BackToFront\\MVC-BackToFront\\MVC-BackToFront.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\MVC-BackToFront\\MVC-BackToFront\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\Task\\MVC-BackToFront\\MVC-BackToFront\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
