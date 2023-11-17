@@ -18,7 +18,8 @@ namespace FrontToBackMVC_2.Controllers
         {
             
             List<Sliders> slidersList = _context.Sliders.ToList();
-            List<Work> workList = _context.Works.ToList();
+            //List<Work> workList = _context.Works.ToList();
+
             /*slidersList.Add(new Sliders()
              {
                  Title = "Develop <strong>Strategies</strong> for\r\n                                <br>your business",
@@ -38,36 +39,36 @@ namespace FrontToBackMVC_2.Controllers
             //_context.AddRange(slidersList);
             //_context.SaveChanges();
 
-            workList.Add(new Work()
-            {
-               Title="",
-               Description="",
-               ImgUrl="",
-               CreatedDate=DateTime.Now,
+            //workList.Add(new Work()
+            //{
+            //   Title="",
+            //   Description="",
+            //   ImgUrl="",
+            //   CreatedDate=DateTime.Now,
 
-            });
-            workList.Add(new Work()
-            {
-                Title = "",
-                Description = "",
-                ImgUrl = "",
-                CreatedDate = DateTime.Now,
+            //});
+            //workList.Add(new Work()
+            //{
+            //    Title = "",
+            //    Description = "",
+            //    ImgUrl = "",
+            //    CreatedDate = DateTime.Now,
 
-            });
-            workList.Add(new Work()
-            {
-                Title = "",
-                Description = "",
-                ImgUrl = "",
-                CreatedDate = DateTime.Now,
+            //});
+            //workList.Add(new Work()
+            //{
+            //    Title = "",
+            //    Description = "",
+            //    ImgUrl = "",
+            //    CreatedDate = DateTime.Now,
 
-            });
+            //});
 
 
 
             HomeVM homeVM = new HomeVM();
             homeVM.Sliders = slidersList;
-            homeVM.Works= workList;
+           // homeVM.Works= workList;
             return View(homeVM);
         }
         //public IActionResult Get(List<Sliders> slidersList )

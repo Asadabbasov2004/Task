@@ -12,5 +12,9 @@ namespace FrontToBackMVC_2.DAL
         }
         public DbSet<Sliders> Sliders { get; set; }
         public DbSet<Work> Works { get; set; }
+
+        public DbSet<Catagory> Catagories { get; set; }
+        public DbSet<WorkImage> Images { get; set; }
+
     }
 }
