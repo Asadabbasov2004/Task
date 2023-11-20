@@ -2,8 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\FrontToBackMVC-2",
-    "\\FrontToBackMVC-2\\Controllers"
+    "\\FrontToBackMVC-2\\Controllers",
+    "\\FrontToBackMVC-2\\DAL",
+    "\\FrontToBackMVC-2\\Migrations",
+    "\\FrontToBackMVC-2\\Models",
+    "\\FrontToBackMVC-2\\obj",
+    "\\FrontToBackMVC-2\\ViewModels",
+    "\\FrontToBackMVC-2\\Views",
+    "\\FrontToBackMVC-2\\Views\\Work"
   ],
-  "SelectedNode": "\\FrontToBackMVC-2.sln",
+  "SelectedNode": "\\FrontToBackMVC-2\\ViewModels",
   "PreviewInSolutionExplorer": false
 }

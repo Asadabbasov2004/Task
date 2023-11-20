@@ -1,0 +1,389 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\Example.png",
+      "PackagePath": "staticwebassets\\Assets\\Example.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\accounts\\change_password.html",
+      "PackagePath": "staticwebassets\\Assets\\accounts\\change_password.html"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\accounts\\forget_password.html",
+      "PackagePath": "staticwebassets\\Assets\\accounts\\forget_password.html"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\accounts\\login.html",
+      "PackagePath": "staticwebassets\\Assets\\accounts\\login.html"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\accounts\\register.html",
+      "PackagePath": "staticwebassets\\Assets\\accounts\\register.html"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\accounts\\reset_password.html",
+      "PackagePath": "staticwebassets\\Assets\\accounts\\reset_password.html"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\css\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\Assets\\css\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\css\\animate.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\css\\aos.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\aos.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\css\\bootstrap\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\bootstrap\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\css\\bootstrap\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\bootstrap\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\css\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\css\\css\\mixins\\_text-hide.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\css\\mixins\\_text-hide.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\css\\custom.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\custom.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\css\\flaticon.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\flaticon.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\css\\icomoon.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\icomoon.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\css\\ionicons.min.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\ionicons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\css\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\flaticon\\backup.txt",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\flaticon\\backup.txt"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\flaticon\\font\\Flaticon.eot",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\flaticon\\font\\Flaticon.eot"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\flaticon\\font\\Flaticon.svg",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\flaticon\\font\\Flaticon.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\flaticon\\font\\Flaticon.ttf",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\flaticon\\font\\Flaticon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\flaticon\\font\\Flaticon.woff",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\flaticon\\font\\Flaticon.woff"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\flaticon\\font\\_flaticon.scss",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\flaticon\\font\\_flaticon.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\flaticon\\font\\flaticon.css",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\flaticon\\font\\flaticon.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\flaticon\\font\\flaticon.html",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\flaticon\\font\\flaticon.html"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\flaticon\\license\\license.pdf",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\flaticon\\license\\license.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\icomoon\\icomoon.eot",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\icomoon\\icomoon.eot"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\icomoon\\icomoon.svg",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\icomoon\\icomoon.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\icomoon\\icomoon.ttf",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\icomoon\\icomoon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\icomoon\\icomoon.woff",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\icomoon\\icomoon.woff"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\ionicons\\css\\_ionicons.scss",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\ionicons\\css\\_ionicons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\ionicons\\css\\ionicons.min.css",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\ionicons\\css\\ionicons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\ionicons\\fonts\\ionicons.eot",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\ionicons\\fonts\\ionicons.eot"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\ionicons\\fonts\\ionicons.svg",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\ionicons\\fonts\\ionicons.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\ionicons\\fonts\\ionicons.ttf",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\ionicons\\fonts\\ionicons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\ionicons\\fonts\\ionicons.woff",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\ionicons\\fonts\\ionicons.woff"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\ionicons\\fonts\\ionicons.woff2",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\ionicons\\fonts\\ionicons.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\open-iconic\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\open-iconic\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\open-iconic\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\open-iconic\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\open-iconic\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\open-iconic\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\open-iconic\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\open-iconic\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\fonts\\open-iconic\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\Assets\\fonts\\open-iconic\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\about.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\about.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\author.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\author.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\bg_1.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\bg_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\bg_2.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\bg_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\bg_3.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\bg_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\bg_4.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\bg_4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\bg_5.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\bg_5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\blog-1.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\blog-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\blog-2.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\blog-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\blog-3.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\blog-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\blog-4.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\blog-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\blog-5.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\blog-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\blog-6.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\blog-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\blog-7.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\blog-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\blog-8.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\blog-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\blog-9.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\blog-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\category-1.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\category-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\category-2.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\category-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\image_1.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\image_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\image_2.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\image_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\image_3.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\image_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\image_4.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\image_4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\image_5.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\image_5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\image_6.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\image_6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\loc.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\loc.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\person_1.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\person_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\person_2.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\person_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\person_3.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\person_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\images\\person_4.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\person_4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\js\\aos.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\aos.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\js\\google-map.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\google-map.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\js\\jquery-3.2.1.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\jquery-3.2.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\js\\jquery-migrate-3.0.1.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\jquery-migrate-3.0.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\js\\jquery.animateNumber.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\jquery.animateNumber.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\js\\jquery.easing.1.3.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\jquery.easing.1.3.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\js\\jquery.stellar.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\jquery.stellar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\js\\jquery.waypoints.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\jquery.waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\wwwroot\\Assets\\js\\scrollax.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\scrollax.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MVC-relation-detail.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MVC-relation-detail.props",
+      "PackagePath": "build\\MVC-relation-detail.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MVC-relation-detail.props",
+      "PackagePath": "buildMultiTargeting\\MVC-relation-detail.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MVC-relation-detail.props",
+      "PackagePath": "buildTransitive\\MVC-relation-detail.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
