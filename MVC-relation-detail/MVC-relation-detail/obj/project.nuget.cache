@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K0VLzhf2KB6A4u8Gd0PAUBG0lQa5KkxSbVSCrAOOtkIJimkhK29ueEUW6zXq1Z2hOh6Amb5Z4OFtsUZ3qCrJRQ==",
+  "dgSpecHash": "r97WsJSmly3MwJINT8zeXzU0jvxEp4IzNk/9YuO2G+yRj/yX6rjXRDgPLR3jAz5mtgW+3ypBma38mSbPfouVMA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\MVC-relation-detail.csproj",
+  "projectFilePath": "C:\\Users\\Asus\\Desktop\\Task\\MVC-relation-detail\\MVC-relation-detail\\MVC-relation-detail.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -145,3 +145,4 @@ C:\Users\Asus\Desktop\MVC-relation-detail\MVC-relation-detail\obj\Debug\net8.0\s
 C:\Users\Asus\Desktop\MVC-relation-detail\MVC-relation-detail\obj\Debug\net8.0\MVC-relation-detail.csproj.CopyComplete
 C:\Users\Asus\Desktop\MVC-relation-detail\MVC-relation-detail\obj\Debug\net8.0\MVC-relation-detail.genruntimeconfig.cache
 C:\Users\Asus\Desktop\MVC-relation-detail\MVC-relation-detail\obj\Debug\net8.0\ref\MVC-relation-detail.dll
+C:\Users\Asus\Desktop\Task\MVC-relation-detail\MVC-relation-detail\bin\Debug\net8.0\MVC-relation-detail.staticwebassets.runtime.json

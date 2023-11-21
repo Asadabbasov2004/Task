@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\MVC-relation-detail.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\Task\\MVC-relation-detail\\MVC-relation-detail\\MVC-relation-detail.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\MVC-relation-detail.csproj": {
+    "C:\\Users\\Asus\\Desktop\\Task\\MVC-relation-detail\\MVC-relation-detail\\MVC-relation-detail.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\MVC-relation-detail.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Task\\MVC-relation-detail\\MVC-relation-detail\\MVC-relation-detail.csproj",
         "projectName": "MVC-relation-detail",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\MVC-relation-detail.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\MVC-relation-detail\\MVC-relation-detail\\MVC-relation-detail.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\MVC-relation-detail\\MVC-relation-detail\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\Task\\MVC-relation-detail\\MVC-relation-detail\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",

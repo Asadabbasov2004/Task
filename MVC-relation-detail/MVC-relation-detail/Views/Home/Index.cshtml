@@ -1,19 +1,19 @@
-﻿@model List<object> ;
+﻿@model HomeVM;
 <section class="home-slider owl-carousel">
 
-    @foreach (var item in Model.ToList())
+    @foreach (var item in Model.foodWithImage)
     {
     <div class="slider-item">
             <div class="container">
                 <div class="row d-flex slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
-                    <div class="img" style="background-image: url(../../wwwroot/Assets/@item.GetType());"></div>
+                    <div class="img" style="background-image: url(./Assets/@item.Images.FirstOrDefault().Url"></div>
 
                     <div class="text d-flex align-items-center ftco-animate">
                         <div class="text-2 pb-lg-5 mb-lg-4 px-4 px-md-5">
-                            <h3 class="subheading mb-3">@item.GetType().Name</h3>
-                         @*    <h1 class="mb-5">@Model.</h1>
-                            <p class="mb-md-5">@Model.Description</p> *@
+                            <h3 class="subheading mb-3"></h3>
+                            <h1 class="mb-5">@item.Name</h1>
+                            <p class="mb-md-5">@item.Title</p>
                             <p><a href="#" class="btn btn-black px-3 px-md-4 py-3">Read More <span
                                 class="icon-arrow_forward ml-lg-4"></span></a></p>
                         </div>
