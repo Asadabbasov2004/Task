@@ -11,8 +11,18 @@ namespace Pronia_MVC.Controllers
         }
         public IActionResult Detail(int? id)
         {
-            //Product product=_context.products.on
-            return View();
+            if (id == null)
+            {
+                return BadRequest();
+            }
+            Product? product=_context.products
+            .Include(p=>p.Category)
+            .Include(p=>p.ProductImages)
+            .Include(p=>p.productTags)
+            .ThenInclude(pt=>pt.Tag)
+            .FirstOrDefault(product => product.Id ==id);
+            if (product == null) return BadRequest();
+            return View(product);
         }
     }
 }

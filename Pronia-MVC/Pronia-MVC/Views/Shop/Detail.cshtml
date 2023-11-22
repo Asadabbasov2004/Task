@@ -1063,9 +1063,18 @@
                         <div class="product-category product-tags">
                             <span class="title">Tags :</span>
                             <ul>
-                                <li>
-                                    <a href="#">Furniture</a>
-                                </li>
+                                @{
+                                    var count = 0;
+                                }
+                                @foreach (var item in Model.productTags)
+                                {
+                                    count++;
+                                    <li>
+                                        <a href="">
+                                            @(Model.productTags.Count() == count ? "" : " , ")
+                                        </a>
+                                    </li>
+                                }
                             </ul>
                         </div>
                         <div class="product-category social-link align-items-center pb-0">

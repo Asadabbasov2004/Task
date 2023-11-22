@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\Desktop\\Pronia-MVC\\Pronia-MVC\\Pronia-MVC.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\Pronia-MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\Desktop\\Pronia-MVC\\Pronia-MVC\\Pronia-MVC.csproj": {
+    "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\Pronia-MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Pronia-MVC\\Pronia-MVC\\Pronia-MVC.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\Pronia-MVC.csproj",
         "projectName": "Pronia-MVC",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\Pronia-MVC\\Pronia-MVC\\Pronia-MVC.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\Pronia-MVC.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\Pronia-MVC\\Pronia-MVC\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,6 +53,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.14, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
             }
           },
           "imports": [

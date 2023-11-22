@@ -14,13 +14,17 @@ namespace Pronia_MVC
 
             var app = builder.Build();
             app.MapControllerRoute(
-                name:"default",
-                pattern:"{controller=Home}/{action=index}/{id?}"
+           name: "areas",
+           pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}"
+             );
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=index}/{id?}"
                 );
             app.UseStaticFiles();
 
-
             app.Run();
+
         }
     }
 }
