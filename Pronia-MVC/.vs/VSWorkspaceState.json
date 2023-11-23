@@ -2,11 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Pronia-MVC",
-    "\\Pronia-MVC\\Controllers",
+    "\\Pronia-MVC\\Areas",
+    "\\Pronia-MVC\\Areas\\Admin",
+    "\\Pronia-MVC\\Areas\\Admin\\Views",
+    "\\Pronia-MVC\\Areas\\Admin\\Views\\Category",
+    "\\Pronia-MVC\\Areas\\Admin\\Views\\Dashboard",
+    "\\Pronia-MVC\\Models",
     "\\Pronia-MVC\\Views",
-    "\\Pronia-MVC\\Views\\Home",
     "\\Pronia-MVC\\Views\\Shop"
   ],
-  "SelectedNode": "\\Pronia-MVC\\Controllers\\ShopController.cs",
+  "SelectedNode": "\\Pronia-MVC\\Areas\\Admin\\Controllers\\CategoryController.cs",
   "PreviewInSolutionExplorer": false
 }

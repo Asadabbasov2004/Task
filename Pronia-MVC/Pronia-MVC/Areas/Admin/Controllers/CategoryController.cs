@@ -24,7 +24,7 @@ namespace Pronia_MVC.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Create(Category category)
         {
-             _context.categories.Add(category);
+             _context.categories.Add(category); 
              _context.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -47,11 +47,13 @@ namespace Pronia_MVC.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View("Error");
+                return View();
             }
             Category oldcategory =  _context.categories.Find(newcategory.Id);
             oldcategory.Name = newcategory.Name;
+
              _context.SaveChanges();
+
             return RedirectToAction("Index");
         }
     }

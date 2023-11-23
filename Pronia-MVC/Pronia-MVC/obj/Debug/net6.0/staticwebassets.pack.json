@@ -8261,6 +8261,46 @@
       "PackagePath": "staticwebassets\\Assets\\scss\\style.scss"
     },
     {
+      "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\Upload\\SliderImage\\1-1-310x220.jpg",
+      "PackagePath": "staticwebassets\\Upload\\SliderImage\\1-1-310x220.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\Upload\\SliderImage\\1-1-570x633.jpg",
+      "PackagePath": "staticwebassets\\Upload\\SliderImage\\1-1-570x633.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\Upload\\SliderImage\\2.png",
+      "PackagePath": "staticwebassets\\Upload\\SliderImage\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\Upload\\SliderImage\\3011cf42-5038-4982-bc38-858eeb3e962ajsakjbadskjsadbkjsdabsadkbsdakjbsdaksdabkdsabsadjkbsdakbjdsa.jpg",
+      "PackagePath": "staticwebassets\\Upload\\SliderImage\\3011cf42-5038-4982-bc38-858eeb3e962ajsakjbadskjsadbkjsdabsadkbsdakjbsdaksdabkdsabsadjkbsdakbjdsa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\Upload\\SliderImage\\59b6f095-cec5-4bc6-be84-c055a78ae3b2daylily-flower-and-buds-sharp.jpg",
+      "PackagePath": "staticwebassets\\Upload\\SliderImage\\59b6f095-cec5-4bc6-be84-c055a78ae3b2daylily-flower-and-buds-sharp.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\Upload\\SliderImage\\87a94eac-b19f-40e7-a7b2-8bd51ac424d8Panorama_of_3mb.jpg",
+      "PackagePath": "staticwebassets\\Upload\\SliderImage\\87a94eac-b19f-40e7-a7b2-8bd51ac424d8Panorama_of_3mb.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\Upload\\SliderImage\\Panorama_of_3mb.jpg",
+      "PackagePath": "staticwebassets\\Upload\\SliderImage\\Panorama_of_3mb.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\Upload\\SliderImage\\ZoomIt.exe",
+      "PackagePath": "staticwebassets\\Upload\\SliderImage\\ZoomIt.exe"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\Upload\\SliderImage\\c3faf70e-e5d2-43fe-9551-364b6bfc380eOlderThanTheInternet.png",
+      "PackagePath": "staticwebassets\\Upload\\SliderImage\\c3faf70e-e5d2-43fe-9551-364b6bfc380eOlderThanTheInternet.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\Upload\\SliderImage\\images.jpg",
+      "PackagePath": "staticwebassets\\Upload\\SliderImage\\images.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Pronia-MVC.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

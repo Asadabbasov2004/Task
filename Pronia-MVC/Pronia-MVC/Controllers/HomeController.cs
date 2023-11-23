@@ -14,6 +14,7 @@ namespace Pronia_MVC.Controllers
         {
             HomeVm homeVm = new HomeVm()
             {
+                sliders=await _context.sliders.ToListAsync(),
                 products = await _context.products.Include(p => p.ProductImages).ToListAsync() 
             };
             return View(homeVm);

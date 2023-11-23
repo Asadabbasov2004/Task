@@ -1,33 +1,36 @@
-﻿@model HomeVm; 
+﻿@model HomeVm
 <!-- Begin Slider Area -->
 <div class="slider-area">
     <!-- Main Slider -->
     <div class="swiper-container main-slider swiper-arrow with-bg_white">
         <div class="swiper-wrapper">
-            <div class="swiper-slide animation-style-01">
-                <div class="slide-inner style-1 bg-height"
-                     data-bg-image="assets/images/slider/bg/1-1.jpg">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 order-2 order-lg-1 align-self-center">
-                                <div class="slide-content text-black">
-                                    <span class="offer">65% Off</span>
-                                    <h2 class="title">New Plant</h2>
-                                    <p class="short-desc">
-                                        Pronia, With 100% Natural, Organic & Plant Shop.
-                                    </p>
-                                    <div class="btn-wrap">
-                                        <a class="btn btn-custom-size xl-size btn-pronia-primary"
-                                           href="shop.html">Discover Now</a>
+            @foreach (var item in Model.sliders)
+            {
+                <div class="swiper-slide animation-style-01">
+                    <div class="slide-inner style-1 bg-height"
+                         data-bg-image="~/assets/images/slider/bg/1-1.jpg">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 order-2 order-lg-1 align-self-center">
+                                    <div class="slide-content text-black">
+                                        <span class="offer">@item.SubTitle</span>
+                                        <h2 class="title">@item.Title</h2>
+                                        <p class="short-desc">
+                                            @item.Description
+                                        </p>
+                                        <div class="btn-wrap">
+                                            <a class="btn btn-custom-size xl-size btn-pronia-primary"
+                                               href="shop.html">Discover Now</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-8 offset-md-2 offset-lg-0 order-1 order-lg-2">
-                                <div class="inner-img">
-                                    <div class="scene fill">
-                                        <div class="expand-width" data-depth="0.2">
-                                            <img src="~/assets/images/website-images//1-1-524x617.png"
-                                                 alt="Inner Image" />
+                                <div class="col-lg-6 col-md-8 offset-md-2 offset-lg-0 order-1 order-lg-2">
+                                    <div class="inner-img">
+                                        <div class="scene fill">
+                                            <div class="expand-width" data-depth="0.2">
+                                                <img src="~/Upload/SliderImage/@item.ImgUrl"
+                                                     alt="Inner Image" />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -35,41 +38,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="swiper-slide animation-style-01">
-                <div class="slide-inner style-1 bg-height"
-                     data-bg-image="assets/images/slider/bg/1-1.jpg">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 order-2 order-lg-1 align-self-center">
-                                <div class="slide-content text-black">
-                                    <span class="offer">65% Off</span>
-                                    <h2 class="title">New Plant</h2>
-                                    <p class="short-desc">
-                                        Pronia, With 100% Natural, Organic & Plant Shop.
-                                    </p>
-                                    <div class="btn-wrap">
-                                        <a class="btn btn-custom-size xl-size btn-pronia-primary"
-                                           href="shop.html">Discover Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-8 offset-md-2 offset-lg-0 order-1 order-lg-2">
-                                <div class="inner-img">
-                                    <div class="scene fill">
-                                        <div class="expand-width" data-depth="0.2">
-                                            <img src="~/assets/images/website-images//1-2-524x617.png"
-                                                 alt="Inner Image" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
-        <!-- Add Pagination -->
+       <!-- Add Pagination -->
         <div class="swiper-pagination d-md-none"></div>
 
         <!-- Add Arrows -->
@@ -1275,86 +1246,86 @@
                          role="tabpanel"
                          aria-labelledby="latest-tab">
                         <div class="product-item-wrap row">
-                            @foreach(var item in Model.products){
+                            @foreach (var item in Model.products)
+                            {
                                 if (item.ProductImages.FirstOrDefault(p => p.IsPrime == true) != null)
                                 {
                                     <div class="col-xl-3 col-md-4 col-sm-6">
                                         <div class="product-item">
                                             <div class="product-img">
-                                                <a asp-controller="Shop" asp-action="Detail" asp-route-id=@item.Id >
+                                                <a asp-controller="Shop" asp-action="Detail" asp-route-id=@item.Id>
                                                     <img class="primary-img"
-                                                    src="~/assets/images/website-images//@item.ProductImages.FirstOrDefault(p=>p.IsPrime==true).Url"
-                                                    alt="Product Images" />
+                                                         src="~/assets/images/website-images//@item.ProductImages.FirstOrDefault(p=>p.IsPrime==true).Url"
+                                                         alt="Product Images" />
                                                     @if (item.ProductImages.FirstOrDefault(p => p.IsPrime == false) != null)
                                                     {
                                                         <img class="secondary-img"
-                                                        src="~/assets/images/website-images//@item.ProductImages.FirstOrDefault(p=>p.IsPrime==false).Url"
-                                                        alt="Product Images" />
+                                                             src="~/assets/images/website-images//@item.ProductImages.FirstOrDefault(p=>p.IsPrime==false).Url"
+                                                             alt="Product Images" />
                                                     }
+
                                                 </a>
-                                        <div class="product-add-action">
-                                            <ul>
-                                                <li>
-                                                    <a href="wishlist.html"
-                                                       data-tippy="Add to wishlist"
-                                                       data-tippy-inertia="true"
-                                                       data-tippy-animation="shift-away"
-                                                       data-tippy-delay="50"
-                                                       data-tippy-arrow="true"
-                                                       data-tippy-theme="sharpborder">
-                                                        <i class="pe-7s-like"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="quuickview-btn"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#quickModal">
-                                                    <a href="#"
-                                                       data-tippy="Quickview"
-                                                       data-tippy-inertia="true"
-                                                       data-tippy-animation="shift-away"
-                                                       data-tippy-delay="50"
-                                                       data-tippy-arrow="true"
-                                                       data-tippy-theme="sharpborder">
-                                                        <i class="pe-7s-look"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="cart.html"
-                                                       data-tippy="Add to cart"
-                                                       data-tippy-inertia="true"
-                                                       data-tippy-animation="shift-away"
-                                                       data-tippy-delay="50"
-                                                       data-tippy-arrow="true"
-                                                       data-tippy-theme="sharpborder">
-                                                        <i class="pe-7s-cart"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                                <div class="product-add-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="wishlist.html"
+                                                               data-tippy="Add to wishlist"
+                                                               data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away"
+                                                               data-tippy-delay="50"
+                                                               data-tippy-arrow="true"
+                                                               data-tippy-theme="sharpborder">
+                                                                <i class="pe-7s-like"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="quuickview-btn"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#quickModal">
+                                                            <a href="#"
+                                                               data-tippy="Quickview"
+                                                               data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away"
+                                                               data-tippy-delay="50"
+                                                               data-tippy-arrow="true"
+                                                               data-tippy-theme="sharpborder">
+                                                                <i class="pe-7s-look"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="cart.html"
+                                                               data-tippy="Add to cart"
+                                                               data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away"
+                                                               data-tippy-delay="50"
+                                                               data-tippy-arrow="true"
+                                                               data-tippy-theme="sharpborder">
+                                                                <i class="pe-7s-cart"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <a class="product-name" href="shop.html">@item.Name</a>
+                                                <div class="price-box pb-1">
+                                                    <span class="new-price">$@item.Price</span>
+                                                </div>
+                                                <div class="rating-box">
+                                                    <ul>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                        <li><i class="fa fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="product-content">
-                                        <a class="product-name" href="shop.html">
-                                            @item.Name
-                                        </a>
-                                        <div class="price-box pb-1">
-                                            <span class="new-price">@item.Price</span>
-                                        </div>
-                                        <div class="rating-box">
-                                            <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                }
                             }
-                            }
-                          
-                          
+
+
                         </div>
                     </div>
                 </div>
@@ -1730,7 +1701,7 @@
 <div class="testimonial-area section-space-top-90 section-space-bottom-95">
     <div class="container-fluid">
         <div class="testimonial-bg"
-             data-bg-image="assets/images/testimonial/bg/1-1-1820x443.jpg">
+             data-bg-image="~/assets/images/testimonial/bg/1-1-1820x443.jpg">
             <div class="section-title-wrap">
                 <h2 class="section-title">What Say Client</h2>
                 <p class="section-desc mb-0">
@@ -1808,7 +1779,7 @@
 <div class="brand-area section-space-bottom-100">
     <div class="container">
         <div class="brand-bg"
-             data-bg-image="assets/images/website-images//1-1170x300.jpg">
+             data-bg-image="~/assets/images/website-images//1-1170x300.jpg">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="swiper-container brand-slider">
@@ -1977,4 +1948,3 @@
     </div>
 </div>
 <!-- Blog Area End Here -->
-<!-- Begin Footer Area -->
