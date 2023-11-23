@@ -1,0 +1,109 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Pustok_MVC</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\Assets\**" />
+    <Content Remove="wwwroot\Assets\**" />
+    <EmbeddedResource Remove="wwwroot\Assets\**" />
+    <None Remove="wwwroot\Assets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\AdminStyle\css\maps\style.css.map" />
+    <None Include="wwwroot\AdminStyle\documentation\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\fonts\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\fonts\Roboto\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\fonts\Roboto\Roboto-Black.woff2" />
+    <None Include="wwwroot\AdminStyle\fonts\Roboto\Roboto-Bold.woff2" />
+    <None Include="wwwroot\AdminStyle\fonts\Roboto\Roboto-Light.woff2" />
+    <None Include="wwwroot\AdminStyle\fonts\Roboto\Roboto-Medium.woff2" />
+    <None Include="wwwroot\AdminStyle\fonts\Roboto\Roboto-Regular.woff2" />
+    <None Include="wwwroot\AdminStyle\images\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\images\auth\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\images\faces\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\images\logo-mini.svg" />
+    <None Include="wwwroot\AdminStyle\images\logo.svg" />
+    <None Include="wwwroot\AdminStyle\js\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\js\chart.js" />
+    <None Include="wwwroot\AdminStyle\js\Chart.min.js" />
+    <None Include="wwwroot\AdminStyle\js\dashboard.js" />
+    <None Include="wwwroot\AdminStyle\js\data-table.js" />
+    <None Include="wwwroot\AdminStyle\js\dataTables.bootstrap4.js" />
+    <None Include="wwwroot\AdminStyle\js\documentation.js" />
+    <None Include="wwwroot\AdminStyle\js\file-upload.js" />
+    <None Include="wwwroot\AdminStyle\js\hoverable-collapse.js" />
+    <None Include="wwwroot\AdminStyle\js\jquery.cookie.js" />
+    <None Include="wwwroot\AdminStyle\js\jquery.dataTables.js" />
+    <None Include="wwwroot\AdminStyle\js\off-canvas.js" />
+    <None Include="wwwroot\AdminStyle\js\tabs.js" />
+    <None Include="wwwroot\AdminStyle\js\template.js" />
+    <None Include="wwwroot\AdminStyle\pages\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\pages\charts\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\pages\forms\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\pages\icons\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\pages\samples\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\pages\tables\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\pages\ui-features\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\scss\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\scss\components\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\scss\components\plugin-overrides\_data-tables.scss" />
+    <None Include="wwwroot\AdminStyle\scss\components\_badges.scss" />
+    <None Include="wwwroot\AdminStyle\scss\components\_bootstrap-progress.scss" />
+    <None Include="wwwroot\AdminStyle\scss\components\_buttons.scss" />
+    <None Include="wwwroot\AdminStyle\scss\components\_cards.scss" />
+    <None Include="wwwroot\AdminStyle\scss\components\_checkbox-radio.scss" />
+    <None Include="wwwroot\AdminStyle\scss\components\_dropdown.scss" />
+    <None Include="wwwroot\AdminStyle\scss\components\_forms.scss" />
+    <None Include="wwwroot\AdminStyle\scss\components\_icons.scss" />
+    <None Include="wwwroot\AdminStyle\scss\components\_lists.scss" />
+    <None Include="wwwroot\AdminStyle\scss\components\_tables.scss" />
+    <None Include="wwwroot\AdminStyle\scss\landing-screens\_auth.scss" />
+    <None Include="wwwroot\AdminStyle\scss\mixins\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\scss\mixins\_animation.scss" />
+    <None Include="wwwroot\AdminStyle\scss\mixins\_badges.scss" />
+    <None Include="wwwroot\AdminStyle\scss\mixins\_blockqoute.scss" />
+    <None Include="wwwroot\AdminStyle\scss\mixins\_buttons.scss" />
+    <None Include="wwwroot\AdminStyle\scss\mixins\_cards.scss" />
+    <None Include="wwwroot\AdminStyle\scss\mixins\_misc.scss" />
+    <None Include="wwwroot\AdminStyle\scss\style.scss" />
+    <None Include="wwwroot\AdminStyle\scss\_background.scss" />
+    <None Include="wwwroot\AdminStyle\scss\_demo.scss" />
+    <None Include="wwwroot\AdminStyle\scss\_fonts.scss" />
+    <None Include="wwwroot\AdminStyle\scss\_footer.scss" />
+    <None Include="wwwroot\AdminStyle\scss\_functions.scss" />
+    <None Include="wwwroot\AdminStyle\scss\_layouts.scss" />
+    <None Include="wwwroot\AdminStyle\scss\_misc.scss" />
+    <None Include="wwwroot\AdminStyle\scss\_navbar.scss" />
+    <None Include="wwwroot\AdminStyle\scss\_reset.scss" />
+    <None Include="wwwroot\AdminStyle\scss\_sidebar.scss" />
+    <None Include="wwwroot\AdminStyle\scss\_typography.scss" />
+    <None Include="wwwroot\AdminStyle\scss\_utilities.scss" />
+    <None Include="wwwroot\AdminStyle\scss\_variables.scss" />
+    <None Include="wwwroot\AdminStyle\scss\_vertical-wrapper.scss" />
+    <None Include="wwwroot\AdminStyle\vendors\.DS_Store" />
+    <None Include="wwwroot\AdminStyle\vendors\base\bootstrap.min.js.map" />
+    <None Include="wwwroot\AdminStyle\vendors\base\vendor.bundle.base.js" />
+    <None Include="wwwroot\AdminStyle\vendors\chart.js\Chart.min.js" />
+    <None Include="wwwroot\AdminStyle\vendors\datatables.net-bs4\dataTables.bootstrap4.js" />
+    <None Include="wwwroot\AdminStyle\vendors\datatables.net\jquery.dataTables.js" />
+    <None Include="wwwroot\AdminStyle\vendors\mdi\css\materialdesignicons.min.css.map" />
+    <None Include="wwwroot\AdminStyle\vendors\mdi\fonts\materialdesignicons-webfont.woff2" />
+  </ItemGroup>
+
+</Project>

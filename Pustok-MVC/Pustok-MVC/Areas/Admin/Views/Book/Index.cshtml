@@ -1,0 +1,45 @@
+﻿@model List<Book>
+@{
+    int count = 0;
+}
+<div class="container ">
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">No#</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">description</th>
+                    <th scope="col ">Price</th>
+                    <th scope="col">Author</th>
+             
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    count++;
+                    <tr>
+                        <th scope="row">@count</th>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Description</td>
+                        <td>@item.Price</td>
+                        <td>@item.AuthorId</td>
+                        <td>
+                            <a class="btn btn-primary" asp-controller="Book" asp-action="Update">Update</a>
+                            <a class="btn btn-danger" asp-controller="Book" asp-action="Create">Create</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a class="btn btn-primary" asp-controller="Category" asp-action="Create">Add</a>
+        <a class="btn btn-primary" asp-controller="Category" asp-action="Update">Add</a>
+
+    </div>
+
+
+</div>
