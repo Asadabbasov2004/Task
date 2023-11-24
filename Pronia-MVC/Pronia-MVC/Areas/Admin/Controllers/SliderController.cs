@@ -39,6 +39,7 @@ namespace Pronia_MVC.Areas.Admin.Controllers
                 return View();
             }
 
+            slider.ImgUrl = slider.ImageFile.Upload(_environment.WebRootPath, @"\Upload\SliderImage\");
             //string filname = slider.ImageFile.FileName;
             //if(filname.Length >64 )
             //{
@@ -55,7 +56,6 @@ namespace Pronia_MVC.Areas.Admin.Controllers
 
 
 
-            slider.ImgUrl = slider.ImageFile.Upload(_environment.WebRootPath, @"\Upload\SliderImage\");
 
 
 

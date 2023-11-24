@@ -106,4 +106,8 @@
     <None Include="wwwroot\AdminStyle\vendors\mdi\fonts\materialdesignicons-webfont.woff2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\AdminStyle\Upload\" />
+  </ItemGroup>
+
 </Project>

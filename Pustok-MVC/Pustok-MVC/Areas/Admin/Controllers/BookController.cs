@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Hosting;
-using Pustok_MVC.Models;
+using Pustok_MVC.Areas.Admin.ViewModels;
+using System.IO;
+using Microsoft.AspNetCore.Http;
 
 namespace Pustok_MVC.Areas.Admin.Controllers
 {
@@ -9,14 +10,15 @@ namespace Pustok_MVC.Areas.Admin.Controllers
     {
         AppDbContext _db;
         private readonly IWebHostEnvironment _environment;
-        public BookController(AppDbContext db,IWebHostEnvironment environment)
+        AdminVM adminVM = new AdminVM();
+        public BookController(AppDbContext db, IWebHostEnvironment environment)
         {
-            _db=db;
-            _environment=environment;
+            _db = db;
+            _environment = environment;
         }
         public IActionResult Index()
         {
-            List<Book> books =_db.books.ToList() ;
+            List<Book> books = _db.books.ToList();
             return View(books);
 
         }
@@ -25,28 +27,62 @@ namespace Pustok_MVC.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Book book)
+        public async Task<IActionResult> Create(Book book)
         {
-            //if (!book.ImagesFiles.ContentType.Contains("image"))
-            //{
-            //    ModelState.AddModelError("ImageFile", "Yalnizca Sekil yukluye bilersiz");
-            //    return View();
-            //}
-            //if (book.ImagesFiles.> 2097152)
-            //{
-            //    ModelState.AddModelError("ImageFile", "Maxsimum 2mb yukluye bilersiz!!");
-            //    return View();
-            //}
-         //   book.BookImgs = book.ImagesFiles.Upload(_environment.WebRootPath, @"\Upload\SliderImage\");
 
+
+
+            //adminVM.Name = book.Name;
+            //adminVM.Description = book.Description;
+            //adminVM.Author = book.Author;
+            //adminVM.Price = book.Price;
+            //if (adminVM.AuthorId.Any(char.IsDigit))
+            //{
+            //    int convertedAuthorId = int.Parse(new string(adminVM.AuthorId.Where(char.IsDigit).ToArray()));
+            //    book.AuthorId = convertedAuthorId;
+            //}
+
+
+            if (book.ImagesFiles == null || book.ImagesFiles.Count == 0)
+            {
+                ModelState.AddModelError("ImagesFiles", "En az bir foto seç");
+            }
+            else
+            {
+                foreach (var file in book.ImagesFiles)
+                {
+                    if (!file.ContentType.Contains("image"))
+                    {
+                        ModelState.AddModelError("ImagesFiles", "Yalnizca Sekil yukluye bilersiz");
+                    }
+
+                    if (file.Length > 2097152)
+                    {
+                        ModelState.AddModelError("ImagesFiles", "Maxsimum 2mb yukluye bilersiz!");
+                    }
+
+                    //var imgUrl = file.Upload(_environment.WebRootPath, @"\AdminStyle\Upload\");
+                    //if (imgUrl != null)
+                    //{
+                    //adminVM.BookImgs.Add(imgUrl);    
+                    //}
+
+                }
+            }
+          
+
+
+
+          
+            //_db.adminVMs.Add(adminVM);
             _db.books.Add(book);
-            _db.SaveChanges();
+     
             return RedirectToAction("Index");
         }
 
         public IActionResult Update(int id)
         {
-            Book book =_db.books.Find(id);
+            Book book = _db.books.Find(id);
             return View(book);
         }
         public IActionResult Update(Book book)

@@ -9,10 +9,10 @@ namespace Pustok_MVC.Models
         public string Description { get; set; }
         public string Price { get; set; }
 
-        public int AuthorId { get; set; }
-        public Author Author { get; set; }
+        public int? AuthorId { get; set; }
+        public Author? Author { get; set; }
 
-        public List<BookImg> BookImgs { get; set; }
+        public List<BookImg>? BookImgs { get; set; }
         [NotMapped]
         public List <IFormFile> ImagesFiles { get; set; }
     }

@@ -1,4 +1,5 @@
-﻿using Pustok_MVC.Models;
+﻿using Pustok_MVC.Areas.Admin.ViewModels;
+using Pustok_MVC.Models;
 
 namespace Pustok_MVC.DAL
 {
@@ -14,6 +15,6 @@ namespace Pustok_MVC.DAL
         public DbSet<BookImg> bookImgs { get; set; }
         public DbSet<Catagory> catagories { get; set; }
         public DbSet<Slider> slider { get; set; }
-
+        public DbSet<AdminVM> adminVMs { get; set; }
     }
 }

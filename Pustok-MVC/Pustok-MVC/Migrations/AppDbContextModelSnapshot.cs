@@ -22,6 +22,36 @@ namespace Pustok_MVC.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Pustok_MVC.Areas.Admin.ViewModels.AdminVM", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("AuthorId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AuthorId");
+
+                    b.ToTable("adminVMs");
+                });
+
             modelBuilder.Entity("Pustok_MVC.Models.Author", b =>
                 {
                     b.Property<int>("Id")
@@ -75,7 +105,10 @@ namespace Pustok_MVC.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AuthorId")
+                    b.Property<int?>("AdminVMId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("AuthorId")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -92,6 +125,8 @@ namespace Pustok_MVC.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AdminVMId");
+
                     b.HasIndex("AuthorId");
 
                     b.ToTable("books");
@@ -105,6 +140,9 @@ namespace Pustok_MVC.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("AdminVMId")
+                        .HasColumnType("int");
+
                     b.Property<int>("BookId")
                         .HasColumnType("int");
 
@@ -113,6 +151,8 @@ namespace Pustok_MVC.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AdminVMId");
 
                     b.HasIndex("BookId");
 
@@ -168,19 +208,34 @@ namespace Pustok_MVC.Migrations
                     b.ToTable("slider");
                 });
 
-            modelBuilder.Entity("Pustok_MVC.Models.Book", b =>
+            modelBuilder.Entity("Pustok_MVC.Areas.Admin.ViewModels.AdminVM", b =>
                 {
                     b.HasOne("Pustok_MVC.Models.Author", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId");
+
+                    b.Navigation("Author");
+                });
+
+            modelBuilder.Entity("Pustok_MVC.Models.Book", b =>
+                {
+                    b.HasOne("Pustok_MVC.Areas.Admin.ViewModels.AdminVM", null)
                         .WithMany("books")
-                        .HasForeignKey("AuthorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("AdminVMId");
+
+                    b.HasOne("Pustok_MVC.Models.Author", "Author")
+                        .WithMany("books")
+                        .HasForeignKey("AuthorId");
 
                     b.Navigation("Author");
                 });
 
             modelBuilder.Entity("Pustok_MVC.Models.BookImg", b =>
                 {
+                    b.HasOne("Pustok_MVC.Areas.Admin.ViewModels.AdminVM", null)
+                        .WithMany("BookImgs")
+                        .HasForeignKey("AdminVMId");
+
                     b.HasOne("Pustok_MVC.Models.Book", "Book")
                         .WithMany("BookImgs")
                         .HasForeignKey("BookId")
@@ -188,6 +243,13 @@ namespace Pustok_MVC.Migrations
                         .IsRequired();
 
                     b.Navigation("Book");
+                });
+
+            modelBuilder.Entity("Pustok_MVC.Areas.Admin.ViewModels.AdminVM", b =>
+                {
+                    b.Navigation("BookImgs");
+
+                    b.Navigation("books");
                 });
 
             modelBuilder.Entity("Pustok_MVC.Models.Author", b =>

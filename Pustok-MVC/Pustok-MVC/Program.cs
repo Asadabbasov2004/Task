@@ -2,7 +2,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {
-    opt.UseSqlServer("Server=DESKTOP-4EOUDP3;database=pustokDb;Trusted_connection=true;Integrated security=true;Encrypt=false");
+    opt.UseSqlServer("Server=ASUS-TUF-F17;database=pustokDb;Trusted_connection=true;Integrated security=true;Encrypt=false");
 
 }) ;
 

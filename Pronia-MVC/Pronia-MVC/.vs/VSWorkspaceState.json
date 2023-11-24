@@ -5,12 +5,12 @@
     "\\Areas\\Admin",
     "\\Areas\\Admin\\Controllers",
     "\\Areas\\Admin\\Views",
-    "\\Areas\\Admin\\Views\\Dashboard",
-    "\\Areas\\Admin\\Views\\Shared",
     "\\Areas\\Admin\\Views\\Slider",
     "\\Helpers",
-    "\\Models"
+    "\\Models",
+    "\\wwwroot",
+    "\\wwwroot\\Upload"
   ],
-  "SelectedNode": "\\Areas\\Admin\\Views\\Slider\\Create.cshtml",
+  "SelectedNode": "\\Areas\\Admin\\Controllers\\SliderController.cs",
   "PreviewInSolutionExplorer": false
 }
