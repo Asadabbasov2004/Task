@@ -3,14 +3,14 @@
     "",
     "\\Areas",
     "\\Areas\\Admin",
-    "\\Areas\\Admin\\Controllers",
     "\\Areas\\Admin\\Views",
+    "\\Areas\\Admin\\Views\\Category",
     "\\Areas\\Admin\\Views\\Slider",
     "\\Helpers",
     "\\Models",
     "\\wwwroot",
     "\\wwwroot\\Upload"
   ],
-  "SelectedNode": "\\Areas\\Admin\\Controllers\\SliderController.cs",
+  "SelectedNode": "\\Areas\\Admin\\Views\\Category\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

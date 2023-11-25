@@ -21,6 +21,7 @@
                     <td>@item.Id</td>
                     <td>@item.Name</td>
                     <td>@item.CatagoryId</td>
+                    <td><a class="btn btn-danger" asp-controller="Category" asp-action="Update" asp-route-id="@item.Id"> Update</a></td>
                 </tr>
             }
         </tbody>

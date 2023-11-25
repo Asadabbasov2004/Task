@@ -15,7 +15,7 @@
                     <th scope="col">Author</th>
              
                     <th>
-                        <a class="btn btn-primary" asp-controller="Book" asp-action="Update">Update</a>
+                        
                         <a class="btn btn-danger" asp-controller="Book" asp-action="Create">Create</a>
                     </th>
                 </tr>
@@ -31,8 +31,11 @@
                         <td>@book.Name</td>
                         <td>@book.Description</td>
                         <td>@book.Price</td>
-                        <td>@book.AuthorId</td>
-                       
+                        <td>@book.Author</td>
+                        <td>
+
+                            <a class="btn btn-primary" asp-controller="Book" asp-action="Update" asp-route-id="@book.Id" >Update</a>
+                        </td>
                     </tr>
                 }
                 

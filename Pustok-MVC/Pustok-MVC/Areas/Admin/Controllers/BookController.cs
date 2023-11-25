@@ -30,19 +30,6 @@ namespace Pustok_MVC.Areas.Admin.Controllers
         public async Task<IActionResult> Create(Book book)
         {
 
-
-
-            //adminVM.Name = book.Name;
-            //adminVM.Description = book.Description;
-            //adminVM.Author = book.Author;
-            //adminVM.Price = book.Price;
-            //if (adminVM.AuthorId.Any(char.IsDigit))
-            //{
-            //    int convertedAuthorId = int.Parse(new string(adminVM.AuthorId.Where(char.IsDigit).ToArray()));
-            //    book.AuthorId = convertedAuthorId;
-            //}
-
-
             if (book.ImagesFiles == null || book.ImagesFiles.Count == 0)
             {
                 ModelState.AddModelError("ImagesFiles", "En az bir foto seç");
@@ -60,31 +47,22 @@ namespace Pustok_MVC.Areas.Admin.Controllers
                     {
                         ModelState.AddModelError("ImagesFiles", "Maxsimum 2mb yukluye bilersiz!");
                     }
-
-                    //var imgUrl = file.Upload(_environment.WebRootPath, @"\AdminStyle\Upload\");
-                    //if (imgUrl != null)
-                    //{
-                    //adminVM.BookImgs.Add(imgUrl);    
-                    //}
-
                 }
             }
           
-
-
-
-          
-            //_db.adminVMs.Add(adminVM);
             _db.books.Add(book);
-     
+             _db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+
 
         public IActionResult Update(int id)
         {
             Book book = _db.books.Find(id);
             return View(book);
         }
+        [HttpPost]
         public IActionResult Update(Book book)
         {
             if (!ModelState.IsValid)
@@ -96,8 +74,9 @@ namespace Pustok_MVC.Areas.Admin.Controllers
             oldbook.Price = book.Price;
             oldbook.Description = book.Description;
 
+            _db.books.Add(oldbook);
             _db.SaveChanges();
-            return RedirectToAction("Update");
+            return RedirectToAction("Index");
         }
     }
 }

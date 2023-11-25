@@ -1,5 +1,47 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@using Pustok_MVC.Areas.Admin.ViewModels
+@model Book
+<form method="post" enctype="multipart/form-data" asp-controller="Book" asp-action="Update">
+    <div class="container">
+        <form method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="mb-3 col-md-3">
+                    <label asp-for="Name" class="form-label">Name</label>
+                    <input asp-for="Name" class="form-control">
+                    <span asp-validation-for="Name" style="color:red"></span>
+                </div>
+                <div class="mb-3 col-md-3">
+                    <label asp-for="Author" class="form-label">Author</label>
+                    <input asp-for="Author" class="form-control">
+                    <span asp-validation-for="Author" style="color:red"></span>
+                </div>
+                @*   <div class="mb-3 col-md-3">
+                <label asp-for="AuthorId" class="form-label">AuthorId</label>
+                <input asp-for="AuthorId" class="form-control">
+                <span asp-validation-for="AuthorId" style="color:red"></span>
+                </div> *@
+                <div class="mb-3 col-md-3">
+                    <label asp-for="Price" class="form-label">Price</label>
+                    <input asp-for="Price" class="form-control">
+                </div>
+                <div class="mb-3 col-md-3">
+                    <label asp-for="ImagesFiles" class="form-label">Image File</label>
+                    <input asp-for="ImagesFiles" class="form-control">
+                    <span asp-validation-for="ImagesFiles" style="color:red"></span>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label asp-for="Description" class="form-label">Description</label>
+                    <textarea asp-for="Description" class="form-control" asp-for="Description" rows="4"></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+
+
+</form>

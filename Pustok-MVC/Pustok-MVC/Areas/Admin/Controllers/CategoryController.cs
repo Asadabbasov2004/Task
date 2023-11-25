@@ -28,6 +28,29 @@ namespace Pustok_MVC.Areas.Admin.Controllers
             return RedirectToAction("Index"); 
         }
 
+        public IActionResult Update(int id) {
+            Catagory catagory = _db.catagories.Find(id);
+            return View(catagory);
+        }
+        [HttpPost]
+        public IActionResult Update(Catagory catagory)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(catagory);
+            }
+            Catagory oldcategory = _db.catagories.Find(catagory.Id);
+            if (oldcategory != null)
+            {
+                oldcategory.Name = catagory.Name;
+                oldcategory.CatagoryId = catagory.CatagoryId;
+                _db.catagories.Add(Catagory);
+                _db.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
+        } 
+
 
     }
 }
