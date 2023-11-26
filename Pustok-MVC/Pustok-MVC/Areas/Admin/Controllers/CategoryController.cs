@@ -2,7 +2,7 @@
 
 namespace Pustok_MVC.Areas.Admin.Controllers
 {
-        [Area("Admin")]
+    [Area("Admin")]
     public class CategoryController : Controller
     {
         AppDbContext _db;
@@ -13,19 +13,19 @@ namespace Pustok_MVC.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            List<Catagory> catagories =_db.catagories.ToList();
+            List<Catagory> catagories = _db.catagories.ToList();
             return View(catagories);
         }
         public IActionResult Create()
         {
-           return View() ;
+            return View();
         }
         [HttpPost]
         public IActionResult Create(Catagory category)
         {
             _db.catagories.Add(category);
             _db.SaveChanges();
-            return RedirectToAction("Index"); 
+            return RedirectToAction("Index");
         }
 
         public IActionResult Update(int id) {
@@ -44,12 +44,12 @@ namespace Pustok_MVC.Areas.Admin.Controllers
             {
                 oldcategory.Name = catagory.Name;
                 oldcategory.CatagoryId = catagory.CatagoryId;
-                _db.catagories.Add(Catagory);
+               // _db.catagories.Add(catagory);
                 _db.SaveChanges();
             }
 
             return RedirectToAction("Index");
-        } 
+        }
 
 
     }

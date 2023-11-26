@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="~/css/plugins.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="~/css/main.css" />
     <link rel="shortcut icon" type="image/x-icon" href="~ /image/favicon.ico">
+   
 </head>
 
 <body>
@@ -165,14 +166,45 @@
                           
 
                             <nav class="category-nav   ">
-                             
-                             
-                              <div>
-                                    <a href="~/javascript:void(0)" class="category-trigger"><i
-                                            class="fa fa-bars"></i>Browse
-                                        categories</a>
-                                    <ul class="category-menu">
-                                <ul>
+
+
+                                <div>
+                                    <a href="javascript:void(0)" class="category-trigger show" id="categoryTrigger">
+                                        <i class="fa fa-bars"></i>Browse categories
+                                    </a>
+                                    <ul class="category-menu" id="categoryMenu">
+                                        @foreach(var item in (ViewData["cat"] as List<Catagory>).Where(p=>p.CatagoryId == null))
+                                        {
+                                            <li>
+                                                <a  href="">@item.Name</a>
+                                                <ol class="sub-menu">
+                                                    @foreach(var subitem in (ViewData["cat"] as List<Catagory>).Where(p=>p.CatagoryId !=null && p.CatagoryId == item.Id))
+                                                    {
+                                                        <li class="p-2"><a href="">@subitem.Name</a> </li>
+                                                    }
+                                                    <hr />
+                                                </ol>
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+
+                                <script>
+                                    function toggleCategoryMenu() {
+                                        var menu = document.getElementById("categoryMenu");
+
+                                        if (menu.style.visibility === "hidden" || menu.style.visibility === "") {
+                                            menu.style.visibility = "visible";
+                                            menu.style.opacity = "1";
+                                        } else {
+                                            menu.style.visibility = "hidden";
+                                            menu.style.opacity = "0";
+                                        }
+                                    }
+
+                                    document.getElementById("categoryTrigger").addEventListener("click", toggleCategoryMenu);
+                                </script>
+                             @*    <ul>
                                 @foreach (var item in (ViewData["cat"] as List<Catagory>).Where(p => p.Id == null)){
                                 <li class="cat-item has-children" >
                                 <a href="~/#">Arts & Photography</a>
@@ -187,7 +219,7 @@
 
                                 </li>
                                 }
-                                </ul>
+                                </ul> *@
                                         
                             </nav>
                         </div>
@@ -781,9 +813,9 @@
         </div>
     </footer>
     <!-- Use Minified Plugins Version For Fast Page Load -->
-    <script src="js/plugins.js"></script>
-    <script src="js/ajax-mail.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="~/js//ajax-mail.js"></script>
+    <script src="~/js/custom.js"></script>
+    <script src="~/js/plugins.js"></script>
 </body>
 
 
