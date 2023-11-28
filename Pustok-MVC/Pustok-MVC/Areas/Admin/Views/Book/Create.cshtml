@@ -1,5 +1,4 @@
-﻿@using Pustok_MVC.Areas.Admin.ViewModels
-@model Book
+﻿@model CreateBookVm 
 <form method="post" enctype="multipart/form-data" asp-controller="Book" asp-action="Create">
     <div class="container">
         <form method="post" enctype="multipart/form-data">
@@ -10,32 +9,42 @@
                     <span asp-validation-for="Name" style="color:red"></span>
                 </div>
                 <div class="mb-3 col-md-3">
-                    <label asp-for="Author" class="form-label">Author</label>
-                    <input asp-for="Author" class="form-control">
-                    <span asp-validation-for="Author" style="color:red"></span>
-                </div>
-              @*   <div class="mb-3 col-md-3">
-                    <label asp-for="AuthorId" class="form-label">Author</label>
-                    <input asp-for="Author" class="form-control">
-                    <span asp-validation-for="Author" style="color:red"></span>
-                </div> *@
-                <div class="mb-3 col-md-3">
                     <label asp-for="Price" class="form-label">Price</label>
                     <input asp-for="Price" class="form-control">
                     <span asp-validation-for="Price" style="color:red"></span>
                 </div>
-                <div class="mb-3 col-md-3">
-                    <label asp-for="ImagesFiles" class="form-label">Image File</label>
-                    <input asp-for="ImagesFiles" class="form-control">
-                    <span asp-validation-for="ImagesFiles" style="color:red"></span>
-                </div>
-
-            </div>
             <div class="row">
                 <div class="mb-3 col-md-6">
                     <label asp-for="Description" class="form-label">Description</label>
                     <textarea asp-for="Description" class="form-control" asp-for="Description" rows="4"></textarea>
                 </div>
+            </div>
+             <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label asp-for="AuthorId" class="form-label">Author</label>
+                        <select class="form-select" aria-label="Default select example" asp-for="AuthorId" asp-items="new SelectList(ViewBag.Authors,nameof(Author.Id),nameof(Author.Name))">
+                          
+                        </select>
+                    </div>
+             </div>
+
+
+              @*   <div class="mb-3 col-md-3">
+                    <label asp-for="Author" class="form-label">Author</label>
+                    <input asp-for="Author" class="form-control">
+                    <span asp-validation-for="Author" style="color:red"></span>
+                </div> *@
+              @*   <div class="mb-3 col-md-3">
+                    <label asp-for="AuthorId" class="form-label">Author</label>
+                    <input asp-for="Author" class="form-control">
+                    <span asp-validation-for="Author" style="color:red"></span>
+                </div> *@
+             @*    <div class="mb-3 col-md-3">
+                    <label asp-for="ImagesFiles" class="form-label">Image File</label>
+                    <input asp-for="ImagesFiles" class="form-control">
+                    <span asp-validation-for="ImagesFiles" style="color:red"></span>
+                </div> *@
+
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>

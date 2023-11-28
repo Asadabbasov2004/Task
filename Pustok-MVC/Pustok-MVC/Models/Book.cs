@@ -12,8 +12,8 @@ namespace Pustok_MVC.Models
         public int? AuthorId { get; set; }
         public Author? Author { get; set; }
 
-        public List<BookImg>? BookImgs { get; set; }
-        [NotMapped]
-        public List <IFormFile> ImagesFiles { get; set; }
+      //  public List<BookImg>? BookImgs { get; set; }
+        //[NotMapped]
+      //  public List <IFormFile> ImagesFiles { get; set; }
     }
 }
