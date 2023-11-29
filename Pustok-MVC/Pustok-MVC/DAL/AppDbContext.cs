@@ -10,11 +10,14 @@ namespace Pustok_MVC.DAL
            
         }
         public DbSet<Author> authors { get; set; }
-        public DbSet<Book> books { get; set; }
         public DbSet<Blog> blogs {get; set; }
+        public DbSet<BlogImgs> blogImgs { get; set; }
+        public DbSet<BlogTag> blogsTag { get; set; }
+        public DbSet<Book> books { get; set; }
         public DbSet<BookImg> bookImgs { get; set; }
+        public DbSet<BookTags> bookTags { get; set; }
         public DbSet<Catagory> catagories { get; set; }
         public DbSet<Slider> slider { get; set; }
-       // public DbSet<AdminVM> adminVMs { get; set; }
+        public DbSet<Tag> tags { get; set; }
     }
 }

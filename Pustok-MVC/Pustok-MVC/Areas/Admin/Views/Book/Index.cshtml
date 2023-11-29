@@ -13,7 +13,8 @@
                     <th scope="col">description</th>
                     <th scope="col ">Price</th>
                     <th scope="col">Author</th>
-             
+                    <th scope="col">Category</th>
+                    <th scope="col">Img</th>
                     <th>
                         
                         <a class="btn btn-danger" asp-controller="Book" asp-action="Create">Create</a>
@@ -32,10 +33,13 @@
                         <td>@book.Description</td>
                         <td>@book.Price</td>
                         <td>@book.AuthorId</td>
+                        <td>@book.CatagoryId</td>
+                        <td></td>
+                        @* @book.BookImgs *@
                         <td>
 
                             <a class="btn btn-primary" asp-controller="Book" asp-action="Update" asp-route-id="@book.Id">Update</a>
-                            <a class="btn btn-primary" asp-controller="Book" asp-action="Delete" asp-route-id="@book.Id">Update</a>
+                            <a class="btn btn-danger" asp-controller="Book" asp-action="Delete" asp-route-id="@book.Id">Delete</a>
 
                         </td>
                     </tr>

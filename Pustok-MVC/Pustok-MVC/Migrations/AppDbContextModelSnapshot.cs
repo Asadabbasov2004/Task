@@ -22,36 +22,6 @@ namespace Pustok_MVC.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Pustok_MVC.Areas.Admin.ViewModels.AdminVM", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("AuthorId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AuthorId");
-
-                    b.ToTable("adminVMs");
-                });
-
             modelBuilder.Entity("Pustok_MVC.Models.Author", b =>
                 {
                     b.Property<int>("Id")
@@ -81,6 +51,9 @@ namespace Pustok_MVC.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CatagoryId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
@@ -94,7 +67,54 @@ namespace Pustok_MVC.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CatagoryId");
+
                     b.ToTable("blogs");
+                });
+
+            modelBuilder.Entity("Pustok_MVC.Models.BlogImgs", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BlogId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BlogId");
+
+                    b.ToTable("blogImgs");
+                });
+
+            modelBuilder.Entity("Pustok_MVC.Models.BlogTag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BlogId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TagId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BlogId");
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("blogsTag");
                 });
 
             modelBuilder.Entity("Pustok_MVC.Models.Book", b =>
@@ -105,10 +125,10 @@ namespace Pustok_MVC.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("AdminVMId")
+                    b.Property<int?>("AuthorId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("AuthorId")
+                    b.Property<int>("CatagoryId")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -125,9 +145,9 @@ namespace Pustok_MVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AdminVMId");
-
                     b.HasIndex("AuthorId");
+
+                    b.HasIndex("CatagoryId");
 
                     b.ToTable("books");
                 });
@@ -140,9 +160,6 @@ namespace Pustok_MVC.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("AdminVMId")
-                        .HasColumnType("int");
-
                     b.Property<int>("BookId")
                         .HasColumnType("int");
 
@@ -152,11 +169,32 @@ namespace Pustok_MVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AdminVMId");
-
                     b.HasIndex("BookId");
 
                     b.ToTable("bookImgs");
+                });
+
+            modelBuilder.Entity("Pustok_MVC.Models.BookTags", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TagId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("bookTags");
                 });
 
             modelBuilder.Entity("Pustok_MVC.Models.Catagory", b =>
@@ -208,34 +246,83 @@ namespace Pustok_MVC.Migrations
                     b.ToTable("slider");
                 });
 
-            modelBuilder.Entity("Pustok_MVC.Areas.Admin.ViewModels.AdminVM", b =>
+            modelBuilder.Entity("Pustok_MVC.Models.Tag", b =>
                 {
-                    b.HasOne("Pustok_MVC.Models.Author", "Author")
-                        .WithMany()
-                        .HasForeignKey("AuthorId");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Navigation("Author");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("tags");
+                });
+
+            modelBuilder.Entity("Pustok_MVC.Models.Blog", b =>
+                {
+                    b.HasOne("Pustok_MVC.Models.Catagory", "Catagory")
+                        .WithMany("blogs")
+                        .HasForeignKey("CatagoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Catagory");
+                });
+
+            modelBuilder.Entity("Pustok_MVC.Models.BlogImgs", b =>
+                {
+                    b.HasOne("Pustok_MVC.Models.Blog", "Blog")
+                        .WithMany("blogImgs")
+                        .HasForeignKey("BlogId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Blog");
+                });
+
+            modelBuilder.Entity("Pustok_MVC.Models.BlogTag", b =>
+                {
+                    b.HasOne("Pustok_MVC.Models.Blog", "Blog")
+                        .WithMany("blogTags")
+                        .HasForeignKey("BlogId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Pustok_MVC.Models.Tag", "Tag")
+                        .WithMany("blogTags")
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Blog");
+
+                    b.Navigation("Tag");
                 });
 
             modelBuilder.Entity("Pustok_MVC.Models.Book", b =>
                 {
-                    b.HasOne("Pustok_MVC.Areas.Admin.ViewModels.AdminVM", null)
-                        .WithMany("books")
-                        .HasForeignKey("AdminVMId");
-
                     b.HasOne("Pustok_MVC.Models.Author", "Author")
                         .WithMany("books")
                         .HasForeignKey("AuthorId");
 
+                    b.HasOne("Pustok_MVC.Models.Catagory", "Catagory")
+                        .WithMany("books")
+                        .HasForeignKey("CatagoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Author");
+
+                    b.Navigation("Catagory");
                 });
 
             modelBuilder.Entity("Pustok_MVC.Models.BookImg", b =>
                 {
-                    b.HasOne("Pustok_MVC.Areas.Admin.ViewModels.AdminVM", null)
-                        .WithMany("BookImgs")
-                        .HasForeignKey("AdminVMId");
-
                     b.HasOne("Pustok_MVC.Models.Book", "Book")
                         .WithMany("BookImgs")
                         .HasForeignKey("BookId")
@@ -245,11 +332,23 @@ namespace Pustok_MVC.Migrations
                     b.Navigation("Book");
                 });
 
-            modelBuilder.Entity("Pustok_MVC.Areas.Admin.ViewModels.AdminVM", b =>
+            modelBuilder.Entity("Pustok_MVC.Models.BookTags", b =>
                 {
-                    b.Navigation("BookImgs");
+                    b.HasOne("Pustok_MVC.Models.Book", "Book")
+                        .WithMany("bookTags")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("books");
+                    b.HasOne("Pustok_MVC.Models.Tag", "Tag")
+                        .WithMany("bookTags")
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("Tag");
                 });
 
             modelBuilder.Entity("Pustok_MVC.Models.Author", b =>
@@ -257,9 +356,32 @@ namespace Pustok_MVC.Migrations
                     b.Navigation("books");
                 });
 
+            modelBuilder.Entity("Pustok_MVC.Models.Blog", b =>
+                {
+                    b.Navigation("blogImgs");
+
+                    b.Navigation("blogTags");
+                });
+
             modelBuilder.Entity("Pustok_MVC.Models.Book", b =>
                 {
                     b.Navigation("BookImgs");
+
+                    b.Navigation("bookTags");
+                });
+
+            modelBuilder.Entity("Pustok_MVC.Models.Catagory", b =>
+                {
+                    b.Navigation("blogs");
+
+                    b.Navigation("books");
+                });
+
+            modelBuilder.Entity("Pustok_MVC.Models.Tag", b =>
+                {
+                    b.Navigation("blogTags");
+
+                    b.Navigation("bookTags");
                 });
 #pragma warning restore 612, 618
         }

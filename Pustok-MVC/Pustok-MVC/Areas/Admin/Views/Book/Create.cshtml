@@ -1,4 +1,4 @@
-﻿@model CreateBookVm 
+﻿@model CreateBookVm
 <form method="post" enctype="multipart/form-data" asp-controller="Book" asp-action="Create">
     <div class="container">
         <form method="post" enctype="multipart/form-data">
@@ -13,37 +13,41 @@
                     <input asp-for="Price" class="form-control">
                     <span asp-validation-for="Price" style="color:red"></span>
                 </div>
-            <div class="row">
-                <div class="mb-3 col-md-6">
-                    <label asp-for="Description" class="form-label">Description</label>
-                    <textarea asp-for="Description" class="form-control" asp-for="Description" rows="4"></textarea>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label asp-for="Description" class="form-label">Description</label>
+                        <textarea asp-for="Description" class="form-control" asp-for="Description" rows="4"></textarea>
+                    </div>
                 </div>
-            </div>
-             <div class="row">
+                <div class="row">
                     <div class="mb-3 col-md-6">
                         <label asp-for="AuthorId" class="form-label">Author</label>
                         <select class="form-select" aria-label="Default select example" asp-for="AuthorId" asp-items="new SelectList(ViewBag.Authors,nameof(Author.Id),nameof(Author.Name))">
-                          
+                            <span asp-validation-for="Price" style="color:red"></span>
+
                         </select>
                     </div>
-             </div>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label asp-for="TagIds" class="form-label">Tag</label>
+                        <select class="form-select" aria-label="Default select example" asp-for="TagIds" asp-items="new SelectList(ViewBag.Tags, nameof(Tag.Id), nameof(Tag.Title))" multiple></select>
+                        <span asp-validation-for="TagIds" style="color:red"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label asp-for="CatagoryId" class="form-label">Catagory</label>
+                        <select class="form-select" aria-label="Default select example" asp-for="CatagoryId" asp-items="new SelectList(ViewBag.Category, nameof(Catagory.Id), nameof(Catagory.Name))" multiple></select>
+                        <span asp-validation-for="CatagoryId" style="color:red"></span>
+                    </div>
+                </div>
 
 
-              @*   <div class="mb-3 col-md-3">
-                    <label asp-for="Author" class="form-label">Author</label>
-                    <input asp-for="Author" class="form-control">
-                    <span asp-validation-for="Author" style="color:red"></span>
-                </div> *@
-              @*   <div class="mb-3 col-md-3">
-                    <label asp-for="AuthorId" class="form-label">Author</label>
-                    <input asp-for="Author" class="form-control">
-                    <span asp-validation-for="Author" style="color:red"></span>
-                </div> *@
-             @*    <div class="mb-3 col-md-3">
-                    <label asp-for="ImagesFiles" class="form-label">Image File</label>
-                    <input asp-for="ImagesFiles" class="form-control">
-                    <span asp-validation-for="ImagesFiles" style="color:red"></span>
-                </div> *@
+
+
 
             </div>
 

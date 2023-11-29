@@ -26,13 +26,16 @@ namespace Pustok_MVC.Areas.Admin.Controllers
         public async Task<IActionResult> Create()
         {
             ViewBag.Authors = await _db.authors.ToListAsync();
-
+            ViewBag.Tags =await _db.tags.ToListAsync();
+            ViewBag.Category =await _db.catagories.ToListAsync();
             return View();
         }
         [HttpPost]
         public async Task<IActionResult> Create(CreateBookVm createBookVm)
         {
             ViewBag.Authors = await _db.authors.ToListAsync();
+            ViewBag.Tags = await _db.tags.ToListAsync();
+            ViewBag.Category = await _db.catagories.ToListAsync();
 
             if (!ModelState.IsValid)
             {
@@ -70,27 +73,30 @@ namespace Pustok_MVC.Areas.Admin.Controllers
                 Description = createBookVm.Description,
                 Price = createBookVm.Price,
                 AuthorId = createBookVm.AuthorId,
+
             };
+          //  if(Book)
+
             await _db.books.AddAsync(book);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
 
 
-        [HttpPost]
+  
         public async Task<IActionResult> Delete(int id)
         {
-            var authorToDelete = await _db.authors.FindAsync(id);
+            var BookToDelete = await _db.books.FindAsync(id);
 
-            if (authorToDelete == null)
+            if (BookToDelete == null)
             {
-                return NotFound();
+                return  View("Update");
             }
 
-            _db.authors.Remove(authorToDelete);
+            _db.books.Remove(BookToDelete);
             await _db.SaveChangesAsync();
 
-            return RedirectToAction("Create");
+            return RedirectToAction("Index");
         }
 
 
