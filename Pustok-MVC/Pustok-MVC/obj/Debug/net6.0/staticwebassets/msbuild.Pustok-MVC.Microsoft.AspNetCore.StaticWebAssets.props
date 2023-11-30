@@ -13472,5 +13472,37 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\js\plugins.js))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\1fdfa10c-9f67-471a-a04c-af7d8e86f781daylily-flower-and-buds-sharp.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pustok-MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pustok-MVC</BasePath>
+      <RelativePath>Upload/Product/1fdfa10c-9f67-471a-a04c-af7d8e86f781daylily-flower-and-buds-sharp.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\1fdfa10c-9f67-471a-a04c-af7d8e86f781daylily-flower-and-buds-sharp.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\3c5f7505-f868-45e2-97b9-fec127db82b1OlderThanTheInternet.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pustok-MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pustok-MVC</BasePath>
+      <RelativePath>Upload/Product/3c5f7505-f868-45e2-97b9-fec127db82b1OlderThanTheInternet.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\3c5f7505-f868-45e2-97b9-fec127db82b1OlderThanTheInternet.png))</OriginalItemSpec>
+    </StaticWebAsset>
   </ItemGroup>
 </Project>

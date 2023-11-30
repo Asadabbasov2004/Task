@@ -5,12 +5,12 @@
     "\\Areas\\Admin",
     "\\Areas\\Admin\\Views",
     "\\Areas\\Admin\\Views\\Category",
-    "\\Areas\\Admin\\Views\\Slider",
+    "\\Areas\\Admin\\Views\\Dashboard",
     "\\Helpers",
     "\\Models",
     "\\wwwroot",
-    "\\wwwroot\\Upload"
+    "\\wwwroot\\Assets\\css"
   ],
-  "SelectedNode": "\\Areas\\Admin\\Views\\Category\\Index.cshtml",
+  "SelectedNode": "\\Models\\Slider.cs",
   "PreviewInSolutionExplorer": false
 }

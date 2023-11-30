@@ -1,4 +1,6 @@
-﻿namespace Pustok_MVC.Areas.Admin.ViewModels.Book
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Pustok_MVC.Areas.Admin.ViewModels.Book
 {
     public class CreateBookVm
     {
@@ -20,6 +22,11 @@
 
        //relation for Category ,many to one
        public int? CatagoryId { get; set; }
+        [Required]
+        public IFormFile MainPhoto { get; set; }
+        [Required]
+        public IFormFile  HoverPhoto { get; set; }
+        public List<IFormFile>? Photos { get; set; }
 
 
     }

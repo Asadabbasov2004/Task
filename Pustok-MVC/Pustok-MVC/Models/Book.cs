@@ -15,7 +15,7 @@ namespace Pustok_MVC.Models
 
 
         //relation for Category ,many to one
-        public int CatagoryId { get; set; }
+        public int? CatagoryId { get; set; }
         public Catagory? Catagory { get; set; }
 
 

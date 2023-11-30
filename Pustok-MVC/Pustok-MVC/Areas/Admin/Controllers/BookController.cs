@@ -3,6 +3,7 @@ using Pustok_MVC.Areas.Admin.ViewModels;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using Pustok_MVC.Areas.Admin.ViewModels.Book;
+using Microsoft.CodeAnalysis;
 
 namespace Pustok_MVC.Areas.Admin.Controllers
 {
@@ -11,7 +12,7 @@ namespace Pustok_MVC.Areas.Admin.Controllers
     {
         AppDbContext _db;
         private readonly IWebHostEnvironment _environment;
-    
+
         public BookController(AppDbContext db, IWebHostEnvironment environment)
         {
             _db = db;
@@ -19,15 +20,15 @@ namespace Pustok_MVC.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            List<Book> books = _db.books.ToList();
+            List<Book> books = _db.books.Include(b=>b.bookTags).ThenInclude(bt=>bt.Tag).Include(p=>p.BookImgs).ToList();
             return View(books);
 
         }
         public async Task<IActionResult> Create()
         {
             ViewBag.Authors = await _db.authors.ToListAsync();
-            ViewBag.Tags =await _db.tags.ToListAsync();
-            ViewBag.Category =await _db.catagories.ToListAsync();
+            ViewBag.Tags = await _db.tags.ToListAsync();
+            ViewBag.Category = await _db.catagories.ToListAsync();
             return View();
         }
         [HttpPost]
@@ -67,30 +68,81 @@ namespace Pustok_MVC.Areas.Admin.Controllers
                 ModelState.AddModelError("AuthorId", "Bele bir catagory movcud deyil");
                 return View();
             }
+
+            List<BookTags> bookTags = new();
+
+            foreach (int tagId in createBookVm.TagIds)
+            {
+
+                bookTags.Add(new() { TagId = tagId });
+            }
+
             Book book = new Book()
             {
                 Name = createBookVm.Name,
                 Description = createBookVm.Description,
                 Price = createBookVm.Price,
                 AuthorId = createBookVm.AuthorId,
-
+                bookTags = bookTags,
+                CatagoryId = createBookVm.CatagoryId,
+                BookImgs=new List<BookImg>()
             };
-          //  if(Book)
 
+            if (!createBookVm.MainPhoto.CheckType("image/"))
+            {
+                ModelState.AddModelError("MainPhoto", "Duzgun formatda sekil qoy");
+                return View();
+            }
+            if (!createBookVm.MainPhoto.CheckLength(3000))
+            {
+                ModelState.AddModelError("MainPhoto", "Duzgun olcude (3mb) sekil qoy");
+                return View();
+            }
+            if (!createBookVm.HoverPhoto.CheckType("image/"))
+            {
+                ModelState.AddModelError("HoverPhoto", "Duzgun formatda sekil qoy");
+                return View();
+            }
+            if (!createBookVm.HoverPhoto.CheckLength(3000))
+            {
+                ModelState.AddModelError("HoverPhoto", "Duzgun olcude (3mb) sekil qoy");
+                return View();
+            }
+
+            BookImg mainImg = new BookImg()
+            {
+                IsPrime = true,
+                Url = createBookVm.MainPhoto.Upload(_environment.WebRootPath, @"\Upload\Product\"),
+                Book = book,
+            };
+
+            BookImg hoverImg = new BookImg()
+            {
+                IsPrime = false,
+                Url = createBookVm.HoverPhoto.Upload(_environment.WebRootPath, @"\Upload\Product\"),
+                Book = book,
+            };
+
+            book.BookImgs.Add(mainImg);
+            book.BookImgs.Add(hoverImg);
+
+
+            //await _db.bookImgs.AddAsync(mainImg);
+            //await _db.bookImgs.AddAsync(hoverImg);
             await _db.books.AddAsync(book);
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
 
-  
+
         public async Task<IActionResult> Delete(int id)
         {
             var BookToDelete = await _db.books.FindAsync(id);
 
             if (BookToDelete == null)
             {
-                return  View("Update");
+                return View("Update");
             }
 
             _db.books.Remove(BookToDelete);

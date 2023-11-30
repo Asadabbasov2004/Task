@@ -50,7 +50,23 @@
 
 
             </div>
-
+            <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label asp-for="MainPhoto" class="form-label">MainPhoto</label>
+                    <input asp-for="MainPhoto" class="form-control" >
+                    <span asp-validation-for="MainPhoto" style="color:red"></span>
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label asp-for="HoverPhoto" class="form-label">HoverPhoto</label>
+                    <input asp-for="HoverPhoto" class="form-control">
+                    <span asp-validation-for="HoverPhoto" style="color:red"></span>
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label asp-for="Photos" class="form-label">Photos</label>
+                    <input asp-for="Photos" class="form-control">
+                    <span asp-validation-for="Photos" style="color:red"></span>
+                </div>
+            </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>

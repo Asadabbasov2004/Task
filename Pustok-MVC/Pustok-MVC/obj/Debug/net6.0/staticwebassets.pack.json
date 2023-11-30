@@ -525,6 +525,14 @@
       "PackagePath": "staticwebassets\\AdminStyle\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2"
     },
     {
+      "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pustok-MVC\\Pustok-MVC\\wwwroot\\Upload\\Product\\1fdfa10c-9f67-471a-a04c-af7d8e86f781daylily-flower-and-buds-sharp.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\1fdfa10c-9f67-471a-a04c-af7d8e86f781daylily-flower-and-buds-sharp.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pustok-MVC\\Pustok-MVC\\wwwroot\\Upload\\Product\\3c5f7505-f868-45e2-97b9-fec127db82b1OlderThanTheInternet.png",
+      "PackagePath": "staticwebassets\\Upload\\Product\\3c5f7505-f868-45e2-97b9-fec127db82b1OlderThanTheInternet.png"
+    },
+    {
       "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pustok-MVC\\Pustok-MVC\\wwwroot\\bootstrap-5.0.2\\bootstrap-5.0.2\\.babelrc.js",
       "PackagePath": "staticwebassets\\bootstrap-5.0.2\\bootstrap-5.0.2\\.babelrc.js"
     },

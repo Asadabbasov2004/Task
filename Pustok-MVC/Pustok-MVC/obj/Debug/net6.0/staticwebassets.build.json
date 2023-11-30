@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "J9FOaOUHoY4uDp+hPQIqejLC7WgyuyE78c5Tb0jaVp0=",
+  "Hash": "yCoztK/1oovsbDcCYBR/IXFlOxovn1HdejJX3VHcXE8=",
   "Source": "Pustok-MVC",
   "BasePath": "_content/Pustok-MVC",
   "Mode": "Default",
@@ -16013,6 +16013,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\plugins.js"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Desktop\\Task\\Pustok-MVC\\Pustok-MVC\\wwwroot\\Upload\\Product\\1fdfa10c-9f67-471a-a04c-af7d8e86f781daylily-flower-and-buds-sharp.jpg",
+      "SourceId": "Pustok-MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\Task\\Pustok-MVC\\Pustok-MVC\\wwwroot\\",
+      "BasePath": "_content/Pustok-MVC",
+      "RelativePath": "Upload/Product/1fdfa10c-9f67-471a-a04c-af7d8e86f781daylily-flower-and-buds-sharp.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Product\\1fdfa10c-9f67-471a-a04c-af7d8e86f781daylily-flower-and-buds-sharp.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Desktop\\Task\\Pustok-MVC\\Pustok-MVC\\wwwroot\\Upload\\Product\\3c5f7505-f868-45e2-97b9-fec127db82b1OlderThanTheInternet.png",
+      "SourceId": "Pustok-MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\Task\\Pustok-MVC\\Pustok-MVC\\wwwroot\\",
+      "BasePath": "_content/Pustok-MVC",
+      "RelativePath": "Upload/Product/3c5f7505-f868-45e2-97b9-fec127db82b1OlderThanTheInternet.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Product\\3c5f7505-f868-45e2-97b9-fec127db82b1OlderThanTheInternet.png"
     }
   ]
 }

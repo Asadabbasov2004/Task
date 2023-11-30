@@ -108,6 +108,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\AdminStyle\Upload\" />
+    <Folder Include="wwwroot\Upload\Product\" />
   </ItemGroup>
 
 </Project>

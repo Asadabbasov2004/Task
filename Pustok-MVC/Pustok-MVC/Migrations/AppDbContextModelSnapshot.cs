@@ -128,7 +128,7 @@ namespace Pustok_MVC.Migrations
                     b.Property<int?>("AuthorId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CatagoryId")
+                    b.Property<int?>("CatagoryId")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -162,6 +162,9 @@ namespace Pustok_MVC.Migrations
 
                     b.Property<int>("BookId")
                         .HasColumnType("int");
+
+                    b.Property<bool>("IsPrime")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Url")
                         .IsRequired()
@@ -312,9 +315,7 @@ namespace Pustok_MVC.Migrations
 
                     b.HasOne("Pustok_MVC.Models.Catagory", "Catagory")
                         .WithMany("books")
-                        .HasForeignKey("CatagoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CatagoryId");
 
                     b.Navigation("Author");
 
