@@ -13,7 +13,7 @@ namespace Pronia_MVC.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            List<Category> categories =  _context.categories.Include(p => p.Products).ToList();
+            List<Category> categories =  _context.Categories.Include(p => p.Products).ToList();
             return View(categories);
         }
         public IActionResult Create()
@@ -24,7 +24,7 @@ namespace Pronia_MVC.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Create(Category category)
         {
-             _context.categories.Add(category); 
+             _context.Categories.Add(category); 
              _context.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -32,14 +32,14 @@ namespace Pronia_MVC.Areas.Admin.Controllers
         public IActionResult Delete(int id)
         {
 
-            Category category =  _context.categories.Find(id);
-             _context.categories.Remove(category);
+            Category category =  _context.Categories.Find(id);
+             _context.Categories.Remove(category);
              _context.SaveChanges();
             return RedirectToAction("Index");
         }
         public IActionResult Update(int id)
         {
-            Category category =  _context.categories.Find(id);
+            Category category =  _context.Categories.Find(id);
             return View(category);
         }
         [HttpPost]
@@ -49,7 +49,7 @@ namespace Pronia_MVC.Areas.Admin.Controllers
             {
                 return View();
             }
-            Category oldcategory =  _context.categories.Find(newcategory.Id);
+            Category oldcategory =  _context.Categories.Find(newcategory.Id);
             oldcategory.Name = newcategory.Name;
 
              _context.SaveChanges();

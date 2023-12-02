@@ -8,11 +8,12 @@ namespace Pronia_MVC.DAL
         {
             
         }
-        public DbSet <Slider> sliders { get; set; }
-        public DbSet <Product> products { get; set; }
-        public DbSet <Category> categories { get; set; }
-        public DbSet <Tag> tags { get; set; }
-        public DbSet<ProductTag> productTags { get; set; }
-        public DbSet<ProductImages> productImages { get; set; }
+        public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<ProductTag> ProductTags { get; set; }
+        public DbSet<ProductImages> ProductImages { get; set; }
+
     }
 }

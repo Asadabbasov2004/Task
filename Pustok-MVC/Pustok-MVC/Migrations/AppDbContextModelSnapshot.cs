@@ -163,7 +163,7 @@ namespace Pustok_MVC.Migrations
                     b.Property<int>("BookId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("IsPrime")
+                    b.Property<bool?>("IsPrime")
                         .HasColumnType("bit");
 
                     b.Property<string>("Url")

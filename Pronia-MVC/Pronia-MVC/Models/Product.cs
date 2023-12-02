@@ -7,9 +7,9 @@
         public string Description { get; set; }
         public string Sku { get; set; }
         public double Price { get; set; }
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; }
         public Category? Category { get; set; }
-        public List<ProductTag>? productTags { get; set; }
+        public List<ProductTag>? ProductTags { get; set; }
         public List<ProductImages>? ProductImages { get; set; }
 
     }

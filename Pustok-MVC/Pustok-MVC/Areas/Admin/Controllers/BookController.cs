@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Pustok_MVC.Areas.Admin.ViewModels;
-using System.IO;
-using Microsoft.AspNetCore.Http;
-using Pustok_MVC.Areas.Admin.ViewModels.Book;
 using Microsoft.CodeAnalysis;
+using Pustok_MVC.Areas.Admin.ViewModels.BookVm;
 
 namespace Pustok_MVC.Areas.Admin.Controllers
 {
@@ -20,7 +17,7 @@ namespace Pustok_MVC.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            List<Book> books = _db.books.Include(b=>b.bookTags).ThenInclude(bt=>bt.Tag).Include(p=>p.BookImgs).ToList();
+            List<Book> books = _db.books.Include(b => b.bookTags).ThenInclude(bt => bt.Tag).Include(p => p.BookImgs).ToList();
             return View(books);
 
         }
@@ -85,7 +82,7 @@ namespace Pustok_MVC.Areas.Admin.Controllers
                 AuthorId = createBookVm.AuthorId,
                 bookTags = bookTags,
                 CatagoryId = createBookVm.CatagoryId,
-                BookImgs=new List<BookImg>()
+                BookImgs = new List<BookImg>()
             };
 
             if (!createBookVm.MainPhoto.CheckType("image/"))
@@ -122,14 +119,32 @@ namespace Pustok_MVC.Areas.Admin.Controllers
                 Url = createBookVm.HoverPhoto.Upload(_environment.WebRootPath, @"\Upload\Product\"),
                 Book = book,
             };
-
+            TempData["Error"] = "";
+            if (createBookVm.Photos != null)
+            {
+                foreach (var item in createBookVm.Photos)
+                {
+                    if (!item.CheckType("image/"))
+                    {
+                        TempData["Error"] += $"{item.FileName}-bu duzgun formatda deyil ";
+                        continue;
+                    }
+                    if (!item.CheckLength(3000))
+                    {
+                        TempData["Error"] += $"{item.FileName}- 3mb dan yuxaridir ";
+                        continue;
+                    }
+                    BookImg newPhoto = new BookImg()
+                    {
+                        IsPrime = null,
+                        Url = item.Upload(_environment.WebRootPath, @"\Upload\Product\"),
+                        Book = book,
+                    };
+                    book.BookImgs.Add(newPhoto);
+                }
+            }
             book.BookImgs.Add(mainImg);
             book.BookImgs.Add(hoverImg);
-
-
-            //await _db.bookImgs.AddAsync(mainImg);
-            //await _db.bookImgs.AddAsync(hoverImg);
-            await _db.books.AddAsync(book);
             await _db.SaveChangesAsync();
             return RedirectToAction("Index");
         }

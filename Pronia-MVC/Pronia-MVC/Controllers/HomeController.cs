@@ -4,19 +4,21 @@ namespace Pronia_MVC.Controllers
 {
     public class HomeController : Controller
     {
-        AppDbContext _context;
+        AppDbContext _db;
 
-        public HomeController(AppDbContext context)
+        public HomeController(AppDbContext db)
         {
-            _context = context;
+            _db = db;
         }
-        public async  Task<IActionResult> Index()
+
+        public async Task<IActionResult> Index()
         {
             HomeVm homeVm = new HomeVm()
             {
-                sliders=await _context.sliders.ToListAsync(),
-                products = await _context.products.Include(p => p.ProductImages).ToListAsync() 
+                sliders = await _db.Sliders.ToListAsync(),
+                products = await _db.Products.Include(p => p.ProductImages).ToListAsync()
             };
+
             return View(homeVm);
         }
     }

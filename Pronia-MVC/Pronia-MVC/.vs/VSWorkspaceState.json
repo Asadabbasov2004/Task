@@ -2,15 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\Areas",
-    "\\Areas\\Admin",
-    "\\Areas\\Admin\\Views",
-    "\\Areas\\Admin\\Views\\Category",
-    "\\Areas\\Admin\\Views\\Dashboard",
+    "\\DAL",
     "\\Helpers",
     "\\Models",
     "\\wwwroot",
-    "\\wwwroot\\Assets\\css"
+    "\\wwwroot\\AdminStyle"
   ],
-  "SelectedNode": "\\Models\\Slider.cs",
+  "SelectedNode": "\\Pronia-MVC.csproj",
   "PreviewInSolutionExplorer": false
 }

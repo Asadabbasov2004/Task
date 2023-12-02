@@ -1,7 +1,11 @@
-﻿using System.IO;
-using Microsoft.AspNetCore.Mvc;
+﻿
 
-namespace Pronia_MVC.Areas.Admin.Controllers
+
+
+
+using System.IO;
+
+namespace BB205_Pronia.Areas.Manage.Controllers
 {
     [Area("Admin")]
     public class SliderController : Controller
@@ -17,7 +21,7 @@ namespace Pronia_MVC.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            List<Slider> sliderList = _context.sliders.ToList();
+            List<Slider> sliderList = _context.Sliders.ToList();
             return View(sliderList);
         }
 
@@ -39,7 +43,6 @@ namespace Pronia_MVC.Areas.Admin.Controllers
                 return View();
             }
 
-            slider.ImgUrl = slider.ImageFile.Upload(_environment.WebRootPath, @"\Upload\SliderImage\");
             //string filname = slider.ImageFile.FileName;
             //if(filname.Length >64 )
             //{
@@ -56,6 +59,7 @@ namespace Pronia_MVC.Areas.Admin.Controllers
 
 
 
+            slider.ImgUrl = slider.ImageFile.Upload(_environment.WebRootPath, @"\Upload\SliderImage\");
 
 
 
@@ -63,7 +67,7 @@ namespace Pronia_MVC.Areas.Admin.Controllers
             {
                 return View();
             }
-            await _context.sliders.AddAsync(slider);
+            await _context.Sliders.AddAsync(slider);
             await _context.SaveChangesAsync();
 
 
@@ -73,33 +77,12 @@ namespace Pronia_MVC.Areas.Admin.Controllers
 
         public IActionResult Delete(int id)
         {
-            var slider = _context.sliders.FirstOrDefault(s => s.Id == id);
+            var slider = _context.Sliders.FirstOrDefault(s => s.Id == id);
 
-            _context.sliders.Remove(slider);
+            _context.Sliders.Remove(slider);
             _context.SaveChanges();
             FileManager.DeleteFile(slider.ImgUrl, _environment.WebRootPath, @"\Upload\SliderImage\");
             return RedirectToAction("Index");
         }
-
-        public IActionResult Update(int id) {
-            Slider slider = _context.sliders.Find(id);
-            return View(slider);
-        }
-        [HttpPost]
-       public IActionResult Update(Slider slider) {
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
-            Slider oldslider = _context.sliders.Find(slider.Id);
-            oldslider.Title = slider.Title;
-            oldslider.SubTitle = slider.SubTitle;
-            oldslider.ImgUrl = slider.ImgUrl;
-            oldslider.Description = slider.Description;
-            _context.SaveChanges();
-
-            return RedirectToAction("Update");
-        }
-
     }
 }

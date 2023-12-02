@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Pustok_MVC.Areas.Admin.ViewModels.BookVm;
 
 namespace Pustok_MVC.Areas.Admin.Controllers
 {
@@ -13,17 +14,32 @@ namespace Pustok_MVC.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            List<Catagory> catagories = _db.catagories.ToList();
+            List<Catagory> catagories = _db.catagories.Include(p=>p.books).Include(p=>p.blogs).ToList();
             return View(catagories);
         }
-        public IActionResult Create()
+        public async Task< IActionResult> Create()
         {
-            return View();
+            ViewBag.Blog =await _db.blogs.ToListAsync();
+            ViewBag.Book =await _db.books.ToListAsync();
+             return View();
         }
         [HttpPost]
-        public IActionResult Create(Catagory category)
+        public async Task< IActionResult> Create(CreateBookVm createBookVm)
         {
-            _db.catagories.Add(category);
+            ViewBag.Blog = await _db.blogs.ToListAsync();
+            ViewBag.Book = await _db.books.ToListAsync();
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            Catagory catagory = new Catagory()
+            {
+                Name = createBookVm.Name,
+                CatagoryId = createBookVm.CatagoryId,
+            };
+
+            await _db.catagories.AddAsync(catagory);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
