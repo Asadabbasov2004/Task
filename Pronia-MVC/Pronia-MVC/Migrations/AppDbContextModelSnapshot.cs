@@ -32,11 +32,12 @@ namespace Pronia_MVC.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("categories");
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("Pronia_MVC.Models.Product", b =>
@@ -47,7 +48,7 @@ namespace Pronia_MVC.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CategoryId")
+                    b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -69,7 +70,7 @@ namespace Pronia_MVC.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("products");
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Pronia_MVC.Models.ProductImages", b =>
@@ -80,7 +81,7 @@ namespace Pronia_MVC.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<bool>("IsPrime")
+                    b.Property<bool?>("IsPrime")
                         .HasColumnType("bit");
 
                     b.Property<int>("ProductId")
@@ -94,7 +95,7 @@ namespace Pronia_MVC.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("productImages");
+                    b.ToTable("ProductImages");
                 });
 
             modelBuilder.Entity("Pronia_MVC.Models.ProductTag", b =>
@@ -108,7 +109,7 @@ namespace Pronia_MVC.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("TagId")
+                    b.Property<int>("TagId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -117,7 +118,7 @@ namespace Pronia_MVC.Migrations
 
                     b.HasIndex("TagId");
 
-                    b.ToTable("productTags");
+                    b.ToTable("ProductTags");
                 });
 
             modelBuilder.Entity("Pronia_MVC.Models.Slider", b =>
@@ -145,7 +146,7 @@ namespace Pronia_MVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("sliders");
+                    b.ToTable("Sliders");
                 });
 
             modelBuilder.Entity("Pronia_MVC.Models.Tag", b =>
@@ -162,16 +163,14 @@ namespace Pronia_MVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("tags");
+                    b.ToTable("Tags");
                 });
 
             modelBuilder.Entity("Pronia_MVC.Models.Product", b =>
                 {
                     b.HasOne("Pronia_MVC.Models.Category", "Category")
                         .WithMany("Products")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CategoryId");
 
                     b.Navigation("Category");
                 });
@@ -190,14 +189,16 @@ namespace Pronia_MVC.Migrations
             modelBuilder.Entity("Pronia_MVC.Models.ProductTag", b =>
                 {
                     b.HasOne("Pronia_MVC.Models.Product", "Product")
-                        .WithMany("productTags")
+                        .WithMany("ProductTags")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Pronia_MVC.Models.Tag", "Tag")
                         .WithMany("productTags")
-                        .HasForeignKey("TagId");
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Product");
 
@@ -213,7 +214,7 @@ namespace Pronia_MVC.Migrations
                 {
                     b.Navigation("ProductImages");
 
-                    b.Navigation("productTags");
+                    b.Navigation("ProductTags");
                 });
 
             modelBuilder.Entity("Pronia_MVC.Models.Tag", b =>

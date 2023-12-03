@@ -33040,6 +33040,118 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\manage\vendor\jquery\jquery.slim.min.map))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\05d464e8-f2aa-40af-853c-2fc46eada822OlderThanTheInternet.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pronia-MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pronia-MVC</BasePath>
+      <RelativePath>Upload/Product/05d464e8-f2aa-40af-853c-2fc46eada822OlderThanTheInternet.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\05d464e8-f2aa-40af-853c-2fc46eada822OlderThanTheInternet.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\3cf1616a-484e-4f1f-aa87-213a4f9675dcdaylily-flower-and-buds-sharp - Copy.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pronia-MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pronia-MVC</BasePath>
+      <RelativePath>Upload/Product/3cf1616a-484e-4f1f-aa87-213a4f9675dcdaylily-flower-and-buds-sharp - Copy.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\3cf1616a-484e-4f1f-aa87-213a4f9675dcdaylily-flower-and-buds-sharp - Copy.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\3d3dba28-efd1-4478-93ae-afad80fb91b6OlderThanTheInternet.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pronia-MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pronia-MVC</BasePath>
+      <RelativePath>Upload/Product/3d3dba28-efd1-4478-93ae-afad80fb91b6OlderThanTheInternet.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\3d3dba28-efd1-4478-93ae-afad80fb91b6OlderThanTheInternet.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\544d6b57-1bdf-4335-bfbd-467ff80a871fduct-Scotland-Harry-Potter-Train_by_Laurence-Norah-1024x682.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pronia-MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pronia-MVC</BasePath>
+      <RelativePath>Upload/Product/544d6b57-1bdf-4335-bfbd-467ff80a871fduct-Scotland-Harry-Potter-Train_by_Laurence-Norah-1024x682.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\544d6b57-1bdf-4335-bfbd-467ff80a871fduct-Scotland-Harry-Potter-Train_by_Laurence-Norah-1024x682.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\adc42e52-d54f-4852-b212-02b8105fa01ddaylily-flower-and-buds-sharp - Copy.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pronia-MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pronia-MVC</BasePath>
+      <RelativePath>Upload/Product/adc42e52-d54f-4852-b212-02b8105fa01ddaylily-flower-and-buds-sharp - Copy.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\adc42e52-d54f-4852-b212-02b8105fa01ddaylily-flower-and-buds-sharp - Copy.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\e6a7a6f8-ec13-4db2-9729-247eea529a6eOlderThanTheInternet.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pronia-MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pronia-MVC</BasePath>
+      <RelativePath>Upload/Product/e6a7a6f8-ec13-4db2-9729-247eea529a6eOlderThanTheInternet.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\e6a7a6f8-ec13-4db2-9729-247eea529a6eOlderThanTheInternet.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\e6f521e0-241e-4146-8ab4-1e3d991f7730Ekran görüntüsü 2023-10-04 120813.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pronia-MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pronia-MVC</BasePath>
+      <RelativePath>Upload/Product/e6f521e0-241e-4146-8ab4-1e3d991f7730Ekran görüntüsü 2023-10-04 120813.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Product\e6f521e0-241e-4146-8ab4-1e3d991f7730Ekran görüntüsü 2023-10-04 120813.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\SliderImage\1-1-310x220.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Pronia-MVC</SourceId>

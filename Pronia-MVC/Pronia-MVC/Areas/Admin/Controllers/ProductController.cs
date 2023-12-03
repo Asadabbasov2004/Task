@@ -37,7 +37,7 @@ namespace BB205_Pronia.Areas.Manage.Controllers
         {
             ViewBag.Categories = await _db.Categories.ToListAsync();
             ViewBag.Tags = await _db.Tags.ToListAsync();
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View();
             }
@@ -82,11 +82,12 @@ namespace BB205_Pronia.Areas.Manage.Controllers
 
             if (!createProductVm.MainPhoto.CheckType("image/"))
             {
-                ModelState.AddModelError("MainPhoto", "Duzgun format (sekil) deyil");
+                ModelState.AddModelError("MainPhoto", "Duzgun format (sekil) deyil \t");
+                return View();
             }
             if (!createProductVm.MainPhoto.CheckLength(3000))
             {
-                ModelState.AddModelError("MainPhoto", "max 3mb sekil ola biler");
+                ModelState.AddModelError("MainPhoto", "max 3mb sekil ola biler \t");
                 return View();
             }
 
@@ -113,7 +114,32 @@ namespace BB205_Pronia.Areas.Manage.Controllers
                 Url = createProductVm.HoverPhoto.Upload(_webHostEnvironment.WebRootPath, @"\Upload\Product\"),
                 Product = product,
             };
-
+            product.ProductImages.Add(mainImages);
+            product.ProductImages.Add(hoverImages);
+            TempData["Error"] = "";
+            if (createProductVm.Photos != null)
+            {
+                foreach (var photo in createProductVm.Photos)
+                {
+                    if (!photo.CheckType("image/"))
+                    {
+                        TempData["Error"] += $"{photo.FileName} -duzgun format deyil";
+                        continue;
+                    }
+                    if (!photo.CheckLength(3000))
+                    {
+                        TempData["Error"] += $"{photo.FileName} - 3mb dan boyuk olmaz";
+                        continue;
+                    }
+                    ProductImages newPhoto = new ProductImages()
+                    {
+                        IsPrime = null,
+                        Url = photo.Upload(_webHostEnvironment.WebRootPath, @"\Upload\Product\"),
+                        Product = product,
+                    };
+                    product.ProductImages.Add(newPhoto);
+                }
+            }
             //await _db.ProductImages.AddAsync()
             await _db.Products.AddAsync(product);
             await _db.SaveChangesAsync();
