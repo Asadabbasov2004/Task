@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Pronia_MVC.Areas.Admin.ViewModels.Product;
+using Pronia_MVC.Models;
 
 namespace BB205_Pronia.Areas.Manage.Controllers
 {
@@ -151,7 +152,9 @@ namespace BB205_Pronia.Areas.Manage.Controllers
             Product product = await _db.Products.Include(p => p.Category)
                 .Include(p => p.ProductTags)
                 .ThenInclude(p => p.Tag)
-                .Where(p => p.Id == id).FirstOrDefaultAsync();
+                .Where(p => p.Id == id)
+                .Include(p => p.ProductImages)
+                .FirstOrDefaultAsync();
             if (product == null)
             {
                 return View("Error");
@@ -163,14 +166,33 @@ namespace BB205_Pronia.Areas.Manage.Controllers
                 Id = id,
                 Name = product.Name,
                 Description = product.Description,
+                Price = product.Price,
                 SKU = product.Sku,
                 CategoryId = product.CategoryId,
-                TagIds = new List<int>()
+                TagIds = new List<int>(),
+                productImages = new List<ProductImagesVm>(),
             };
 
             foreach (var item in product.ProductTags)
             {
                 updateProductVm.TagIds.Add(item.TagId);
+            }
+            foreach (var item in product.ProductImages)
+            {
+                ProductImagesVm productImages = new ProductImagesVm()
+                {
+                    Id = item.Id,
+                    IsPrime = item.IsPrime,
+                    Url = item.Url,
+                };
+                if (productImages == null)
+                {
+                    return View("Error");
+                }
+                if (productImages != null)
+                {
+                    updateProductVm.productImages.Add(productImages);
+                }
             }
             return View(updateProductVm);
         }
@@ -184,10 +206,9 @@ namespace BB205_Pronia.Areas.Manage.Controllers
             ViewBag.Tags = await _db.Tags.ToListAsync();
             if (!ModelState.IsValid)
             {
-
-                return View("Error");
+                return View();
             }
-            Product existProduct = await _db.Products.Where(p => p.Id == updateProductVm.Id).FirstOrDefaultAsync();
+            Product existProduct = await _db.Products.Where(p => p.Id == updateProductVm.Id).Include(p => p.ProductTags).ThenInclude(p => p.Tag).Include(b => b.ProductImages).FirstOrDefaultAsync();
             if (existProduct == null)
             {
                 return View("Error");
@@ -214,6 +235,8 @@ namespace BB205_Pronia.Areas.Manage.Controllers
                         return View();
                     }
                 }
+
+
                 List<int> createTags;
                 if (existProduct.ProductTags != null)
                 {
@@ -240,10 +263,123 @@ namespace BB205_Pronia.Areas.Manage.Controllers
             }
             else
             {
-                //existProduct.ProductTags =new List<ProductTag>();
                 var productTagList = _db.ProductTags.Where(pt => pt.ProductId == existProduct.Id).ToList();
                 _db.ProductTags.RemoveRange(productTagList);
             }
+
+            TempData["Error"] = "";
+
+            //       Mainphoto
+
+            if (updateProductVm.MainPhoto != null)
+            {
+                if (!updateProductVm.MainPhoto.CheckType("image/"))
+                {
+                    ModelState.AddModelError("MainPhoto", "ancaq sekil ola biler");
+                    return View();
+                }
+                if (updateProductVm.MainPhoto.CheckLength(3000))
+                {
+                    ModelState.AddModelError("MainPhoto", "3mb dan boyuk olmaz");
+                    return View();
+                }
+              
+                var oldPhoto = existProduct.ProductImages?.FirstOrDefault(p => p.IsPrime == true);
+                existProduct.ProductImages?.Remove(oldPhoto);
+                ProductImages newproductimage = new ProductImages()
+                {
+                    IsPrime = true,
+                    ProductId = existProduct.Id,
+                    Url = updateProductVm.MainPhoto.Upload(_webHostEnvironment.WebRootPath, @"\Upload\Product\")
+
+
+                };
+                existProduct.ProductImages?.Add(newproductimage);
+            }
+
+            /// hoverphoto
+
+            if (updateProductVm.HoverPhoto != null)
+            {
+                if (!updateProductVm.HoverPhoto.CheckType("image/"))
+                {
+                    ModelState.AddModelError("HoverPhoto", "ancaq sekil ola biler") ;
+                    return View();
+                }
+                if (updateProductVm.HoverPhoto.CheckLength(3000))
+                {
+                    ModelState.AddModelError("HoverPhoto", "3mb dan boyuk olmaz");
+                    return View();
+                }
+              
+                var oldPhoto = existProduct.ProductImages?.FirstOrDefault(p => p.IsPrime == false);
+                existProduct.ProductImages?.Remove(oldPhoto);
+                ProductImages newhover = new ProductImages()
+                {
+                    IsPrime = false,
+                    ProductId = existProduct.Id,
+                    Url = updateProductVm.HoverPhoto.Upload(_webHostEnvironment.WebRootPath, @"\Upload\Product\")
+
+
+                };
+                existProduct.ProductImages?.Add(newhover);
+            }
+            if (updateProductVm.ImageIds == null)
+            {
+                existProduct.ProductImages.RemoveAll(b => b.IsPrime == null);
+            }
+            else
+            {
+                var removeListImage = existProduct.ProductImages?.Where(p => !updateProductVm.ImageIds.Contains(p.Id) && p.IsPrime == null).ToList();
+                if (removeListImage != null)
+                {
+                    foreach (var image in removeListImage)
+                    {
+                        existProduct.ProductImages.Remove(image);
+                        FileManager.DeleteFile(image.Url, _webHostEnvironment.WebRootPath, @"\Upload\Product\");
+                    }
+
+
+                }
+                else
+                {
+                    existProduct.ProductImages.RemoveAll(p => p.IsPrime == null);
+                }
+
+            }
+
+            //all additional photos
+
+            if (updateProductVm.Photos != null)
+            {
+                foreach (var photo in updateProductVm.Photos)
+                {
+                    if (!photo.CheckType("image/"))
+                    {
+                        TempData["Error"] += $"{photo.FileName} ancaq sekil ola biler\t";
+                        continue;
+
+                    }
+                    if (photo.CheckLength(3000))
+                    {
+                        TempData["Error"] += $"{photo.FileName} 3mb dan boyuk olmaz";
+
+                        continue;
+                    }
+
+                    ProductImages multipleimage = new ProductImages()
+                    {
+
+                        IsPrime = null,
+                        Url = photo.Upload(_webHostEnvironment.WebRootPath, @"\Upload\Product\"),
+                        Product = existProduct
+                    };
+                    existProduct.ProductImages?.Add(multipleimage);
+
+                }
+            }
+
+
 
             await _db.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
@@ -253,6 +389,12 @@ namespace BB205_Pronia.Areas.Manage.Controllers
         public IActionResult Delete(int id)
         {
             var product = _db.Products.FirstOrDefault(p => p.Id == id);
+
+            var relatedProductTag = _db.ProductTags.Where(pt => pt.ProductId == id);
+            var relatedProductImage = _db.ProductImages.Where(pt => pt.ProductId == id);
+           
+            _db.ProductImages.RemoveRange(relatedProductImage);
+            _db.ProductTags.RemoveRange(relatedProductTag);
             if (product == null)
             {
                 return View("Error");

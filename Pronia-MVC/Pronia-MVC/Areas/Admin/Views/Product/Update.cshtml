@@ -15,7 +15,7 @@
                 <span asp-validation-for="SKU" style="color:red"></span>
             </div>
             <div class="mb-3 col-md-3">
-                <label asp-for="Price" class="form-la<a href=" c:\users\asus\desktop\bb205_repos\bb205_pronia\bb205_pronia\areas\manage\views\product\update.cshtml">c:\users\asus\desktop\bb205_repos\bb205_pronia\bb205_pronia\areas\manage\views\product\update.cshtml</a>bel">Price</label>
+                <label asp-for="Price" class="form-label" >Price</label>
                 <input asp-for="Price" class="form-control">
                 <span asp-validation-for="Price" style="color:red"></span>
             </div>
@@ -43,7 +43,50 @@
                 <span asp-validation-for="TagIds" style="color:red"></span>
             </div>
         </div>
+        <div class="row">
+            <div class="mb-3 col-md-3">
+                <div style="width:100px; height:150px">
+                    <img style='width:100% ;height:150px' src="~/Upload/Product/@Model.productImages.FirstOrDefault(p=>p.IsPrime==true).Url" />
+                </div>
+                <label asp-for="MainPhoto" class="form-label">MainPhoto </label>
+                <input asp-for="MainPhoto" class="form-control">
+                <span asp-validation-for="MainPhoto" style="color:red"></span>
+            </div>
+            <div class="mb-3 col-md-3">
+                <div style="width:100px; height:150px">
+                    <img style='width:100% ;height:100%' src="~/Upload/Product/@Model.productImages?.FirstOrDefault(p=>p.IsPrime==false)?.Url" />
+                </div>
+                <label asp-for="HoverPhoto " class="form-label">HoverPhoto </label>
+                <input asp-for="HoverPhoto" class="form-control">
+                <span asp-validation-for="HoverPhoto" style="color:red"></span>
+            </div>
 
+        </div>
+        <div class="row">
+            @foreach (var item in Model.productImages?.Where(p => p.IsPrime == null)?.ToList())
+            {
+                <div class="col-3 position-relative">
+                    <img style="width:40%; height150px" src="~/Upload/Product/@item.Url" />
+                    <input type="hidden" value="@item.Id" name="ImageIds">
+
+                    <button class="btn btn-danger position-absolute custom-delete" style="right:20%;">X</button>
+
+                </div>
+            }
+            <label asp-for="Photos" class="form-label">multipleImages</label>
+            <input asp-for="Photos" class="form-control">
+            <span asp-validation-for="Photos" style="color: red"></span>
+                </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
+    <script>
+        var btn = document.querySelectorAll(".custom-delete")
+        btn.forEach(b => {
+            b.addEventListener("click", function ()
+            {
+                b.parentElement.remove()
+            })
+        })
+    </script>
 </div>

@@ -13,12 +13,15 @@ namespace Pronia_MVC.Areas.Admin.ViewModels.Product
         public List<int>? TagIds { get; set; }
         public IFormFile? MainPhoto { get; set; }
         public IFormFile? HoverPhoto { get; set; }
-        public List<ProductImages>? productImages { get; set; };
+        public List<IFormFile> Photos { get; set; }
+        public List<ProductImagesVm> productImages { get; set; }
+
+        public List <int> ? ImageIds { get; set; }
     }
     public class ProductImagesVm
     {
-        public int Id { get; set; } 
-        public bool IsPrime { get; set; }
-        public string Url { get; set; } 
+        public int? Id { get; set; } 
+        public bool? IsPrime { get; set; }
+        public string? Url { get; set; } 
     }
 }
