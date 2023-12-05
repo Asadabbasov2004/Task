@@ -19,6 +19,7 @@ namespace Pustok_MVC.Controllers
             ViewData["cat"] = _context.catagories.ToList();
             HomeVM homeVM = new HomeVM();
             homeVM.sliders=_context.slider.ToList();
+            homeVM.books=_context.books.Include(p=>p.BookImgs).ToList();
             return View(homeVM);
         }
     }

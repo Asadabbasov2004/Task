@@ -1256,12 +1256,12 @@
                                             <div class="product-img">
                                                 <a asp-controller="Shop" asp-action="Detail" asp-route-id=@item.Id>
                                                     <img class="primary-img"
-                                                         src="~/assets/images/website-images//@item.ProductImages.FirstOrDefault(p=>p.IsPrime==true).Url"
+                                                         src="~/Upload/Product/@item.ProductImages.FirstOrDefault(p=>p.IsPrime==true).Url"
                                                          alt="Product Images" />
                                                     @if (item.ProductImages.FirstOrDefault(p => p.IsPrime == false) != null)
                                                     {
                                                         <img class="secondary-img"
-                                                             src="~/assets/images/website-images//@item.ProductImages.FirstOrDefault(p=>p.IsPrime==false).Url"
+                                                             src="~/Upload//@item.ProductImages.FirstOrDefault(p=>p.IsPrime==false).Url"
                                                              alt="Product Images" />
                                                     }
 
@@ -1293,7 +1293,7 @@
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="cart.html"
+                                                            <a asp-action="AddBasket" asp-controller="Cart" asp-route-id="@item.Id"
                                                                data-tippy="Add to cart"
                                                                data-tippy-inertia="true"
                                                                data-tippy-animation="shift-away"
