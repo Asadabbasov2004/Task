@@ -649,6 +649,10 @@
       "PackagePath": "staticwebassets\\Assets\\images\\website-images\\service.png"
     },
     {
+      "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\Assets\\js\\Basket.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\Basket.js"
+    },
+    {
       "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\Assets\\js\\main.js",
       "PackagePath": "staticwebassets\\Assets\\js\\main.js"
     },
@@ -1039,6 +1043,10 @@
     {
       "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\manage\\js\\demo\\datatables-demo.js",
       "PackagePath": "staticwebassets\\manage\\js\\demo\\datatables-demo.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\manage\\js\\main.js",
+      "PackagePath": "staticwebassets\\manage\\js\\main.js"
     },
     {
       "Id": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\manage\\js\\sb-admin-2.js",

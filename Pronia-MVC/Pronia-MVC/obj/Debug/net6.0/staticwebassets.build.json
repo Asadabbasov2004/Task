@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9NUoy+nyQ0V58Eid975eEua3SAYChwHsNTAevzexYO0=",
+  "Hash": "9aRjuErNHsKk9NZx6SvpfWJboKjDZoPnBlhH3xtDN2w=",
   "Source": "Pronia-MVC",
   "BasePath": "_content/Pronia-MVC",
   "Mode": "Default",
@@ -3095,6 +3095,25 @@
       "OriginalItemSpec": "wwwroot\\Assets\\images\\website-images\\service.png"
     },
     {
+      "Identity": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\Assets\\js\\Basket.js",
+      "SourceId": "Pronia-MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\",
+      "BasePath": "_content/Pronia-MVC",
+      "RelativePath": "Assets/js/Basket.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\js\\Basket.js"
+    },
+    {
       "Identity": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\Assets\\js\\main.js",
       "SourceId": "Pronia-MVC",
       "SourceType": "Discovered",
@@ -4233,6 +4252,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\manage\\js\\demo\\datatables-demo.js"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\manage\\js\\main.js",
+      "SourceId": "Pronia-MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\",
+      "BasePath": "_content/Pronia-MVC",
+      "RelativePath": "manage/js/main.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\manage\\js\\main.js"
     },
     {
       "Identity": "C:\\Users\\Asus\\Desktop\\Task\\Pronia-MVC\\Pronia-MVC\\wwwroot\\manage\\js\\sb-admin-2.js",
