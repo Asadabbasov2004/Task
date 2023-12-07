@@ -145,6 +145,7 @@ namespace Pustok_MVC.Areas.Admin.Controllers
             }
             book.BookImgs.Add(mainImg);
             book.BookImgs.Add(hoverImg);
+            await _db.books.AddAsync(book);
             await _db.SaveChangesAsync();
             return RedirectToAction("Index");
         }

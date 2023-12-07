@@ -187,7 +187,6 @@ Home Slider Tab
 
                         @foreach (var item in Model.books)
                         {
-                            <a asp-controller="basket" asp-action="addItem" asp-route-id="@item.Id" >
 
                                 <div class="single-slide" >
                                     <div class="product-card">
@@ -195,20 +194,23 @@ Home Slider Tab
 
 
                                             <h3>
-                                                <a asp-controller="basket" asp-action="index">
+                                                <a>
                                                     @item.Name
                                                 </a>
                                             </h3>
                                         </div>
                                         <div class="product-card--body">
                                             <div class="card-image">
-                                                <img src="~/image/products/@item.BookImgs.FirstOrDefault()" alt="">
+                                            <a asp-controller="Basket" asp-action="AddBasket" asp-route-id="@item.Id">
+
+                                                <img src="~/Upload/Product/@item.BookImgs.FirstOrDefault().Url" alt="">
+                                                </a>
                                                 <div class="hover-contents">
                                                     <a  class="hover-image">
                                                         <img src="~/wwwroot/image/products/product-1.jpg" alt="">
                                                     </a>
                                                     <div class="hover-btns">
-                                                        <a  class="single-btn">
+                                                        <a  asp-controller="Basket" asp-action="AddBasket" asp-route-id="@item.Id" class="single-btn">
                                                             <i class="fas fa-shopping-basket"></i>
                                                         </a>
                                                         <a  class="single-btn">
@@ -225,15 +227,13 @@ Home Slider Tab
                                                 </div>
                                             </div>
                                             <div class="price-block">
-                                                <span class="price">£51.20</span>
-                                                <del class="price-old">£51.20</del>
-                                                <span class="price-discount">20%</span>
+                                                <span class="price">@item.Price</span>
+                                            
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                            </a>
                        
                         }
 

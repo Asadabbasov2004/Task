@@ -6,7 +6,7 @@ namespace Pustok_MVC.Areas.Admin.ViewModels.BookVm
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public string Price { get; set; }
+        public double Price { get; set; }
 
         //relation for Tag ,many to many
         public List<int>? TagIds { get; set; }
