@@ -47,6 +47,7 @@ namespace BB205_Pronia.Services
                         ImgUrl = product.ProductImages.FirstOrDefault().Url
                     });
                 }
+
                 if (deletedCookie.Count > 0)
                 {
                     foreach (var delete in deletedCookie)
