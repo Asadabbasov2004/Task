@@ -101,7 +101,7 @@
                                         </ul>
                                     </li>
                                     <!-- Pages -->
-                                    <li class="menu-item has-children">
+                                    @* <li class="menu-item has-children">
                                         <a href="~/javascript:void(0)">Pages <i
                                                 class="fas fa-chevron-down dropdown-arrow"></i></a>
                                         <ul class="sub-menu">
@@ -114,6 +114,22 @@
                                             <li><a href="~/order-complete.html">Order Complete</a></li>
                                             <li><a href="~/faq.html">Faq</a></li>
                                             <li><a href="~/contact-2.html">contact 02</a></li>
+                                        </ul>
+                                    </li> *@
+                                    <li class="menu-item has-children">
+                                        <a href="~/javascript:void(0)">
+                                            My account <i class="fas fa-chevron-down dropdown-arrow"></i>
+                                        </a>
+                                        <ul class="sub-menu">
+                                           @if(User.Identity.IsAuthenticated){
+                                                <li><a> Welcome </a></li>
+                                                <li><a asp-controller="Account" asp-action="Logout"> Logout</a></li>
+                                            }
+                                            else
+                                            {
+                                                <li><a asp-controller="Account" asp-action="Register">Register</a></li>
+                                                <li><a asp-controller="Account" asp-action="Login">Login</a></li>
+                                            }
                                         </ul>
                                     </li>
                                     <!-- Blog -->
@@ -229,12 +245,15 @@
                                 <button>Search</button>
                             </div>
                         </div>
+                        <div class="col-"> 
+
+                        </div>
                         <div class="col-lg-4">
                             <div class="main-navigation flex-lg-right">
                                 <div class="cart-widget">
                                     <div class="login-block">
                                         <a href="~/login-register.html" class="font-weight-bold">Login</a> <br>
-                                        <span>or</span><a href="~/login-register.html">Register</a>
+                                        <span>or</span><a asp-controller="Account" asp-action="Register">Register</a>
                                     </div>
                                     <div class="cart-block">
                                         <div class="cart-total">

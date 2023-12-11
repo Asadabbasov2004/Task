@@ -1,9 +1,11 @@
-﻿using Pustok_MVC.Areas.Admin.ViewModels;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Pustok_MVC.Areas.Admin.ViewModels;
 using Pustok_MVC.Models;
 
 namespace Pustok_MVC.DAL
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext:IdentityDbContext<AppUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
         {
