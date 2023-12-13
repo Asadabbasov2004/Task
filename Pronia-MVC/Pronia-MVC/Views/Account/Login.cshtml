@@ -1,0 +1,31 @@
+﻿@using Pronia_MVC.ViewModels.Account
+@model LoginVm;
+<form method="post">
+	<div class="login-form">
+		<h4 class="login-title">Returning Customer</h4>
+		<p><span class="font-weight-bold">I am a returning customer</span></p>
+		<div class="row">
+			<div class="col-md-12 col-12 mb--15">
+				<label asp-for="UserNameOrEmail">Enter your email UserName Or Email.</label>
+				<input asp-for="UserNameOrEmail" class="mb-0 form-control" id="email1"
+					   placeholder="Enter you email address here...">
+				<span asp-validation-for="UserNameOrEmail" class="text-danger"></span>
+			</div>
+			<div class="col-12 mb--20">
+				<label asp-for="Password">Password</label>
+				<input asp-for="Password" class="mb-0 form-control" type="password" id="login-password" placeholder="Enter your password">
+				<span asp-validation-for="Password" class="text-danger"></span>
+			</div>
+			<div class="col-12 mb--20 check-box">
+				<label asp-for="RememberMe"></label>
+				<input asp-for="RememberMe" class="mb-0 form-control">
+				<span asp-validation-for="RememberMe" class="text-danger"></span>
+			</div>
+			<div class="col-12 mb--20" asp-validation-summary="All">
+			</div>
+			<div class="col-md-12">
+				<button type="submit" class="btn btn--primary">login</button>
+			</div>
+		</div>
+	</div>
+</form>

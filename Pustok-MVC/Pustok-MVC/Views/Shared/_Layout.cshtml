@@ -1,7 +1,5 @@
 ﻿@using Pustok_MVC.Models;
 <html lang="zxx">
-
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -122,13 +120,13 @@
                                         </a>
                                         <ul class="sub-menu">
                                            @if(User.Identity.IsAuthenticated){
-                                                <li><a> Welcome </a></li>
+                                                <li><a> Welcome @User.Identity.Name </a></li>
                                                 <li><a asp-controller="Account" asp-action="Logout"> Logout</a></li>
                                             }
                                             else
                                             {
                                                 <li><a asp-controller="Account" asp-action="Register">Register</a></li>
-                                                <li><a asp-controller="Account" asp-action="Login">Login</a></li>
+                                                <li><a asp-controller="Account" asp-action="Login" asp-route-ReturnUrl=@Context.Request.Path >Login</a></li>
                                             }
                                         </ul>
                                     </li>
@@ -252,8 +250,18 @@
                             <div class="main-navigation flex-lg-right">
                                 <div class="cart-widget">
                                     <div class="login-block">
-                                        <a href="~/login-register.html" class="font-weight-bold">Login</a> <br>
-                                        <span>or</span><a asp-controller="Account" asp-action="Register">Register</a>
+                                        <ul class="sub-menu">
+                                            @if (User.Identity.IsAuthenticated)
+                                            {
+                                                <li><a> Welcome @User.Identity.Name</a></li>
+                                                <li><a asp-controller="Account" asp-action="LogOut"> Logout</a></li>
+                                            }
+                                            else
+                                            {
+                                                <li><a asp-controller="Account" asp-action="Register">Register</a></li>
+                                                <li><a asp-controller="Account" asp-action="Login">Login</a></li>
+                                            }
+                                        </ul>
                                     </div>
                                     <div class="cart-block">
                                         <div class="cart-total">

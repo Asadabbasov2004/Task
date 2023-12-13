@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis;
 using Pustok_MVC.Areas.Admin.ViewModels.BookVm;
 
 namespace Pustok_MVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class BookController : Controller
     {
         AppDbContext _db;

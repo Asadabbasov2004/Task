@@ -12,6 +12,5 @@
         public Category? Category { get; set; }
         public List<ProductTag>? ProductTags { get; set; }
         public List<ProductImages>? ProductImages { get; set; }
-
     }
 }

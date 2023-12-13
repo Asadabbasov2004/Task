@@ -1,13 +1,12 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Pronia_MVC.Areas.Admin.ViewModels.Product;
 using Pronia_MVC.Models;
 
 namespace BB205_Pronia.Areas.Manage.Controllers
 {
     [Area("Admin")]
-    public class ProductController : Controller
+	[Authorize]
+	public class ProductController : Controller
     {
         AppDbContext _db { get; set; }
         IWebHostEnvironment _webHostEnvironment { get; set; }

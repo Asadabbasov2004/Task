@@ -1,14 +1,10 @@
 ﻿
-
-
-
-
-using System.IO;
-
 namespace BB205_Pronia.Areas.Manage.Controllers
 {
     [Area("Admin")]
-    public class SliderController : Controller
+	[Authorize]
+
+	public class SliderController : Controller
     {
         AppDbContext _context;
         private readonly IWebHostEnvironment _environment;

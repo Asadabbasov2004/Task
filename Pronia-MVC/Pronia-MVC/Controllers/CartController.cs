@@ -63,36 +63,46 @@ namespace BB205_Pronia.Controllers
             if (id <= 0) return BadRequest();
             Product product = _context.Products.Where(p => p.IsDeleted == false).FirstOrDefault(p => p.Id == id);
             if (product == null) return NotFound();
-            List<CookieItemVm> basket;
-            var json = Request.Cookies["Basket"];
-
-            if (json != null)
+            if (User.Identity.IsAuthenticated)
             {
-                basket = JsonConvert.DeserializeObject<List<CookieItemVm>>(json);
-                var existProduct = basket.FirstOrDefault(p => p.Id == id);
-                if (existProduct != null)
+                AppUser user =_user
+                List<CookieItemVm> basket;
+                var json = Request.Cookies["Basket"];
+
+                if (json != null)
                 {
-                    existProduct.Count += 1;
+                    basket = JsonConvert.DeserializeObject<List<CookieItemVm>>(json);
+                    var existProduct = basket.FirstOrDefault(p => p.Id == id);
+                    if (existProduct != null)
+                    {
+                        existProduct.Count += 1;
+                    }
+                    else
+                    {
+                        basket.Add(new CookieItemVm()
+                        {
+                            Id = id,
+                            Count = 1
+                        });
+                    }
+
                 }
                 else
                 {
+                    basket = new List<CookieItemVm>();
                     basket.Add(new CookieItemVm()
                     {
                         Id = id,
                         Count = 1
                     });
                 }
-
             }
             else
             {
-                basket = new List<CookieItemVm>();
-                basket.Add(new CookieItemVm()
-                {
-                    Id = id,
-                    Count = 1
-                });
+
             }
+           
+    
 
 
             var cookieBasket = JsonConvert.SerializeObject(basket);

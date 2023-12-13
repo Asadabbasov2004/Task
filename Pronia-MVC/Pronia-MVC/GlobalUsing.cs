@@ -5,3 +5,4 @@ global using Pronia_MVC.ViewModels;
 global using Pronia_MVC.Models;
 global using Microsoft.AspNetCore.Mvc;
 global using Pronia_MVC.Helpers;
+global using Microsoft.AspNetCore.Authorization;

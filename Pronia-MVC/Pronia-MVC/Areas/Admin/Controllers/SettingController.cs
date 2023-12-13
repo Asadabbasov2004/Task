@@ -5,6 +5,7 @@ using Pronia_MVC.Areas.Admin.ViewModels.Setting;
 namespace Pronia_MVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class SettingController : Controller
     {
         AppDbContext _db;
