@@ -561,3 +561,7 @@ C:\Users\Asus\Desktop\Task\Diana-MVC\Dinana-mvc\Dinana-mvc\bin\Debug\net6.0\runt
 C:\Users\Asus\Desktop\Task\Diana-MVC\Dinana-mvc\Dinana-mvc\bin\Debug\net6.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\Asus\Desktop\Task\Diana-MVC\Dinana-mvc\Dinana-mvc\bin\Debug\net6.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\Asus\Desktop\Task\Diana-MVC\Dinana-mvc\Dinana-mvc\bin\Debug\net6.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\II novbe\Desktop\Task\Diana-MVC\Dinana-mvc\Dinana-mvc\obj\Debug\net6.0\Dinana-mvc.csproj.AssemblyReference.cache
+C:\Users\II novbe\Desktop\Task\Diana-MVC\Dinana-mvc\Dinana-mvc\obj\Debug\net6.0\Dinana-mvc.dll
+C:\Users\II novbe\Desktop\Task\Diana-MVC\Dinana-mvc\Dinana-mvc\obj\Debug\net6.0\refint\Dinana-mvc.dll
+C:\Users\II novbe\Desktop\Task\Diana-MVC\Dinana-mvc\Dinana-mvc\obj\Debug\net6.0\Dinana-mvc.pdb

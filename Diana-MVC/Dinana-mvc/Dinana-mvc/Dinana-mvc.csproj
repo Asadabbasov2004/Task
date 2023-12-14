@@ -1608,4 +1608,8 @@
     <TypeScriptCompile Include="wwwroot\Admin\vendors\tinymce\tinymce.d.ts" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Upload\Product\" />
+  </ItemGroup>
+
 </Project>
