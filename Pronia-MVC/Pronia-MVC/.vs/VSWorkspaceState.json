@@ -2,12 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Areas",
-    "\\DAL",
+    "\\Areas\\Admin",
+    "\\Areas\\Admin\\Controllers",
+    "\\Areas\\Admin\\Views",
+    "\\Areas\\Admin\\Views\\Dashboard",
+    "\\Areas\\Admin\\Views\\Slider",
     "\\Helpers",
     "\\Models",
-    "\\wwwroot",
-    "\\wwwroot\\AdminStyle"
+    "\\wwwroot"
   ],
-  "SelectedNode": "\\Pronia-MVC.csproj",
+  "SelectedNode": "\\Areas\\Admin\\Controllers\\ProductController.cs",
   "PreviewInSolutionExplorer": false
 }
