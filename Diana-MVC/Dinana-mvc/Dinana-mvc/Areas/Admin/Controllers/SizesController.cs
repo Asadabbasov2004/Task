@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Dinana_mvc.DAL;
-using Dinana_mvc.Models;
-
+﻿using Microsoft.AspNetCore.Mvc;
 namespace Dinana_mvc.Areas.Admin.Controllers
 {
     [Area("Admin")]

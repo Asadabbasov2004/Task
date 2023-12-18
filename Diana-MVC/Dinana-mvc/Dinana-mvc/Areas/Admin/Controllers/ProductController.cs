@@ -1,7 +1,6 @@
 ﻿using Dinana_mvc.Areas.Admin.ViewModels.Product;
 using Dinana_mvc.Helpers;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Dinana_mvc.Areas.Admin.Controllers
 {
@@ -19,10 +18,11 @@ namespace Dinana_mvc.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index()
         {
-            List<Product> products = await _db.Products.Include(p => p.Images).Include(p => p.Categories)
+            List<Product> products = await _db.Products.Include(p => p.Images).Include(p => p.Category)
                 .Include(p => p.ProductColors).ThenInclude(p => p.Color)
                 .Include(p => p.ProductMaterials).ThenInclude(p => p.Material)
                 .Include(p => p.ProductSizes).ThenInclude(p => p.Size)
+                .Include(p => p.Images)
                 .ToListAsync();
             return View(products);
         }
@@ -55,7 +55,7 @@ namespace Dinana_mvc.Areas.Admin.Controllers
                 Name = createProductVm.Name,
                 Description = createProductVm.Description,
                 Price = createProductVm.Price,
-                // Count = createProductVm.Count,
+                Count = createProductVm.Count,
                 CategoryId = createProductVm.CategoryId,
                 Images = new List<productImages>()
             };
@@ -155,7 +155,7 @@ namespace Dinana_mvc.Areas.Admin.Controllers
                     {
                         IsActive = false,
                         ImageUrl = photo.UploadFile(_env.WebRootPath, @"\Upload\Product"),
-                        Product =product,
+                        Product = product,
                     };
                     product.Images.Add(images);
                 }
@@ -168,11 +168,13 @@ namespace Dinana_mvc.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Update(int id)
         {
-            Product product = await _db.Products.Where(p => p.Id == id).Include(p => p.Images).Include(p => p.Categories)
-                .Include(p => p.ProductColors).ThenInclude(p => p.Color)
-                .Include(p => p.ProductMaterials).ThenInclude(p => p.Material)
-                .Include(p => p.ProductSizes).ThenInclude(p => p.Size).FirstOrDefaultAsync();
-            if(product is null)
+            var existingProduct = await _db.Products
+                .Include(p => p.Images)
+                .Include(p => p.ProductSizes)
+                .Include(p => p.ProductColors)
+                .Include(p => p.ProductMaterials)
+                .FirstOrDefaultAsync(p => p.Id == id);
+            if (existingProduct == null)
             {
                 return View();
             }
@@ -180,30 +182,219 @@ namespace Dinana_mvc.Areas.Admin.Controllers
             ViewBag.Colors = await _db.Colors.ToListAsync();
             ViewBag.Materials = await _db.Materials.ToListAsync();
             ViewBag.Sizes = await _db.Sizes.ToListAsync();
-            
-            UpdateProductVm updateProductVm = new UpdateProductVm()
+            var updateProductVm = new UpdateProductVm
             {
-                Id = id,
-                Name =product.Name,
-                Description = product.Description,
-                Price = product.Price,
-                Count = product.Count,
-                CategoryId =product.CategoryId ,
+                Id = existingProduct.Id,
+                Name = existingProduct.Name,
+                Description = existingProduct.Description,
+                Price = existingProduct.Price,
+                CategoryId = existingProduct.CategoryId,
                 SizeIds = new List<int>(),
                 MaterialIds = new List<int>(),
                 ColorIds = new List<int>(),
                 Images = new List<UpdateImagesVm>()
             };
-            foreach (var item roduct.ProductSizes)
+            if (existingProduct.ProductSizes != null)
             {
-                updateProductVm.SizeIds.Add(item.);
+                foreach (var item in existingProduct.ProductSizes)
+                {
+                    updateProductVm.SizeIds.Add(item.SizeId);
+                }
+            }
+            if (existingProduct.ProductMaterials != null)
+            {
+                foreach (var item in existingProduct.ProductMaterials)
+                {
+                    updateProductVm.MaterialIds.Add(item.MaterialId);
+                }
+            }
+            if (existingProduct.ProductColors != null)
+            {
+                foreach (var item in existingProduct.ProductColors)
+                {
+                    updateProductVm.ColorIds.Add(item.ColorId);
+                }
             }
 
+            foreach (var item in existingProduct.Images)
+            {
+                UpdateImagesVm updateImagesVm = new UpdateImagesVm()
+                {
+                    Id = item.Id,
+                    ImageUrl = item.ImageUrl,
+                    IsActive = item.IsActive,
+                };
+                if (updateImagesVm == null)
+                {
+                    return View();
+                }
+                if (updateImagesVm != null)
+                {
+                    updateProductVm.Images.Add(updateImagesVm);
+                }
+            }
+
+            return View(updateProductVm);
         }
         [HttpPost]
         public async Task<IActionResult> Update(UpdateProductVm updateProductVm)
         {
+            ViewBag.Categories = await _db.Categories.ToListAsync();
+            ViewBag.Colors = await _db.Colors.ToListAsync();
+            ViewBag.Materials = await _db.Materials.ToListAsync();
+            ViewBag.Sizes = await _db.Sizes.ToListAsync();
+
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            Product existProduct = await _db.Products.Include(p => p.Images)
+                .Include(p => p.ProductSizes)
+                .Include(p => p.ProductColors)
+                .Include(p => p.ProductMaterials)
+                .FirstOrDefaultAsync(p => p.Id == updateProductVm.Id);
+
+            if (existProduct == null)
+            {
+                return NotFound();
+            }
+
+            existProduct.Name = updateProductVm.Name;
+            existProduct.Description = updateProductVm.Description;
+            existProduct.Price = updateProductVm.Price;
+            existProduct.Count = updateProductVm.Count;
+            existProduct.CategoryId = updateProductVm.CategoryId;
+
+            if (updateProductVm.SizeIds != null)
+            {
+                foreach (var item in updateProductVm.SizeIds)
+                {
+                    bool resultSize = await _db.ProductSizes.AnyAsync(c => c.Id == item);
+                    if (!resultSize)
+                    {
+                        ModelState.AddModelError("SizeIds", "bele size yoxdu");
+                        return View();
+                    }
+                }
+                List<int> createSizeIds;
+                if (existProduct.ProductSizes != null)
+                {
+                    createSizeIds = updateProductVm.SizeIds.Where(p => !existProduct.ProductSizes.Exists(pi => pi.SizeId == p)).ToList();
+                }
+                else
+                {
+                    createSizeIds = updateProductVm.SizeIds.ToList();
+                }
+
+                foreach (var sizeId in createSizeIds)
+                {
+                    ProductSizes productSizes = new ProductSizes()
+                    {
+                        SizeId = sizeId,
+                        ProductId = existProduct.Id,
+                    };
+                    await _db.ProductSizes.AddAsync(productSizes);
+                }
+
+                List<ProductSizes> removeSizes = existProduct.ProductSizes.Where(p => !updateProductVm.SizeIds.Contains(p.SizeId)).ToList();
+                _db.ProductSizes.RemoveRange(removeSizes);
+            }
+            else
+            {
+                var productSizes = _db.ProductSizes.Where(p => p.SizeId == existProduct.Id).ToList();
+                _db.ProductSizes.RemoveRange(productSizes);
+            }
+
+            TempData["Error"] = "";
+
+            //       Mainphoto
+
+            if (updateProductVm.Mainphoto != null)
+            {
+                if (!updateProductVm.Mainphoto.CheckType("image/"))
+                {
+                    ModelState.AddModelError("MainPhoto", "ancaq sekil ola biler");
+                    return View();
+                }
+                if (updateProductVm.Mainphoto.CheckLength(3000))
+                {
+                    ModelState.AddModelError("MainPhoto", "3mb dan boyuk olmaz");
+                    return View();
+                }
+
+                var oldPhoto = existProduct.Images?.FirstOrDefault(p => p.IsActive == true);
+                existProduct.Images?.Remove(oldPhoto);
+                productImages newproductimage = new productImages()
+                {
+                    IsActive = true,
+                    ProductId = existProduct.Id,
+                    ImageUrl = updateProductVm.Mainphoto.UploadFile(_env.WebRootPath, @"\Upload\Product\")
+
+
+                };
+                existProduct.Images?.Add(newproductimage);
+            }
+
+            //all additional photos
+
+            if (updateProductVm.AllPhotos != null)
+            {
+                foreach (var photo in updateProductVm.AllPhotos)
+                {
+                    if (!photo.CheckType("image/"))
+                    {
+                        TempData["Error"] += $"{photo.FileName} ancaq sekil ola biler\t";
+                        continue;
+
+                    }
+                    if (photo.CheckLength(3000))
+                    {
+                        TempData["Error"] += $"{photo.FileName} 3mb dan boyuk olmaz";
+
+                        continue;
+                    }
+
+                    productImages multipleimage = new productImages()
+                    {
+
+                        IsActive = false,
+                        ImageUrl = photo.UploadFile(_env.WebRootPath, @"\Upload\Product\"),
+                        Product = existProduct
+                    };
+                    existProduct.Images?.Add(multipleimage);
+
+                }
+            }
+            await _db.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
 
         }
+        public async Task< IActionResult> Delete(int id)
+        {
+            var product = _db.Products.FirstOrDefault(p => p.Id == id);
+            var relatedSize = _db.ProductSizes.Where(p => p.ProductId == id);
+            var relatedMeterial =_db.ProductMaterials.Where(p => p.ProductId == id);    
+            var relatedColor =_db.ProductColors.Where(p => p.ProductId == id);
+            var relatedImage = _db.Images.Where(p => p.ProductId == id);
+            var relatedCatwgory =_db.Categories.Where(p => p.ProductId ==id);
+
+            _db.ProductSizes.RemoveRange(relatedSize);
+            _db.ProductMaterials.RemoveRange(relatedMeterial);
+            _db.ProductColors.RemoveRange(relatedColor);
+            _db.Images.RemoveRange(relatedImage);
+            _db.Categories.RemoveRange(relatedCatwgory);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+            _db.Products.Remove(product);
+            _db.SaveChanges();
+            return RedirectToAction("index");
+        }
+
+
+
     }
 }

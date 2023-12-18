@@ -12,7 +12,6 @@ namespace Dinana_mvc.Models
         public List<productImages>? Images { get; set; }
         public List<ProductSizes>? ProductSizes { get; set; }
         public List<ProductMaterial>? ProductMaterials { get; set; }
-        public List<Category>? Categories { get; set; }
         public List<ProductColor>? ProductColors { get; set; }
     }
 }

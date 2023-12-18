@@ -1,8 +1,99 @@
-﻿<table>
-    <thead>
-        <row>
-            <td>No @</td>
-        </row>
-    </thead>
-    <tbody></tbody>
-</table>
+﻿@model List<Product>
+@{
+    int count = 0;
+    int Tagcount = 0;
+}
+
+<div class="container">
+    <div class="d-flex" style="justify-content:space-between;align-items:center">
+        <h1>Product</h1>
+        <a class="btn btn-primary " asp-controller="Product" asp-action="Create">Create</a>
+
+    </div>
+    <span style="color:red">@TempData["Error"]</span>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">No#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">CategoryId</th>
+                <th scope="col">Count</th>
+                <th scope="col">ProductSizes</th>
+                <th scope="col">ProductMaterials</th>
+                <th scope="col">ProductColors</th>
+                <th scope="col">Productimage</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <th scope="row">@count</th>
+                    <td>@item.Name</td>
+                    <td>@(item.Description.Length > 10 ? item.Description.Substring(0, 10) : item.Description)</td> 
+                    <td>@item.Price</td>
+                    <td>@item.CategoryId</td>
+                    <td>@item.Count</td>
+                    <td>
+                        @foreach (var pt in item.ProductSizes)
+                        {
+                            Tagcount++;
+                            @pt.Product.Name
+
+                            @(item.ProductSizes.Count == Tagcount ? "" : ",  ")
+                            ;
+                        }
+                        @{
+                            Tagcount = 0;
+                        }
+
+                    </td>
+                    <td>
+                        @foreach (var pt in item.ProductMaterials)
+                        {
+                            Tagcount++;
+                            @pt.Product.Name
+
+                            @(item.ProductSizes.Count == Tagcount ? "" : ",  ")
+                            ;
+                        }
+                        @{
+                            Tagcount = 0;
+                        }
+                    <td>
+                            @foreach (var pt in item.ProductColors)
+                            {
+                                Tagcount++;
+                                @pt.Product.Name
+
+                                @(item.ProductSizes.Count == Tagcount ? "" : ",  ")
+                                ;
+                            }
+                            @{
+                                Tagcount = 0;
+                            }
+                    </td>
+                    <td>
+                        <div style="width:100px">
+                            <img width="100%" src="~/Upload/Product/@item.Images.FirstOrDefault(p=>p.IsActive==true)?.ImageUrl">
+                        </div>
+                    </td>
+                    <td>
+                        <a class="btn btn-secondary" asp-controller="Product" asp-action="Update" asp-route-id="@item.Id">Update</a>
+
+                        <a class="btn btn-danger" asp-controller="Product" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+</div>
+
+
+

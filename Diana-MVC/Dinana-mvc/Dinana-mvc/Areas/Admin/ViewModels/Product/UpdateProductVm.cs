@@ -24,7 +24,7 @@ namespace Dinana_mvc.Areas.Admin.ViewModels.Product
     {
         public int? Id { get; set; }
         public string? ImageUrl { get; set; }
-        public string? IsActive { get; set; }
+        public bool? IsActive { get; set; }
 
     }
    

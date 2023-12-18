@@ -115,8 +115,6 @@ namespace Dinana_mvc.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductId");
-
                     b.ToTable("Categories");
                 });
 
@@ -165,6 +163,9 @@ namespace Dinana_mvc.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("Count")
                         .HasColumnType("int");
 
@@ -180,6 +181,8 @@ namespace Dinana_mvc.Migrations
                         .HasColumnType("float");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
                 });
@@ -238,7 +241,7 @@ namespace Dinana_mvc.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<bool>("IsActive")
+                    b.Property<bool?>("IsActive")
                         .HasColumnType("bit");
 
                     b.Property<int?>("ProductId1")
@@ -256,6 +259,27 @@ namespace Dinana_mvc.Migrations
                     b.ToTable("ProductSizes");
                 });
 
+            modelBuilder.Entity("Dinana_mvc.Models.Setting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Key")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Settings");
+                });
+
             modelBuilder.Entity("Dinana_mvc.Models.Size", b =>
                 {
                     b.Property<int>("Id")
@@ -271,6 +295,23 @@ namespace Dinana_mvc.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Sizes");
+                });
+
+            modelBuilder.Entity("Dinana_mvc.Models.Subscribe", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Subscribes");
                 });
 
             modelBuilder.Entity("Dinana_mvc.Models.productImages", b =>
@@ -431,15 +472,13 @@ namespace Dinana_mvc.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Dinana_mvc.Models.Category", b =>
+            modelBuilder.Entity("Dinana_mvc.Models.Product", b =>
                 {
-                    b.HasOne("Dinana_mvc.Models.Product", "Product")
-                        .WithMany("Categories")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("Dinana_mvc.Models.Category", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryId");
 
-                    b.Navigation("Product");
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("Dinana_mvc.Models.ProductColor", b =>
@@ -553,6 +592,11 @@ namespace Dinana_mvc.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Dinana_mvc.Models.Category", b =>
+                {
+                    b.Navigation("Products");
+                });
+
             modelBuilder.Entity("Dinana_mvc.Models.Color", b =>
                 {
                     b.Navigation("Colors");
@@ -565,8 +609,6 @@ namespace Dinana_mvc.Migrations
 
             modelBuilder.Entity("Dinana_mvc.Models.Product", b =>
                 {
-                    b.Navigation("Categories");
-
                     b.Navigation("Images");
 
                     b.Navigation("ProductColors");

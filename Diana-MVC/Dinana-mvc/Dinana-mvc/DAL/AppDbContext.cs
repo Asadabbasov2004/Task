@@ -20,6 +20,7 @@ namespace Dinana_mvc.DAL
         public DbSet<ProductSizes> ProductSizes { get; set; }
 
         public DbSet<Size> Sizes { get; set; }
-
+        public DbSet<Subscribe> Subscribes { get; set; }
+        public DbSet<Setting> Settings { get; set; }
     }
 }
