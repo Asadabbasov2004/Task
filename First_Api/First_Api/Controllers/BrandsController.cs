@@ -1,5 +1,7 @@
 ﻿using First_Api.DAL;
+using First_Api.DTOs.BrandDTOs;
 using First_Api.Entities;
+using First_Api.Repositories.Abstraction;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,41 +12,51 @@ namespace First_Api.Controllers
     [ApiController]
     public class BrandsController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IRepository _repository;
 
-        public BrandsController(AppDbContext context)
+        public BrandsController(IRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            List<Brand> brands = await _context.Brands.ToListAsync();
-            return StatusCode(StatusCodes.Status200OK,brands);
+            var brands = await _repository.GetAll();
+            return StatusCode(StatusCodes.Status200OK, brands);
         }
         [HttpGet]
         [Route("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var Brand  = await _context.Brands.SingleOrDefaultAsync(c=>c.Id ==id);
+            if (id <= 0) return StatusCode(StatusCodes.Status400BadRequest);
+            var Brand = await _repository.GetById(id);
+            if (id == null) return StatusCode(StatusCodes.Status404NotFound);
+
             return StatusCode(StatusCodes.Status200OK, Brand);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(Brand brand)
+        public async Task<IActionResult> Create([FromForm] CreateBrandDto createBrandDto)
         {
-            await _context.Brands.AddAsync(brand);
-            await _context.SaveChangesAsync();
+            Brand brand = new Brand()
+            {
+                Name =createBrandDto.Name
+            };
+            await _repository.Create(brand);
+            await _repository.SaveChangeAsync();
+
             return StatusCode(StatusCodes.Status201Created ,brand);
         }
         [HttpPut]
         public async Task<IActionResult> Update(int id ,string name)
         {
             if (id <= 0) return StatusCode(StatusCodes.Status400BadRequest);
-            var brands = await _context.Brands.FirstOrDefaultAsync(c => c.Id == id);
+            var brands = await _repository.GetById(id);
              if(brands == null) return StatusCode(StatusCodes.Status404NotFound);
              brands.Name = name;
-             await _context.SaveChangesAsync();
+            _repository.Update(brands);
+            await _repository.SaveChangeAsync();
+
             return StatusCode(StatusCodes.Status200OK, brands);
         }
         [HttpDelete]
@@ -56,15 +68,16 @@ namespace First_Api.Controllers
                 return StatusCode(StatusCodes.Status400BadRequest);
             }
 
-            var brand = await _context.Brands.FirstOrDefaultAsync(c => c.Id == id);
+            var brand =await _repository.GetById(id);
 
             if (brand == null)
             {
                 return StatusCode(StatusCodes.Status404NotFound);
             }
 
-            _context.Brands.Remove(brand);
-            await _context.SaveChangesAsync();
+            _repository.Delete(brand);
+
+            await _repository.SaveChangeAsync();
 
             return StatusCode(StatusCodes.Status200OK, brand);
         }

@@ -2231,11 +2231,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\II novbe\\Desktop\\First_Api\\First_Api\\First_Api.csproj",
+      "projectUniqueName": "C:\\Users\\II novbe\\Desktop\\Task\\First_Api\\First_Api\\First_Api.csproj",
       "projectName": "First_Api",
-      "projectPath": "C:\\Users\\II novbe\\Desktop\\First_Api\\First_Api\\First_Api.csproj",
+      "projectPath": "C:\\Users\\II novbe\\Desktop\\Task\\First_Api\\First_Api\\First_Api.csproj",
       "packagesPath": "C:\\Users\\II novbe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\II novbe\\Desktop\\First_Api\\First_Api\\obj\\",
+      "outputPath": "C:\\Users\\II novbe\\Desktop\\Task\\First_Api\\First_Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
