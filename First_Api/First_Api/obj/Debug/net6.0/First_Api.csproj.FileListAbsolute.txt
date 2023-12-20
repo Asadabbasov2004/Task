@@ -124,3 +124,5 @@ C:\Users\II novbe\Desktop\Task\First_Api\First_Api\obj\Debug\net6.0\scopedcss\bu
 C:\Users\II novbe\Desktop\Task\First_Api\First_Api\obj\Debug\net6.0\First_Api.csproj.CopyComplete
 C:\Users\II novbe\Desktop\Task\First_Api\First_Api\obj\Debug\net6.0\First_Api.genruntimeconfig.cache
 C:\Users\II novbe\Desktop\Task\First_Api\First_Api\obj\Debug\net6.0\ref\First_Api.dll
+C:\Users\II novbe\Desktop\Task\First_Api\First_Api\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\II novbe\Desktop\Task\First_Api\First_Api\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

@@ -1,57 +1,68 @@
 ﻿using First_Api.DAL;
 using First_Api.Entities;
+using First_Api.Entities.Base;
 using First_Api.Repositories.Abstraction;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace First_Api.Repositories.Implementation
 {
-    public class Repository : IRepository
+    public class Repository<T> : IRepository<T> where T :BaseEntity   
     {
         private readonly AppDbContext _context;
+        private DbSet<T> _table;
 
         public Repository(AppDbContext context)
         {
             _context = context;
+            _table=_context.Set<T>();
         }
 
 
-        public async Task<IQueryable<Brand>> GetAll(Expression<Func<Brand,bool>>? expression=null ,params string[] includes  )
+        public async Task<IQueryable<T>> GetAll(Expression<Func<T,bool>>? expression=null,
+            Expression<Func<T, object>>? orderbyExpression = null,
+            bool isDescending=false,
+             params string[] includes  )
         {
-           IQueryable<Brand> query = _context.Brands;
-            if(includes is not null)
+           IQueryable<T> query = _table;
+            
+            if(expression is not null)
+            {
+                query = query.Where(expression);
+            }
+            if(orderbyExpression != null)
+            {
+                query = isDescending ? query.OrderByDescending(orderbyExpression) : query.OrderBy(orderbyExpression); 
+            }
+            if (includes is not null)
             {
                 for (int i = 0; i < includes.Length; i++)
                 {
                     query = query.Include(includes[i]);
                 }
             }
-            if(expression is not null)
-            {
-                query = query.Where(expression);
-
-            }
+          
             return query;
         }
 
-        public async Task<Brand> GetById(int id)
+        public async Task<T> GetById(int id)
         {
-            return await _context.Brands.AsNoTracking().FirstOrDefaultAsync(c=>c.Id == id);
+            return await _table.AsNoTracking().FirstOrDefaultAsync(c=>c.Id == id);
         }
 
 
-        public async Task Create(Brand brand)
+        public async Task Create(T entity)
         {
-            await _context.Brands.AddAsync(brand);
+            await _table.AddAsync(entity);
         }
 
-        public void Delete(Brand brand)
+        public void Delete(T entity)
         {
-            _context.Brands.Remove(brand);
+            _table.Remove(entity);
         }
-        public void Update(Brand brand)
+        public void Update(T entity)
         {
-            _context.Brands.Update(brand);
+            _table.Update(entity);
         }
 
         public async Task SaveChangeAsync()

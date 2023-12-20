@@ -62,5 +62,30 @@ namespace First_Api.Repositories.Implementation
         {
             await _context.SaveChangesAsync();
         }
+
+        public Task<IQueryable<Car>> GetAll(Expression<Func<Car, bool>>? expression = null, params string[] includes)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<Car> ICarRepository.GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task Create(Car brand)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Car brand)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(Car brand)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
