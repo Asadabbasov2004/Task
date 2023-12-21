@@ -2,7 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\First_Api",
-    "\\First_Api\\Controllers"
+    "\\First_Api\\Controllers",
+    "\\First_Api\\DTOs",
+    "\\First_Api\\DTOs\\BrandDTOs"
   ],
   "SelectedNode": "\\First_Api.sln",
   "PreviewInSolutionExplorer": false
