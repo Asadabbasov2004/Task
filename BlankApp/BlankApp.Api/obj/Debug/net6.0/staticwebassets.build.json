@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "jgi5aMODNdzblxJyUxaUeGGz4eZn0C7WWghTT16JKNc=",
+  "Source": "BlankApp.Api",
+  "BasePath": "_content/BlankApp.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,17 @@
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.DAL\bin\Debug\net6.0\BlankApp.DAL.deps.json
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.DAL\bin\Debug\net6.0\BlankApp.DAL.runtimeconfig.json
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.DAL\bin\Debug\net6.0\BlankApp.DAL.dll
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.DAL\bin\Debug\net6.0\BlankApp.DAL.pdb
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.DAL\bin\Debug\net6.0\BlankApp.Core.dll
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.DAL\bin\Debug\net6.0\BlankApp.Core.pdb
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.DAL\obj\Debug\net6.0\BlankApp.DAL.csproj.AssemblyReference.cache
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.DAL\obj\Debug\net6.0\BlankApp.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.DAL\obj\Debug\net6.0\BlankApp.DAL.AssemblyInfoInputs.cache
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.DAL\obj\Debug\net6.0\BlankApp.DAL.AssemblyInfo.cs
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.DAL\obj\Debug\net6.0\BlankApp.DAL.csproj.CoreCompileInputs.cache
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.DAL\obj\Debug\net6.0\BlankApp.DAL.csproj.CopyComplete
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.DAL\obj\Debug\net6.0\BlankApp.DAL.dll
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.DAL\obj\Debug\net6.0\refint\BlankApp.DAL.dll
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.DAL\obj\Debug\net6.0\BlankApp.DAL.pdb
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.DAL\obj\Debug\net6.0\BlankApp.DAL.genruntimeconfig.cache
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.DAL\obj\Debug\net6.0\ref\BlankApp.DAL.dll

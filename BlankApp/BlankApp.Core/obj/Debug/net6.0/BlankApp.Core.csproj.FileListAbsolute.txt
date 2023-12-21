@@ -1,0 +1,12 @@
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.Core\bin\Debug\net6.0\BlankApp.Core.deps.json
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.Core\bin\Debug\net6.0\BlankApp.Core.dll
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.Core\bin\Debug\net6.0\BlankApp.Core.pdb
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.Core\obj\Debug\net6.0\BlankApp.Core.csproj.AssemblyReference.cache
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.Core\obj\Debug\net6.0\BlankApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.Core\obj\Debug\net6.0\BlankApp.Core.AssemblyInfoInputs.cache
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.Core\obj\Debug\net6.0\BlankApp.Core.AssemblyInfo.cs
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.Core\obj\Debug\net6.0\BlankApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.Core\obj\Debug\net6.0\BlankApp.Core.dll
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.Core\obj\Debug\net6.0\refint\BlankApp.Core.dll
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.Core\obj\Debug\net6.0\BlankApp.Core.pdb
+C:\Users\II novbe\Desktop\BlankApp\BlankApp.Core\obj\Debug\net6.0\ref\BlankApp.Core.dll
