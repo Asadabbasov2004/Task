@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Second-Api",
+    "\\Second-Api\\Services",
+    "\\Second-Api\\Services\\Implementation",
+    "\\Second-Api\\Services\\Interfaces"
+  ],
+  "SelectedNode": "\\Second-Api\\Services\\Implementation\\CategoryService.cs",
+  "PreviewInSolutionExplorer": false
+}

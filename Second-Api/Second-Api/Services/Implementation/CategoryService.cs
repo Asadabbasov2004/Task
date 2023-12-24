@@ -43,7 +43,7 @@ namespace Second_Api.Services.Implementation
             if (id <= 0)  throw new Exception("Bad request");
             Category existCategory = await _repository.GetById(id);
             if (existCategory == null) throw new Exception("Not Found");
-               existCategory = _mapper.Map<Category>(updateCategoryDtos);
+            _mapper.Map(updateCategoryDtos,existCategory);
             _repository.Update(existCategory);
             await _repository.SaveChangeAsync();
             return existCategory;   

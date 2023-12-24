@@ -3384,11 +3384,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Second-Api\\Second-Api\\Second-Api.csproj",
+      "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Task\\Second-Api\\Second-Api\\Second-Api.csproj",
       "projectName": "Second-Api",
-      "projectPath": "C:\\Users\\Asus\\Desktop\\Second-Api\\Second-Api\\Second-Api.csproj",
+      "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\Second-Api\\Second-Api\\Second-Api.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asus\\Desktop\\Second-Api\\Second-Api\\obj\\",
+      "outputPath": "C:\\Users\\Asus\\Desktop\\Task\\Second-Api\\Second-Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
