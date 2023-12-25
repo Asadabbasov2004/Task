@@ -6,6 +6,6 @@
     "\\Second-Api\\Services\\Implementation",
     "\\Second-Api\\Services\\Interfaces"
   ],
-  "SelectedNode": "\\Second-Api\\Services\\Implementation\\CategoryService.cs",
+  "SelectedNode": "\\Second-Api\\Services\\Interfaces\\ICategoryService.cs",
   "PreviewInSolutionExplorer": false
 }
