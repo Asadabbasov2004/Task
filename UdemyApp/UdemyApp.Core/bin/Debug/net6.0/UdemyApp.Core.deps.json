@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "UdemyApp.Core/1.0.0": {
+        "runtime": {
+          "UdemyApp.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UdemyApp.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

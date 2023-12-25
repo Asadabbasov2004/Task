@@ -1,0 +1,12 @@
+C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Core\bin\Debug\net6.0\UdemyApp.Core.deps.json
+C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Core\bin\Debug\net6.0\UdemyApp.Core.dll
+C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Core\bin\Debug\net6.0\UdemyApp.Core.pdb
+C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\UdemyApp.Core.csproj.AssemblyReference.cache
+C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\UdemyApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\UdemyApp.Core.AssemblyInfoInputs.cache
+C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\UdemyApp.Core.AssemblyInfo.cs
+C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\UdemyApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\UdemyApp.Core.dll
+C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\refint\UdemyApp.Core.dll
+C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\UdemyApp.Core.pdb
+C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\ref\UdemyApp.Core.dll

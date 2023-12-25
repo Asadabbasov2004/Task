@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "rmXuMXl9Htt2FbTxMA1jMFUTGsn1OgUUK7VtT3YB8Pg=",
+  "Source": "UdemyApp.API",
+  "BasePath": "_content/UdemyApp.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

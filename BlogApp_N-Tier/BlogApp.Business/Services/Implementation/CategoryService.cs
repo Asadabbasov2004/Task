@@ -68,7 +68,7 @@ namespace BlogApp.Business.Services.Implementation
             if (updateCategoryDto.LogoImg != null)
             {
                 existingCategory.LogoUrl.RemoveFile("C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Business\\Staticfiles\\Upload\\");
-                existingCategory.LogoUrl = updateCategoryDto.LogoImg.UploadFile(folderName: "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Business\\Staticfiles\\Upload\\");
+                existingCategory.LogoUrl = updateCategoryDto.LogoImg.UploadFile(folderName: "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Business\\Staticfiles\\Upload\\  ");
             }
             _repo.Update(existingCategory);
             _repo.SaveChangeAsync();
