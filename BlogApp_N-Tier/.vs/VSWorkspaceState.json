@@ -2,9 +2,17 @@
   "ExpandedNodes": [
     "",
     "\\BlogApp.Business",
+<<<<<<< HEAD
     "\\BlogApp.Core",
     "\\BlogApp.Core\\Entities"
   ],
   "SelectedNode": "\\BlogApp.Core\\Entities\\AppUser.cs",
+=======
+    "\\BlogApp.Business\\Services",
+    "\\BlogApp.Business\\Services\\Implementation",
+    "\\BlogApp.Business\\Services\\Interfaces"
+  ],
+  "SelectedNode": "\\BlogApp.Business\\Services\\Implementation\\CategoryService.cs",
+>>>>>>> be0c12e9f051915f58ef4b641444ed6c57446d26
   "PreviewInSolutionExplorer": false
 }

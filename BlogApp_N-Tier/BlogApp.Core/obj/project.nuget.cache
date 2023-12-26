@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "2OejprrqWQYeZVDs6T374U/WlNCARQwrW+N5TcvY69+Qtiy9qtTaqemxuoxj+OTG7QkaI+uHTdJsfV/Pw722Lg==",
   "success": true,
   "projectFilePath": "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Core\\BlogApp.Core.csproj",
@@ -26,5 +27,11 @@
     "C:\\Users\\II novbe\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
     "C:\\Users\\II novbe\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
+=======
+  "dgSpecHash": "cDeY0tRL/ZZiDsevsqjGsF0V00QYuKRpbS8LCOx+832ZHm+ZX46+S/DRJ1JvKk5QVpXCjVTOW8v8M3I1CsiuWQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Core\\BlogApp.Core.csproj",
+  "expectedPackageFiles": [],
+>>>>>>> be0c12e9f051915f58ef4b641444ed6c57446d26
   "logs": []
 }

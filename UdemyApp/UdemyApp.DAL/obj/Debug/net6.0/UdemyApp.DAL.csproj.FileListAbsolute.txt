@@ -15,3 +15,21 @@ C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.DAL\obj\Debug\net6.0\refint\UdemyApp
 C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.DAL\obj\Debug\net6.0\UdemyApp.DAL.pdb
 C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.DAL\obj\Debug\net6.0\UdemyApp.DAL.genruntimeconfig.cache
 C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.DAL\obj\Debug\net6.0\ref\UdemyApp.DAL.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\bin\Debug\net6.0\UdemyApp.DAL.deps.json
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\bin\Debug\net6.0\UdemyApp.DAL.runtimeconfig.json
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\bin\Debug\net6.0\UdemyApp.DAL.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\bin\Debug\net6.0\UdemyApp.DAL.pdb
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\bin\Debug\net6.0\UdemyApp.Core.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\bin\Debug\net6.0\UdemyApp.Core.pdb
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\obj\Debug\net6.0\UdemyApp.DAL.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\obj\Debug\net6.0\UdemyApp.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\obj\Debug\net6.0\UdemyApp.DAL.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\obj\Debug\net6.0\UdemyApp.DAL.AssemblyInfo.cs
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\obj\Debug\net6.0\UdemyApp.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\obj\Debug\net6.0\UdemyApp.DAL.sourcelink.json
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\obj\Debug\net6.0\UdemyApp.DAL.csproj.CopyComplete
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\obj\Debug\net6.0\UdemyApp.DAL.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\obj\Debug\net6.0\refint\UdemyApp.DAL.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\obj\Debug\net6.0\UdemyApp.DAL.pdb
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\obj\Debug\net6.0\UdemyApp.DAL.genruntimeconfig.cache
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.DAL\obj\Debug\net6.0\ref\UdemyApp.DAL.dll

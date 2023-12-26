@@ -67,3 +67,14 @@ C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.API\obj\Debug\net6.0\refint\UdemyApp
 C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.API\obj\Debug\net6.0\UdemyApp.API.pdb
 C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.API\obj\Debug\net6.0\UdemyApp.API.genruntimeconfig.cache
 C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.API\obj\Debug\net6.0\ref\UdemyApp.API.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\obj\Debug\net6.0\UdemyApp.API.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\obj\Debug\net6.0\UdemyApp.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\obj\Debug\net6.0\UdemyApp.API.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\obj\Debug\net6.0\UdemyApp.API.AssemblyInfo.cs
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\obj\Debug\net6.0\UdemyApp.API.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\obj\Debug\net6.0\UdemyApp.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\obj\Debug\net6.0\UdemyApp.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\obj\Debug\net6.0\UdemyApp.API.sourcelink.json
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\obj\Debug\net6.0\UdemyApp.API.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\obj\Debug\net6.0\refint\UdemyApp.API.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\obj\Debug\net6.0\UdemyApp.API.pdb

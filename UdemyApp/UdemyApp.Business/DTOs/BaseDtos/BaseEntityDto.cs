@@ -8,6 +8,6 @@ namespace UdemyApp.Business.DTOs.BaseDtos
 {
     public abstract class BaseEntityDto
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
     }
 }

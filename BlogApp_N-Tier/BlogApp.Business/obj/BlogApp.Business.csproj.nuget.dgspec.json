@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Business\\BlogApp.Business.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Business\\BlogApp.Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Business\\BlogApp.Business.csproj": {
+    "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Business\\BlogApp.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Business\\BlogApp.Business.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Business\\BlogApp.Business.csproj",
         "projectName": "BlogApp.Business",
-        "projectPath": "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Business\\BlogApp.Business.csproj",
-        "packagesPath": "C:\\Users\\II novbe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Business\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Business\\BlogApp.Business.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Business\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\II novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.DAL\\BlogApp.DAL.csproj": {
-                "projectPath": "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.DAL\\BlogApp.DAL.csproj"
+              "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.DAL\\BlogApp.DAL.csproj": {
+                "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.DAL\\BlogApp.DAL.csproj"
               }
             }
           }
@@ -77,25 +73,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Core\\BlogApp.Core.csproj": {
+    "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Core\\BlogApp.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Core\\BlogApp.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Core\\BlogApp.Core.csproj",
         "projectName": "BlogApp.Core",
-        "projectPath": "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Core\\BlogApp.Core.csproj",
-        "packagesPath": "C:\\Users\\II novbe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Core\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Core\\BlogApp.Core.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\II novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -142,25 +134,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.DAL\\BlogApp.DAL.csproj": {
+    "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.DAL\\BlogApp.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.DAL\\BlogApp.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.DAL\\BlogApp.DAL.csproj",
         "projectName": "BlogApp.DAL",
-        "projectPath": "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.DAL\\BlogApp.DAL.csproj",
-        "packagesPath": "C:\\Users\\II novbe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.DAL\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.DAL\\BlogApp.DAL.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\II novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -174,8 +162,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Core\\BlogApp.Core.csproj": {
-                "projectPath": "C:\\Users\\II novbe\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Core\\BlogApp.Core.csproj"
+              "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Core\\BlogApp.Core.csproj": {
+                "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Core\\BlogApp.Core.csproj"
               }
             }
           }
@@ -221,7 +209,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
