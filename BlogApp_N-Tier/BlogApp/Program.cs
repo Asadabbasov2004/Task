@@ -5,7 +5,11 @@ using BlogApp.DAL.Context;
 using BlogApp.DAL.Repositories.Abstraction;
 using BlogApp.DAL.Repositories.Implementation;
 using FluentValidation;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System;
+using Microsoft.AspNetCore.Authentication;
+using BlogApp.Core.Entities;
 
 namespace BlogApp
 {
@@ -17,6 +21,8 @@ namespace BlogApp
 
             builder.Services.AddScoped<ICategoryRepository,CategoryRepository>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<IAppUserService, AppUserService>();
+
             builder.Services.AddTransient<IValidator<CreateCategoryDto>, CategoryCreateDtoValidator>();
             builder.Services.AddTransient<IValidator<UpdateCategoryDto>, CategoryUpdateDtoValidator>();
             builder.Services.AddControllers();
@@ -28,9 +34,14 @@ namespace BlogApp
                 opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
             });
 
+            builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
+            {
+                opt.Password.RequireNonAlphanumeric = true;
+            }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+            //  services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDBContext>();
 
             var app = builder.Build();
-
+            app.UseAuthentication();
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
@@ -39,7 +50,6 @@ namespace BlogApp
             }
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

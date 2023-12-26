@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\BlogApp.Business",
-    "\\BlogApp.Business\\Services\\Implementation",
-    "\\BlogApp.Business\\Services\\Interfaces"
+    "\\BlogApp.Core",
+    "\\BlogApp.Core\\Entities"
   ],
-  "SelectedNode": "\\BlogApp_N-Tier.sln",
+  "SelectedNode": "\\BlogApp.Core\\Entities\\AppUser.cs",
   "PreviewInSolutionExplorer": false
 }
