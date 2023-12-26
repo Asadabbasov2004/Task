@@ -8,6 +8,5 @@ namespace UdemyApp.Business.DTOs.CategoryDtos
 {
     public class StudentCreateDto
     {
-        public string 
     }
 }

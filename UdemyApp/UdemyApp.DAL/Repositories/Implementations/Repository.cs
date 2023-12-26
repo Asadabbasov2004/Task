@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,94 +14,53 @@ namespace UdemyApp.DAL.Repositories.Implementations
 {
     public class Repository<T> : IRepository<T> where T : BaseAudiTableEntity, new()
     {
-        private readonly AppDbcontext _context;
+        protected readonly DbContext _context;
 
-        public Repository(AppDbcontext context)
+
+        public Repository(DbContext context)
         {
             _context = context;
         }
 
         public DbSet<T> Table => _context.Set<T>();
 
-        public async Task Create(T entity)
+
+        public async Task CreateAsync(T entity)
         {
             await Table.AddAsync(entity);
         }
 
-        public void delete(int id)
+        //public Task DeleteAsync(int Id)
+        //{
+        //}
+
+        public Task<IQueryable<T>> GetAllAsync(Expression<Func<T, bool>>? expression = null, Expression<Func<T, object>>? orderbyExpression = null, bool isDescending = false, params string[] includes)
         {
-            var brand = Table.FirstOrDefault(b => b.Id == id);
-            if (brand != null)
-            {
-                brand.IsDeleted = true;
-            }
+            throw new NotImplementedException();
         }
 
-        public void deleteAll()
+        public async Task<T> FindByIdAsync(int id)
         {
-            foreach (var item in Table)
-            {
-                item.IsDeleted = true;
-            }
+            return await _context.Set<T>().FindAsync(id);
         }
 
-        public async Task<IQueryable<T>> GetAllAsync(Expression<Func<T, bool>>? expression = null, params string[] includes)
+        public async Task<bool> IsExist(int id)
         {
-            IQueryable<T> query = Table.Where(b => !b.IsDeleted);
-            if (includes is not null)
-            {
-                for (int i = 0; i < includes.Length; i++)
-                {
-                    query = query.Include(includes[i]);
-                }
-            }
-            if (expression is not null)
-            {
-                query = query.Where(expression);
-            }
-            return query;
+           return await Table.AnyAsync(x => x.Id == id && !x.IsDeleted);
         }
 
-        public async Task<T> GetById(int id)
+        public async Task<int> SaveChangesAsync()
         {
-            return await Table.AsNoTracking().FirstOrDefaultAsync(b => b.Id == id);
+          return  await _context.SaveChangesAsync();
         }
 
-        public async Task<IQueryable<T>> RecycleBin(Expression<Func<T, bool>>? expression = null, params string[] includes)
+        public async Task<T> UpdateAsync(T entity)
         {
-            IQueryable<T> query = Table.Where(b => b.IsDeleted);
-            if (includes is not null)
-            {
-                for (int i = 0; i < includes.Length; i++)
-                {
-                    query = query.Include(includes[i]);
-                }
-            }
-            if (expression is not null)
-            {
-                query = query.Where(expression);
-            }
-            return query;
-        }
-
-        public void restore()
-        {
-            foreach (var item in Table)
-            {
-                item.IsDeleted = false;
-            }
-        }
-
-        public void Save()
-        {
-            _context.SaveChanges();
-        }
-
-        public void Update(T entity)
-        {
-            Table.Update(entity);
-
+            _context.Entry(entity).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return entity;
         }
     }
+}   
 
-}
+

@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\BlogApp.Business",
+    "\\BlogApp.Business\\Services",
     "\\BlogApp.Business\\Services\\Implementation",
     "\\BlogApp.Business\\Services\\Interfaces"
   ],
-  "SelectedNode": "\\BlogApp_N-Tier.sln",
+  "SelectedNode": "\\BlogApp.Business\\Services\\Implementation\\CategoryService.cs",
   "PreviewInSolutionExplorer": false
 }

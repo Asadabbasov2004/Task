@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\II novbe\\Desktop\\UdemyApp\\UdemyApp.DAL\\UdemyApp.DAL.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\Task\\UdemyApp\\UdemyApp.DAL\\UdemyApp.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\II novbe\\Desktop\\UdemyApp\\UdemyApp.Core\\UdemyApp.Core.csproj": {
+    "C:\\Users\\Asus\\Desktop\\Task\\UdemyApp\\UdemyApp.Core\\UdemyApp.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\II novbe\\Desktop\\UdemyApp\\UdemyApp.Core\\UdemyApp.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Task\\UdemyApp\\UdemyApp.Core\\UdemyApp.Core.csproj",
         "projectName": "UdemyApp.Core",
-        "projectPath": "C:\\Users\\II novbe\\Desktop\\UdemyApp\\UdemyApp.Core\\UdemyApp.Core.csproj",
-        "packagesPath": "C:\\Users\\II novbe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\II novbe\\Desktop\\UdemyApp\\UdemyApp.Core\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\UdemyApp\\UdemyApp.Core\\UdemyApp.Core.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\Task\\UdemyApp\\UdemyApp.Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\II novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,25 +55,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\II novbe\\Desktop\\UdemyApp\\UdemyApp.DAL\\UdemyApp.DAL.csproj": {
+    "C:\\Users\\Asus\\Desktop\\Task\\UdemyApp\\UdemyApp.DAL\\UdemyApp.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\II novbe\\Desktop\\UdemyApp\\UdemyApp.DAL\\UdemyApp.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Task\\UdemyApp\\UdemyApp.DAL\\UdemyApp.DAL.csproj",
         "projectName": "UdemyApp.DAL",
-        "projectPath": "C:\\Users\\II novbe\\Desktop\\UdemyApp\\UdemyApp.DAL\\UdemyApp.DAL.csproj",
-        "packagesPath": "C:\\Users\\II novbe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\II novbe\\Desktop\\UdemyApp\\UdemyApp.DAL\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\UdemyApp\\UdemyApp.DAL\\UdemyApp.DAL.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\Task\\UdemyApp\\UdemyApp.DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\II novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -91,8 +83,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\II novbe\\Desktop\\UdemyApp\\UdemyApp.Core\\UdemyApp.Core.csproj": {
-                "projectPath": "C:\\Users\\II novbe\\Desktop\\UdemyApp\\UdemyApp.Core\\UdemyApp.Core.csproj"
+              "C:\\Users\\Asus\\Desktop\\Task\\UdemyApp\\UdemyApp.Core\\UdemyApp.Core.csproj": {
+                "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\UdemyApp\\UdemyApp.Core\\UdemyApp.Core.csproj"
               }
             }
           }
@@ -138,7 +130,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

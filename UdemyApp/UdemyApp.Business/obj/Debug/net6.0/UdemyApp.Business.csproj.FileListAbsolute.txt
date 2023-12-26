@@ -15,3 +15,12 @@ C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\UdemyApp.B
 C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\refint\UdemyApp.Business.dll
 C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\UdemyApp.Business.pdb
 C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\ref\UdemyApp.Business.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\UdemyApp.Business.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\UdemyApp.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\UdemyApp.Business.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\UdemyApp.Business.AssemblyInfo.cs
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\UdemyApp.Business.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\UdemyApp.Business.sourcelink.json
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\UdemyApp.Business.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\refint\UdemyApp.Business.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\UdemyApp.Business.pdb

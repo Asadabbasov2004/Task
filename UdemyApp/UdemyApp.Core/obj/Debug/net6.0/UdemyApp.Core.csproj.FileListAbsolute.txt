@@ -10,3 +10,15 @@ C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\UdemyApp.Core.
 C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\refint\UdemyApp.Core.dll
 C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\UdemyApp.Core.pdb
 C:\Users\II novbe\Desktop\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\ref\UdemyApp.Core.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Core\bin\Debug\net6.0\UdemyApp.Core.deps.json
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Core\bin\Debug\net6.0\UdemyApp.Core.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Core\bin\Debug\net6.0\UdemyApp.Core.pdb
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\UdemyApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\UdemyApp.Core.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\UdemyApp.Core.AssemblyInfo.cs
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\UdemyApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\UdemyApp.Core.sourcelink.json
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\UdemyApp.Core.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\refint\UdemyApp.Core.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\UdemyApp.Core.pdb
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Core\obj\Debug\net6.0\ref\UdemyApp.Core.dll
