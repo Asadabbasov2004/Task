@@ -71,5 +71,11 @@ namespace UdemyApp.Business.Services.Implemantations
             if (id <= 0) throw new NegativeIdException();
             if (!await _repo.IsExist(id)) throw new CategoryNotFoundException();
         }
+        public async Task Remove (int id)
+        {
+            await CheckEntity(id);
+            await _repo.Remove(id);
+            await _repo.SaveChangesAsync();  
+        }
     }
 }

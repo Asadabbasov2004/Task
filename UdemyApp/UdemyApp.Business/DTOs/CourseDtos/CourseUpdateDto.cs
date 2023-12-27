@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UdemyApp.Business.DTOs.BaseDtos;
 
-namespace UdemyApp.Business.DTOs.CategoryDtos
+namespace UdemyApp.Business.DTOs.CourseDtos
 {
     public class StudentUpdateDto:BaseEntityDto
     {

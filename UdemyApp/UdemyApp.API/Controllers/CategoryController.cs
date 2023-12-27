@@ -5,7 +5,7 @@ using UdemyApp.Business.Exceptions.Category;
 using UdemyApp.Business.Exceptions.Common;
 using UdemyApp.Business.Services.Interface;
 using UdemyApp.Core.Entities;
-
+using System.Threading.Tasks;
 namespace UdemyApp.API.Controllers
 {
     [Route("api/[controller]")]
@@ -69,17 +69,31 @@ namespace UdemyApp.API.Controllers
 
         public async Task<IActionResult> Delete(int id)
         {
-            await _service.Delete(id);
+            try
+            {
+            await _service.Remove(id);
             return StatusCode(StatusCodes.Status200OK);
-
+            }
+            catch (NegativeIdException ex)
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, ex.Message);
+            }
+            catch (CategoryNotFoundException ex)
+            {
+                return StatusCode(StatusCodes.Status404NotFound, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, ex.Message);
+            }
         }
 
 
-        [HttpDelete("DeleteAll")]
-        public async Task<IActionResult> DeleteAll()
-        {
-            await _service.deleteAll();
-            return StatusCode(StatusCodes.Status200OK);
-        }
+        //[HttpDelete("DeleteAll")]
+        //public async Task<IActionResult> DeleteAll()
+        //{
+        //    await _service.deleteAll();
+        //    return StatusCode(StatusCodes.Status200OK);
+        //}
     }
 }

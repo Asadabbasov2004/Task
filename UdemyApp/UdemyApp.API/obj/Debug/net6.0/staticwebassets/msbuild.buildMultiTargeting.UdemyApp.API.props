@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\UdemyApp.API.props" />
+</Project>

@@ -14,5 +14,6 @@ namespace UdemyApp.Business.Services.Interface
         Task<bool> CreateAsync(CategoryCreateDto createDto);
         Task<CategoryGetDto> GetByIdAsync(int id);
         Task<bool> UpdateAsync(CategoryUpdateDto updateDto);
+        Task Remove(int id);
     }
 }

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace UdemyApp.Business.DTOs.BaseDtos
 {
-    public abstract class BaseAuditableEntityDto:BaseEntityDto
+    public abstract class BaseAuditableEntityDto 
     {
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
-        public bool IsDeleted { get; set; } = false;
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public bool? IsDeleted { get; set; } = false;
     }
 }

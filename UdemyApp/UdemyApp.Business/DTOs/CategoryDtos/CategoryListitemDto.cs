@@ -9,6 +9,10 @@ namespace UdemyApp.Business.DTOs.CategoryDtos
 {
     public class CategoryListitemDto:BaseAuditableEntityDto
     {
+        public int Id { get; set; }
+
         public string Title { get; set; }
+        public int? ParentCategoryId { get; set; }
+
     }
 }

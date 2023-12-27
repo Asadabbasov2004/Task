@@ -25,7 +25,7 @@ namespace UdemyApp.DAL.Repositories.Interfaces
        // Task DeleteAsync(int Id);
         Task<int> SaveChangesAsync();
         Task<bool> IsExist(int id);
-
+        Task Remove(int id);
     }
 
 }

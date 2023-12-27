@@ -30,13 +30,28 @@ namespace UdemyApp.DAL.Repositories.Implementations
             await Table.AddAsync(entity);
         }
 
-        //public Task DeleteAsync(int Id)
-        //{
-        //}
+        
 
-        public Task<IQueryable<T>> GetAllAsync(Expression<Func<T, bool>>? expression = null, Expression<Func<T, object>>? orderbyExpression = null, bool isDescending = false, params string[] includes)
+        public async Task<IQueryable<T>> GetAllAsync(Expression<Func<T, bool>>? expression = null, Expression<Func<T, object>>? orderbyExpression = null, bool isDescending = false, params string[] includes)
         {
-            throw new NotImplementedException();
+            IQueryable<T> query = Table.Where(e => !e.IsDeleted);
+            if (expression != null)
+            {
+                query = query.Where(expression);
+            }
+            if(orderbyExpression != null)
+            {
+                query =isDescending ? query.OrderByDescending(orderbyExpression)
+                    : query.OrderBy(orderbyExpression);
+            }
+            if(includes is not null)
+            {
+                for(int i = 0; i < includes.Length; i++)
+                {
+                    query = query.Include(includes[i]);
+                }
+            }
+            return query;
         }
 
         public async Task<T> FindByIdAsync(int id)
@@ -59,6 +74,11 @@ namespace UdemyApp.DAL.Repositories.Implementations
             _context.Entry(entity).State = EntityState.Modified;
             await _context.SaveChangesAsync();
             return entity;
+        }
+
+        public async Task Remove(int id)
+        {
+            (await FindByIdAsync(id)).IsDeleted =true  ;
         }
     }
 }   

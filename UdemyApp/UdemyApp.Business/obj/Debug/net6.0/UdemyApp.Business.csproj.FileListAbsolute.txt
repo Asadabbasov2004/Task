@@ -24,3 +24,12 @@ C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\UdemyApp.
 C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\UdemyApp.Business.dll
 C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\refint\UdemyApp.Business.dll
 C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\UdemyApp.Business.pdb
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\bin\Debug\net6.0\UdemyApp.Business.deps.json
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\bin\Debug\net6.0\UdemyApp.Business.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\bin\Debug\net6.0\UdemyApp.Business.pdb
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\bin\Debug\net6.0\UdemyApp.Core.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\bin\Debug\net6.0\UdemyApp.DAL.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\bin\Debug\net6.0\UdemyApp.DAL.pdb
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\bin\Debug\net6.0\UdemyApp.Core.pdb
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\UdemyApp.Business.csproj.CopyComplete
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.Business\obj\Debug\net6.0\ref\UdemyApp.Business.dll

@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\UdemyApp.API",
+    "\\UdemyApp.API\\Controllers",
+    "\\UdemyApp.Business",
+    "\\UdemyApp.Business\\DTOs",
+    "\\UdemyApp.Business\\DTOs\\StudentDtos"
+  ],
+  "SelectedNode": "\\UdemyApp.sln",
+  "PreviewInSolutionExplorer": false
+}

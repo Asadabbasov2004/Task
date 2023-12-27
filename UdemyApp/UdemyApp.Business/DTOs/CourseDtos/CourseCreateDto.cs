@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UdemyApp.Business.DTOs.StudentDtos
+namespace UdemyApp.Business.DTOs.CourseDtos
 {
     public class StudentCreateDto
     {

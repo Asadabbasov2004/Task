@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using UdemyApp.Business.Profiles;
+using UdemyApp.Business.Services.Implemantations;
+using UdemyApp.Business.Services.Interface;
 using UdemyApp.DAL.Context;
 using UdemyApp.DAL.Repositories.Implementations;
 using UdemyApp.DAL.Repositories.Interfaces;
@@ -14,7 +16,7 @@ namespace UdemyApp.API
 
 
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-          //  builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+            builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddControllers();
             builder.Services.AddAutoMapper(typeof(CategoryMapProfile).Assembly);
             builder.Services.AddEndpointsApiExplorer();
