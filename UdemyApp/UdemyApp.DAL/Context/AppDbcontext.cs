@@ -6,10 +6,11 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using UdemyApp.Core.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace UdemyApp.DAL.Context
 {
-    public class AppDbcontext : DbContext
+    public class AppDbcontext : IdentityDbContext<AppUser>
     {
         public AppDbcontext(DbContextOptions<AppDbcontext> options) : base(options)
         {

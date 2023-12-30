@@ -6,10 +6,12 @@ using UdemyApp.Business.Exceptions.Common;
 using UdemyApp.Business.Services.Interface;
 using UdemyApp.Core.Entities;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 namespace UdemyApp.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CategoryController : ControllerBase
     {
 
@@ -30,8 +32,29 @@ namespace UdemyApp.API.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var brand = await _service.GetByIdAsync(id);
-            return StatusCode(StatusCodes.Status200OK, brand);
+            //var brand = await _service.GetByIdAsync(id);
+          
+            //return StatusCode(StatusCodes.Status200OK, brand);
+
+            try
+            {
+                var brand = await _service.GetByIdAsync(id);
+                if (brand ==null) return NotFound();
+                return StatusCode(StatusCodes.Status200OK, brand);
+            }
+            catch (NegativeIdException ex)
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, ex.Message);
+            }
+            catch (CategoryNotFoundException ex)
+            {
+                return StatusCode(StatusCodes.Status404NotFound, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, ex.Message);
+            }
+
         }
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] CategoryCreateDto categoryCreateDto)

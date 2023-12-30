@@ -144,3 +144,12 @@ C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\obj\Debug\net6.0\scopedcss\bund
 C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\obj\Debug\net6.0\UdemyApp.API.csproj.CopyComplete
 C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\obj\Debug\net6.0\UdemyApp.API.genruntimeconfig.cache
 C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\obj\Debug\net6.0\ref\UdemyApp.API.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Asus\Desktop\Task\UdemyApp\UdemyApp.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

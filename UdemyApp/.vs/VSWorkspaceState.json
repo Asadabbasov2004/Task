@@ -1,12 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\UdemyApp.API",
-    "\\UdemyApp.API\\Controllers",
     "\\UdemyApp.Business",
     "\\UdemyApp.Business\\DTOs",
-    "\\UdemyApp.Business\\DTOs\\StudentDtos"
+    "\\UdemyApp.Business\\DTOs\\CategoryDtos",
+    "\\UdemyApp.Business\\DTOs\\StudentDtos",
+    "\\UdemyApp.Business\\DTOs\\UserDtos",
+    "\\UdemyApp.Business\\Exceptions",
+    "\\UdemyApp.Business\\Exceptions\\Category",
+    "\\UdemyApp.Business\\Services",
+    "\\UdemyApp.Business\\Services\\Implemantations"
   ],
-  "SelectedNode": "\\UdemyApp.sln",
+  "SelectedNode": "\\UdemyApp.Business\\Services\\Implemantations\\UserService.cs",
   "PreviewInSolutionExplorer": false
 }
