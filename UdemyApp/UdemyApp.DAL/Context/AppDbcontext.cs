@@ -20,6 +20,7 @@ namespace UdemyApp.DAL.Context
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             base.OnModelCreating(modelBuilder);
+            //intersept
         }
         public DbSet<Course> courses { get; set; }
         public DbSet<Student> students { get; set; }

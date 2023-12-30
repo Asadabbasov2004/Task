@@ -33,13 +33,22 @@ namespace UdemyApp.Business.Services.Implemantations
         public async Task<bool> CreateAsync(CategoryCreateDto createDto)
         {
             if (createDto == null) throw new CategoryNullException();
-            Category category = new Category()
-            {
-                Title = createDto.Title,
-                ParentCategoryId = createDto.ParentCategoryId,
-                CreatedAt = createDto.CreatedAt,
+            //Category category = new Category()
+            //{
+            //    Title = createDto.Title,
+            //    ParentCategoryId = createDto.ParentCategoryId,
+            //    CreatedAt = createDto.CreatedAt,
 
-            };
+            //};
+            if(createDto.ParentCategoryId != null)
+            {
+                var a =await _repo.FindByIdAsync(createDto.ParentCategoryId);
+                if (a == null)
+                {
+                    throw new CategoryNullException();  
+                }; 
+            } 
+            var category = _mapper.Map<Category>(createDto);
             await _repo.CreateAsync(category);
             int result =await _repo.SaveChangesAsync();
 

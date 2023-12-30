@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\BlogApp",
+    "\\BlogApp.Business",
+    "\\BlogApp.Business\\DTOs",
+    "\\BlogApp.Business\\DTOs\\AppUserDto",
     "\\BlogApp\\Controllers"
   ],
-  "SelectedNode": "\\BlogApp\\Controllers\\UserController.cs",
+  "SelectedNode": "\\BlogApp.Business\\DTOs\\AppUserDto\\RegisterDto.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -7,9 +7,9 @@ using UdemyApp.Business.DTOs.BaseDtos;
 
 namespace UdemyApp.Business.DTOs.CategoryDtos
 {
-    public class CategoryCreateDto:BaseAuditableEntityDto
+    public class CategoryCreateDto
     {
         public string Title { get; set; }
-        public int? ParentCategoryId {get; set; }
+        public int ParentCategoryId { get; set; }
     }
 }

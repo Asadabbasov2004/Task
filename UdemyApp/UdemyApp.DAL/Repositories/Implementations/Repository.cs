@@ -27,6 +27,7 @@ namespace UdemyApp.DAL.Repositories.Implementations
 
         public async Task CreateAsync(T entity)
         {
+
             await Table.AddAsync(entity);
         }
 
