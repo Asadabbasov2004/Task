@@ -1,0 +1,13 @@
+C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia.Core\bin\Debug\net6.0\Pronia.Core.deps.json
+C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia.Core\bin\Debug\net6.0\Pronia.Core.dll
+C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia.Core\bin\Debug\net6.0\Pronia.Core.pdb
+C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia.Core\obj\Debug\net6.0\Pronia.Core.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia.Core\obj\Debug\net6.0\Pronia.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia.Core\obj\Debug\net6.0\Pronia.Core.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia.Core\obj\Debug\net6.0\Pronia.Core.AssemblyInfo.cs
+C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia.Core\obj\Debug\net6.0\Pronia.Core.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia.Core\obj\Debug\net6.0\Pronia.Core.sourcelink.json
+C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia.Core\obj\Debug\net6.0\Pronia.Core.dll
+C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia.Core\obj\Debug\net6.0\refint\Pronia.Core.dll
+C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia.Core\obj\Debug\net6.0\Pronia.Core.pdb
+C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia.Core\obj\Debug\net6.0\ref\Pronia.Core.dll

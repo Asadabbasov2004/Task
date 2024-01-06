@@ -4,13 +4,13 @@
     "\\Pronia-MVC",
     "\\Pronia-MVC\\Areas",
     "\\Pronia-MVC\\Areas\\Admin",
-    "\\Pronia-MVC\\Areas\\Admin\\Controllers",
     "\\Pronia-MVC\\Areas\\Admin\\Views",
     "\\Pronia-MVC\\Areas\\Admin\\Views\\Dashboard",
+    "\\Pronia-MVC\\Areas\\Admin\\Views\\Product",
     "\\Pronia-MVC\\Models",
     "\\Pronia-MVC\\Views",
     "\\Pronia-MVC\\Views\\Shop"
   ],
-  "SelectedNode": "\\Pronia-MVC\\Areas\\Admin\\Controllers\\ProductController.cs",
+  "SelectedNode": "\\Pronia-MVC\\Areas\\Admin\\Views\\Product\\Create.cshtml",
   "PreviewInSolutionExplorer": false
 }

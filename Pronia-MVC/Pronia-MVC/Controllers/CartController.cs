@@ -65,7 +65,7 @@ namespace BB205_Pronia.Controllers
             if (product == null) return NotFound();
             if (User.Identity.IsAuthenticated)
             {
-                AppUser user =_user
+              //  AppUser user =_user
                 List<CookieItemVm> basket;
                 var json = Request.Cookies["Basket"];
 

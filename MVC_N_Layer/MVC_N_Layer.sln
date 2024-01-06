@@ -3,7 +3,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pronia_MVC", "Pronia_MVC\Pronia_MVC.csproj", "{620EE3FE-0594-478A-B6F9-8AA8B6AF9EFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pronia.Core", "Pronia.Core\Pronia.Core.csproj", "{A5A9EFEE-E72E-456E-BEAC-31030D0D1A90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pronia.DAL", "Pronia.DAL\Pronia.DAL.csproj", "{2632E324-03E9-4B63-85CE-3597169E9299}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pronia.Business", "Pronia.Business\Pronia.Business.csproj", "{6AE2213A-9330-4613-8F5C-C4229A79EE27}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{620EE3FE-0594-478A-B6F9-8AA8B6AF9EFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{620EE3FE-0594-478A-B6F9-8AA8B6AF9EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{620EE3FE-0594-478A-B6F9-8AA8B6AF9EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{620EE3FE-0594-478A-B6F9-8AA8B6AF9EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5A9EFEE-E72E-456E-BEAC-31030D0D1A90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A9EFEE-E72E-456E-BEAC-31030D0D1A90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A9EFEE-E72E-456E-BEAC-31030D0D1A90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A9EFEE-E72E-456E-BEAC-31030D0D1A90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2632E324-03E9-4B63-85CE-3597169E9299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2632E324-03E9-4B63-85CE-3597169E9299}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2632E324-03E9-4B63-85CE-3597169E9299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2632E324-03E9-4B63-85CE-3597169E9299}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AE2213A-9330-4613-8F5C-C4229A79EE27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AE2213A-9330-4613-8F5C-C4229A79EE27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AE2213A-9330-4613-8F5C-C4229A79EE27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AE2213A-9330-4613-8F5C-C4229A79EE27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
