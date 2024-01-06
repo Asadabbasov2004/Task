@@ -11,6 +11,6 @@
     "\\UdemyApp.Business\\Services",
     "\\UdemyApp.Business\\Services\\Implemantations"
   ],
-  "SelectedNode": "\\UdemyApp.sln",
+  "SelectedNode": "\\UdemyApp.Business\\Services\\Implemantations\\CategoryService.cs",
   "PreviewInSolutionExplorer": false
 }

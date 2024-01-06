@@ -18,9 +18,4 @@
     <ProjectReference Include="..\Pronia.Business\Pronia.Business.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Areas\Admin\ViewModels\" />
-    <Folder Include="Areas\Admin\Views\" />
-  </ItemGroup>
-
 </Project>

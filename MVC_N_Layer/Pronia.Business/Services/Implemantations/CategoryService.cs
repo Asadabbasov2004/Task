@@ -1,4 +1,7 @@
-﻿using Pronia.Business.DTOs.CategoryDtos;
+﻿using AutoMapper;
+using Pronia.Business.DTOs.CategoryDtos;
+using Pronia.Business.Exceptions.Category;
+using Pronia.Business.Exceptions.Common;
 using Pronia.Business.Services.Interface;
 using Pronia.Core.Entities;
 using Pronia.DAL.Repositories.Interfaces;

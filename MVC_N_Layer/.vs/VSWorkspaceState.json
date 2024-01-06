@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Pronia.Business",
+    "\\Pronia.Business\\Services",
+    "\\Pronia.Business\\Services\\Implemantations"
   ],
-  "SelectedNode": "\\MVC_N_Layer.sln",
+  "SelectedNode": "\\Pronia.Business\\Services\\Implemantations\\CategoryService.cs",
   "PreviewInSolutionExplorer": false
 }

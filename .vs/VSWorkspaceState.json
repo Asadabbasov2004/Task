@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\AdonetTask",
+    "\\AdonetTask\\AdonetTask"
   ],
+  "SelectedNode": "\\AdonetTask\\AdonetTask\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

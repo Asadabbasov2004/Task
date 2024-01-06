@@ -36,7 +36,7 @@ namespace Pronia_MVC.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
-        [Authorize(Roles = "Admin")]
+      //  [Authorize(Roles = "Admin")]
 
         public IActionResult Delete(int id)
         {
@@ -46,7 +46,7 @@ namespace Pronia_MVC.Areas.Admin.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
 
         public IActionResult Update(int id)
         {
@@ -54,7 +54,7 @@ namespace Pronia_MVC.Areas.Admin.Controllers
             return View(category);
         }
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        ///[Authorize(Roles = "Admin")]
 
         public IActionResult Update(Category newcategory)
         {
