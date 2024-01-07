@@ -256,3 +256,5 @@ C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia_MVC\obj\Debug\net6.0\Pronia_MVC.ge
 C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia_MVC\obj\Debug\net6.0\ref\Pronia_MVC.dll
 C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia_MVC\obj\Debug\net6.0\Pronia_MVC.RazorAssemblyInfo.cache
 C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia_MVC\obj\Debug\net6.0\Pronia_MVC.RazorAssemblyInfo.cs
+C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia_MVC\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Asus\Desktop\Task\MVC_N_Layer\Pronia_MVC\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

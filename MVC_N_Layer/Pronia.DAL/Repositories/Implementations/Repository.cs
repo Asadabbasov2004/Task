@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Pronia.Core.Entities.Common;
 using Pronia.DAL.Repositories.Interfaces;
+using Pronia.DAL.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;

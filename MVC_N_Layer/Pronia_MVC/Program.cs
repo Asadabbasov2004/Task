@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Pronia.Business.Profiles;
+using Pronia.Business.Services.Implemantations;
+using Pronia.Business.Services.Interface;
 using Pronia.Core.Entities;
 using Pronia.DAL.Context;
 using Pronia.DAL.Repositories.Implementations;
@@ -17,7 +19,7 @@ namespace Pronia_MVC
             builder.Services.AddControllersWithViews();
             builder.Services.AddAutoMapper(typeof(CategoryMapProfile).Assembly);
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-            builder.Services.AddScoped<ICategoryRepository,CategoryRepository>();
+            builder.Services.AddScoped<ICategoryService,CategoryService>();
             builder.Services.AddDbContext<AppDbContext>(opt =>
             {
                 opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
@@ -45,7 +47,7 @@ namespace Pronia_MVC
                 pattern: "{controller=Home}/{action=index}/{id?}"
                 );
             app.UseStaticFiles();
-
+            app.Run();
         }
     }
 }

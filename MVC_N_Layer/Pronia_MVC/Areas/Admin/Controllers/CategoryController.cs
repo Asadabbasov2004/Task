@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Pronia.Business.Services.Interface;
 using Pronia.Core.Entities;
 using Pronia.DAL.Context;
 
@@ -9,15 +10,18 @@ namespace Pronia_MVC.Areas.Admin.Controllers
         [Area("Admin")]
     public class CategoryController:Controller
     {
-        AppDbContext _context;
-        public CategoryController(AppDbContext context)
+        private readonly ICategoryService _service;
+        DbContext _context;
+
+        public CategoryController(ICategoryService service)
         {
-            _context = context;
+            _service = service;
         }
       //  [Authorize(Roles = "Admin,Moderator")]
         public IActionResult Index()
         {
-            List<Category> categories = _context.Categories.Include(p => p.Products).ToList();
+            var categories = _service.GetAllAsync();
+            Console.WriteLine(typeof(Category));
             return View(categories);
         }
         [Authorize(Roles = "Admin")]
@@ -31,7 +35,7 @@ namespace Pronia_MVC.Areas.Admin.Controllers
         
         public IActionResult Create(Category category)
         {
-            _context.Categories.Add(category);
+            //_context.Categories.Add(category);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -41,18 +45,18 @@ namespace Pronia_MVC.Areas.Admin.Controllers
         public IActionResult Delete(int id)
         {
 
-            Category category = _context.Categories.Find(id);
-            _context.Categories.Remove(category);
+            //Category category = _context.Categories.Find(id);
+            //_context.Categories.Remove(category);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
         //[Authorize(Roles = "Admin")]
 
-        public IActionResult Update(int id)
-        {
-            Category category = _context.Categories.Find(id);
-            return View(category);
-        }
+        //public IActionResult Update(int id)
+        //{
+        //    Category category = _context.Categories.Find(id);
+        //    return View(category);
+        //}
         [HttpPost]
         ///[Authorize(Roles = "Admin")]
 
@@ -62,10 +66,10 @@ namespace Pronia_MVC.Areas.Admin.Controllers
             {
                 return View();
             }
-            Category oldcategory = _context.Categories.Find(newcategory.Id);
-            oldcategory.Name = newcategory.Name;
+            //Category oldcategory = _context.Categories.Find(newcategory.Id);
+            //oldcategory.Name = newcategory.Name;
 
-            _context.SaveChanges();
+            //_context.SaveChanges();
 
             return RedirectToAction("Index");
         }

@@ -4,13 +4,13 @@
     "\\Pronia-MVC",
     "\\Pronia-MVC\\Areas",
     "\\Pronia-MVC\\Areas\\Admin",
-    "\\Pronia-MVC\\Areas\\Admin\\Controllers",
     "\\Pronia-MVC\\Areas\\Admin\\Views",
     "\\Pronia-MVC\\Areas\\Admin\\Views\\Product",
+    "\\Pronia-MVC\\DAL",
     "\\Pronia-MVC\\Models",
     "\\Pronia-MVC\\Views",
     "\\Pronia-MVC\\Views\\Shop"
   ],
-  "SelectedNode": "\\Pronia-MVC\\Areas\\Admin\\Controllers\\CategoryController.cs",
+  "SelectedNode": "\\Pronia-MVC\\DAL\\AppDbContext.cs",
   "PreviewInSolutionExplorer": false
 }

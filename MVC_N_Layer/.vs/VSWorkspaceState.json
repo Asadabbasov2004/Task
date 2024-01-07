@@ -3,8 +3,9 @@
     "",
     "\\Pronia.Business",
     "\\Pronia.Business\\Services",
-    "\\Pronia.Business\\Services\\Implemantations"
+    "\\Pronia.Business\\Services\\Implemantations",
+    "\\Pronia_MVC"
   ],
-  "SelectedNode": "\\Pronia.Business\\Services\\Implemantations\\CategoryService.cs",
+  "SelectedNode": "\\Pronia_MVC\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

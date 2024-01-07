@@ -4,7 +4,7 @@ namespace Pronia.Core.Entities
 {
     public class Tag: BaseAudiTableEntity
     {
-        public string Name { get; set; }
-        public List<ProductTag> productTags { get; set; }
+        public string Name { get; set; } = "DefaultName";
+        public List<ProductTag>? productTags { get; set; }
     }
 }
