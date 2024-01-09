@@ -824,11 +824,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.Core\\AppBay.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.Core\\AppBay.Core.csproj",
       "projectName": "AppBay.Core",
-      "projectPath": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.Core\\AppBay.Core.csproj",
+      "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.Core\\AppBay.Core.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.Core\\obj\\",
+      "outputPath": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.MVC\\AppBay.MVC.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.MVC\\AppBay.MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.Business\\AppBay.Business.csproj": {
+    "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.Business\\AppBay.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.Business\\AppBay.Business.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.Business\\AppBay.Business.csproj",
         "projectName": "AppBay.Business",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.Business\\AppBay.Business.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.Business\\AppBay.Business.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.Business\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.DAL\\AppBay.DAL.csproj": {
-                "projectPath": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.DAL\\AppBay.DAL.csproj"
+              "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.DAL\\AppBay.DAL.csproj": {
+                "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.DAL\\AppBay.DAL.csproj"
               }
             }
           }
@@ -43,6 +43,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -63,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.Core\\AppBay.Core.csproj": {
+    "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.Core\\AppBay.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.Core\\AppBay.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.Core\\AppBay.Core.csproj",
         "projectName": "AppBay.Core",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.Core\\AppBay.Core.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.Core\\AppBay.Core.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.Core\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -124,14 +134,14 @@
         }
       }
     },
-    "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.DAL\\AppBay.DAL.csproj": {
+    "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.DAL\\AppBay.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.DAL\\AppBay.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.DAL\\AppBay.DAL.csproj",
         "projectName": "AppBay.DAL",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.DAL\\AppBay.DAL.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.DAL\\AppBay.DAL.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.DAL\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -148,8 +158,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.Core\\AppBay.Core.csproj": {
-                "projectPath": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.Core\\AppBay.Core.csproj"
+              "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.Core\\AppBay.Core.csproj": {
+                "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.Core\\AppBay.Core.csproj"
               }
             }
           }
@@ -203,14 +213,14 @@
         }
       }
     },
-    "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.MVC\\AppBay.MVC.csproj": {
+    "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.MVC\\AppBay.MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.MVC\\AppBay.MVC.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.MVC\\AppBay.MVC.csproj",
         "projectName": "AppBay.MVC",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.MVC\\AppBay.MVC.csproj",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.MVC\\AppBay.MVC.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.MVC\\obj\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.MVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -227,8 +237,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.Business\\AppBay.Business.csproj": {
-                "projectPath": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.Business\\AppBay.Business.csproj"
+              "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.Business\\AppBay.Business.csproj": {
+                "projectPath": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.Business\\AppBay.Business.csproj"
               }
             }
           }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AppBay.MVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a1031d5ed7c31a660f0dce0aef014af1ec9833a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba1a08b4d4f8bd325d4aa8283d6f43e55823fc9a")]
 [assembly: System.Reflection.AssemblyProductAttribute("AppBay.MVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AppBay.MVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

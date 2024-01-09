@@ -1,14 +1,23 @@
+using AppBay.Business.MapperProfile.FeatureProfile;
+using AppBay.Business.Services.Implementations;
+using AppBay.Business.Services.Interfaces;
 using AppBay.DAL;
+using AppBay.DAL.Repository.Implementations;
+using AppBay.DAL.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IFeatureRepository,FeatureRepository>();
+builder.Services.AddScoped<IFeatureService, FeatureService>();
+builder.Services.AddAutoMapper(typeof(FeatureProfile).Assembly);
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

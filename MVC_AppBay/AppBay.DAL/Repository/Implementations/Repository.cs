@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppBay.DAL.Repository.Implementation
+namespace AppBay.DAL.Repository.Implementations
 {
     public class Repository<T> : IRepository<T> where T : BaseEntity, new()
     {
@@ -50,9 +50,9 @@ namespace AppBay.DAL.Repository.Implementation
             return await _context.SaveChangesAsync();
         }
 
-        public void UpdateAsync(T entity)
+        public  void UpdateAsync(T entity)
         {
-           
+            Table.Update(entity);  
         }
     }
 }

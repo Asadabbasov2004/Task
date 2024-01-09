@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LiQORTw3VJTyiI0FPSH7MMCK8z833qxPJo4QKySMR6NJboNWUkHcwepwg3XvGF4v204rFuSERVbwSenuu0OVWw==",
+  "dgSpecHash": "bXI6ruk/m9g+7VaP5UscWKzzmHrrl8LesOPWRYGtI8G+OqVYQJBECNoKL7c0XnjBY2Ly5STJ9pRSedXqq5Uuhw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asus\\Desktop\\MVC_AppBay\\AppBay.DAL\\AppBay.DAL.csproj",
+  "projectFilePath": "C:\\Users\\Asus\\Desktop\\Task\\MVC_AppBay\\AppBay.DAL\\AppBay.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
