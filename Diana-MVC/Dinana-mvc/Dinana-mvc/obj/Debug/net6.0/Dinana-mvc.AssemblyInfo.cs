@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dinana-mvc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13e07893973d14e4e758e20ffde9fd1f7c047cf4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dinana-mvc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dinana-mvc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

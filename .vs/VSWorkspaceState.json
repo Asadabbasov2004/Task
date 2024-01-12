@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\AdonetTask",
-    "\\AdonetTask\\AdonetTask"
+    "\\AdonetTask\\AdonetTask",
+    "\\AdonetTask\\AdonetTask\\Services"
   ],
-  "SelectedNode": "\\AdonetTask\\AdonetTask\\Program.cs",
+  "SelectedNode": "\\AdonetTask\\AdonetTask\\Services\\StudentsService.cs",
   "PreviewInSolutionExplorer": false
 }
