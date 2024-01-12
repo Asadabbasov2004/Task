@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UdemyApp.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6871bdaacee9c9788229f927779abe26eb1bf8f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("UdemyApp.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UdemyApp.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
