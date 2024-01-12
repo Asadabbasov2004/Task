@@ -22,3 +22,4 @@ C:\Users\II novbe\Desktop\Task\BlogApp_N-Tier\BlogApp.Core\obj\Debug\net6.0\Blog
 C:\Users\II novbe\Desktop\Task\BlogApp_N-Tier\BlogApp.Core\obj\Debug\net6.0\refint\BlogApp.Core.dll
 C:\Users\II novbe\Desktop\Task\BlogApp_N-Tier\BlogApp.Core\obj\Debug\net6.0\BlogApp.Core.pdb
 C:\Users\II novbe\Desktop\Task\BlogApp_N-Tier\BlogApp.Core\obj\Debug\net6.0\ref\BlogApp.Core.dll
+C:\Users\Asus\Desktop\Task\BlogApp_N-Tier\BlogApp.Core\obj\Debug\net6.0\BlogApp.Core.csproj.AssemblyReference.cache

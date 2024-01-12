@@ -144,3 +144,14 @@ C:\Users\II novbe\Desktop\Task\BlogApp_N-Tier\BlogApp\obj\Debug\net6.0\refint\Bl
 C:\Users\II novbe\Desktop\Task\BlogApp_N-Tier\BlogApp\obj\Debug\net6.0\BlogApp.pdb
 C:\Users\II novbe\Desktop\Task\BlogApp_N-Tier\BlogApp\obj\Debug\net6.0\BlogApp.genruntimeconfig.cache
 C:\Users\II novbe\Desktop\Task\BlogApp_N-Tier\BlogApp\obj\Debug\net6.0\ref\BlogApp.dll
+C:\Users\Asus\Desktop\Task\BlogApp_N-Tier\BlogApp\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\Asus\Desktop\Task\BlogApp_N-Tier\BlogApp\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Asus\Desktop\Task\BlogApp_N-Tier\BlogApp\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Asus\Desktop\Task\BlogApp_N-Tier\BlogApp\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Asus\Desktop\Task\BlogApp_N-Tier\BlogApp\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Asus\Desktop\Task\BlogApp_N-Tier\BlogApp\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Asus\Desktop\Task\BlogApp_N-Tier\BlogApp\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Asus\Desktop\Task\BlogApp_N-Tier\BlogApp\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Asus\Desktop\Task\BlogApp_N-Tier\BlogApp\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Asus\Desktop\Task\BlogApp_N-Tier\BlogApp\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Asus\Desktop\Task\BlogApp_N-Tier\BlogApp\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll

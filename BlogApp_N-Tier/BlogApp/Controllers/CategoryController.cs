@@ -3,6 +3,7 @@ using BlogApp.Business.Services.Interfaces;
 using BlogApp.Core.Entities;
 using BlogApp.DAL.Repositories.Abstraction;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +11,7 @@ namespace BlogApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CategoryController : ControllerBase
     {
         private readonly ICategoryService _service;
@@ -39,14 +41,20 @@ namespace BlogApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] CreateCategoryDto createBrandDto)
         {
-            var validationResult = _validator.Validate(createBrandDto);
+            //var validationResult = _validator.Validate(createBrandDto);
 
-            if (!validationResult.IsValid)
+            //if (!validationResult.IsValid)
+            //{
+            //    return BadRequest(validationResult.Errors);
+            //}
+            //await _service.Create(createBrandDto);
+            //return StatusCode(StatusCodes.Status200OK);
+            bool result = await _service.Create(createBrandDto);
+            if (result)
             {
-                return BadRequest(validationResult.Errors);
+                return StatusCode(StatusCodes.Status201Created);
             }
-            await _service.Create(createBrandDto);
-            return StatusCode(StatusCodes.Status200OK);
+            return StatusCode(StatusCodes.Status409Conflict);
         }
 
         [HttpPut]

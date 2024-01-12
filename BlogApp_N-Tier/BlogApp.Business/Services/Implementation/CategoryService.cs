@@ -1,4 +1,6 @@
-﻿using BlogApp.Business.DTOs.Category;
+﻿using AutoMapper;
+using BlogApp.Business.DTOs.Category;
+using BlogApp.Business.Exceptions.Category;
 using BlogApp.Business.Helper;
 using BlogApp.Business.Services.Interfaces;
 using BlogApp.Core.Entities;
@@ -15,27 +17,25 @@ namespace BlogApp.Business.Services.Implementation
     public class CategoryService : ICategoryService
     {
         private readonly ICategoryRepository _repo;
-
-        public CategoryService(ICategoryRepository repo)
+        private readonly IMapper _mapper;
+        public CategoryService(ICategoryRepository repo,IMapper mapper)
         {
             _repo = repo;
+            _mapper = mapper;
         }
 
-        public async Task Create(CreateCategoryDto createCategoryDto)
+        public async Task<bool> Create(CreateCategoryDto createCategoryDto)
         {
-            if (!createCategoryDto.LogoImg.CheckContent("image/"))
-            {
-                throw new Exception("Enter true format");
-            }
-            Category category = new Category()
-            {
-                Name = createCategoryDto.Name,
-                LogoUrl = createCategoryDto.LogoImg.UploadFile(folderName: "C:\\Users\\Asus\\Desktop\\Task\\BlogApp_N-Tier\\BlogApp.Business\\Staticfiles\\Upload\\")
-
-
-            };
+            if (createCategoryDto == null) throw new CategoryNullException();
+            var category = _mapper.Map<Category>(createCategoryDto);
             await _repo.Create(category);
-            _repo.SaveChangeAsync();
+            int result = await _repo.SaveChangeAsync();
+
+            if (result >0)
+            {
+                return true;
+            }
+            return false;
         }
 
         public async Task Delete(int id)

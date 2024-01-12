@@ -10,5 +10,8 @@ namespace BlogApp.Core.Entities.Common
     {
         public int Id { get; set; }
         public bool IsDeleted { get; set; }=false;
+        //baseauditable.cs
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
     }
 }

@@ -11,6 +11,8 @@ namespace UdemyApp.Core.Entities
     {
         public string Title {get; set;}
         public string Description {get; set;}
+        public string? CoverImage { get; set;}
+
         public int? TeacherId { get; set;}   
         public List<StudentsCourses>? StudentsCourses {get; set;}
 

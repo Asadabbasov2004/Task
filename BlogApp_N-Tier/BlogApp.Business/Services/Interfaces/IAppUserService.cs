@@ -11,10 +11,6 @@ namespace BlogApp.Business.Services.Interfaces
     public interface IAppUserService
     {
         Task Register(RegisterDto registerDto);
-
-        public interface IAppUserService
-        {
-            Task<IdentityResult> Register(RegisterDto registerDto);
-        }
+        Task<TokenResponseDto> Login(LoginDto loginDto);
     }
 }

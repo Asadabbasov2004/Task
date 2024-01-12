@@ -11,7 +11,7 @@ namespace BlogApp.Business.DTOs.Category
     public class CreateCategoryDto
     {
         public string? Name { get; set; }
-        public IFormFile? LogoImg { get; set; }
+        public IFormFile? LogoUrl { get; set; }
     }
     public class CategoryCreateDtoValidator : AbstractValidator<CreateCategoryDto>
     {

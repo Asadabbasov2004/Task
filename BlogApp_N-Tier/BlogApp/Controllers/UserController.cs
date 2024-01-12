@@ -1,4 +1,5 @@
 ﻿using BlogApp.Business.DTOs.AppUserDto;
+using BlogApp.Business.Exceptions.User;
 using BlogApp.Business.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -16,18 +17,26 @@ namespace BlogApp.Controllers
         {
             _Service = service;
         }
-        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Register([FromForm] RegisterDto registerDto)
         {
-       
-            var result =  _Service.Register(registerDto);
-            if (result.Succeeded)
-            {
-                return Ok("Registrated successfully!");
-            }
 
-            return BadRequest(result.Errors);
+            try
+            {
+                await _Service.Register(registerDto);
+                return StatusCode(StatusCodes.Status200OK);
+            }
+            catch (RegistrationException ex)
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, ex.Message);
+            }
+        }
+        [HttpPost("[action]")]
+        public async Task<IActionResult> Login([FromForm] LoginDto loginDto)
+        {
+            var result = await _Service.Login(loginDto);
+            return Ok(result);
+
         }
     }
 }

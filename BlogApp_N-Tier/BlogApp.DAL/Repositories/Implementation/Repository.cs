@@ -72,9 +72,9 @@ namespace BlogApp.DAL.Repositories.Implementation
         {
             Table.Update(entity);
         }
-        public async Task SaveChangeAsync()
+        public async Task<int> SaveChangeAsync()
         {
-            await _context.SaveChangesAsync();
+           return await _context.SaveChangesAsync();
         }
 
         public void deleteAll()

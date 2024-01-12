@@ -1,4 +1,7 @@
-﻿using BlogApp.Business.DTOs.AppUserDto;
+﻿using AutoMapper;
+using BlogApp.Business.DTOs.AppUserDto;
+using BlogApp.Business.Exceptions.User;
+using BlogApp.Business.ExternalServices.Interface;
 using BlogApp.Business.Services.Interfaces;
 using BlogApp.Core.Entities;
 using Microsoft.AspNetCore.Identity;
@@ -13,25 +16,38 @@ namespace BlogApp.Business.Services.Implementation
     public class AppUserService:IAppUserService
     {
         private readonly UserManager<AppUser> _userManager;
+        private readonly IMapper _mapper;
 
-        public AppUserService(UserManager<AppUser> userManager)
+        public ITokenService _tokenService { get; }
+
+        public AppUserService(UserManager<AppUser> userManager, IMapper mapper, ITokenService tokenService)
         {
             _userManager = userManager;
+            _mapper = mapper;
+            _tokenService = tokenService;
         }
+
+
         public async Task Register(RegisterDto registerDto)
         {
-            AppUser user = new AppUser()
-            {
-                Name = registerDto.Name,
-                Surname = registerDto.Surname,
-                Email = registerDto.Email,
-                UserName = registerDto.Username
-            };
+            if (registerDto == null) throw new RegistrationException();
+            AppUser user = _mapper.Map<AppUser>(registerDto);
             var result = await _userManager.CreateAsync(user, registerDto.Password);
+
             if (!result.Succeeded)
             {
-                throw new ArgumentException($"Unable to register user {registerDto.Username}");
-            }
+                if (result.Errors.Any()) throw new RegistrationException();
+            };
+
         }
+        public async Task<TokenResponseDto> Login(LoginDto loginDto)
+        {
+            var identityUser = await _userManager.FindByNameAsync(loginDto.UserNameorEmail) ?? await _userManager.FindByEmailAsync(loginDto.UserNameorEmail);
+            if (identityUser == null) throw new RegistrationException();
+            if (!await _userManager.CheckPasswordAsync(identityUser, loginDto.Password)) throw new RegistrationException();
+
+            return _tokenService.CreateToken(identityUser);
+        }
+
     }
 }

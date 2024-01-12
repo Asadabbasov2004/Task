@@ -12,7 +12,7 @@ namespace BlogApp.Business.Services.Interfaces
     {
         Task<ICollection<Category>> GetAllAsync();
         Task<Category> GetById(int id);
-        Task Create(CreateCategoryDto createCategoryDto); 
+        Task<bool> Create(CreateCategoryDto createCategoryDto); 
         Task Delete(int id);
         Task deleteAll();
         Task Update(UpdateCategoryDto updateCategoryDto);

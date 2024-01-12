@@ -5,8 +5,11 @@
     "\\BlogApp.Business",
     "\\BlogApp.Business\\DTOs",
     "\\BlogApp.Business\\DTOs\\AppUserDto",
+    "\\BlogApp.DAL",
+    "\\BlogApp.DAL\\Repositories",
+    "\\BlogApp.DAL\\Repositories\\Abstraction",
     "\\BlogApp\\Controllers"
   ],
-  "SelectedNode": "\\BlogApp.Business\\DTOs\\AppUserDto\\RegisterDto.cs",
+  "SelectedNode": "\\BlogApp.DAL\\Repositories\\Abstraction\\IRepository.cs",
   "PreviewInSolutionExplorer": false
 }

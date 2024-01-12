@@ -21,7 +21,7 @@ namespace BlogApp.DAL.Repositories.Abstraction
         void Update(TEntity entity);
         void Delete(int id);
         void deleteAll();
-        Task SaveChangeAsync();
+        Task<int> SaveChangeAsync();
     }
 
 }
