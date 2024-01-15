@@ -1,0 +1,17 @@
+C:\Users\II novbe\Desktop\Tempbusiness\Temp.Business\bin\Debug\net6.0\Temp.Business.deps.json
+C:\Users\II novbe\Desktop\Tempbusiness\Temp.Business\bin\Debug\net6.0\Temp.Business.dll
+C:\Users\II novbe\Desktop\Tempbusiness\Temp.Business\bin\Debug\net6.0\Temp.Business.pdb
+C:\Users\II novbe\Desktop\Tempbusiness\Temp.Business\obj\Debug\net6.0\Temp.Business.csproj.AssemblyReference.cache
+C:\Users\II novbe\Desktop\Tempbusiness\Temp.Business\obj\Debug\net6.0\Temp.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\II novbe\Desktop\Tempbusiness\Temp.Business\obj\Debug\net6.0\Temp.Business.AssemblyInfoInputs.cache
+C:\Users\II novbe\Desktop\Tempbusiness\Temp.Business\obj\Debug\net6.0\Temp.Business.AssemblyInfo.cs
+C:\Users\II novbe\Desktop\Tempbusiness\Temp.Business\obj\Debug\net6.0\Temp.Business.csproj.CoreCompileInputs.cache
+C:\Users\II novbe\Desktop\Tempbusiness\Temp.Business\obj\Debug\net6.0\Temp.Business.dll
+C:\Users\II novbe\Desktop\Tempbusiness\Temp.Business\obj\Debug\net6.0\refint\Temp.Business.dll
+C:\Users\II novbe\Desktop\Tempbusiness\Temp.Business\obj\Debug\net6.0\Temp.Business.pdb
+C:\Users\II novbe\Desktop\Tempbusiness\Temp.Business\obj\Debug\net6.0\ref\Temp.Business.dll
+C:\Users\II novbe\Desktop\Tempbusiness\Temp.Business\bin\Debug\net6.0\Temp.Core.dll
+C:\Users\II novbe\Desktop\Tempbusiness\Temp.Business\bin\Debug\net6.0\Temp.DAL.dll
+C:\Users\II novbe\Desktop\Tempbusiness\Temp.Business\bin\Debug\net6.0\Temp.DAL.pdb
+C:\Users\II novbe\Desktop\Tempbusiness\Temp.Business\bin\Debug\net6.0\Temp.Core.pdb
+C:\Users\II novbe\Desktop\Tempbusiness\Temp.Business\obj\Debug\net6.0\Temp.Business.csproj.CopyComplete
