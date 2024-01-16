@@ -19,40 +19,41 @@ namespace AppBay.DAL.Repository.Implementations
             _context = context;
         }
         public DbSet<T> Table => _context.Set<T>();
+
+        public async Task CreateAsync(T entity)
+        {
+            entity.Created = DateTime.Now;
+            await Table.AddAsync(entity);
+        }
+
+        public  void DeleteAsync(T entity)
+        {
+            entity.IsDeleted = true;
+            Table.AddAsync(entity);
+        }
+
         public async Task<IEnumerable<T>> GetAllAsync()
         {
-            IEnumerable<T> entity = await Table.ToListAsync();
-            return entity;
+            IQueryable<T> query = Table.Where(e => e.IsDeleted == false);
+            return await query.ToListAsync();
         }
 
         public async Task<T> GetByIdAsync(int id)
         {
-            T entity = await Table.FirstOrDefaultAsync(x => x.Id == id);
-            return  entity;
-        }
-        public async Task<T> CreateAsync(T entity)
-        {
-            await Table.AddAsync(entity);
-            await _context.SaveChangesAsync();
-            return entity;
+            IQueryable<T> query = Table.Where(e => e.IsDeleted == false);
+            return await query.FirstOrDefaultAsync(e => e.Id == id);
         }
 
-        public async void Delete(int id)
+        public async Task<int> SaveChangesAsync()
         {
-            T entity =await GetByIdAsync(id);
-            Table.Remove(entity);
+            int res = await _context.SaveChangesAsync();
+
+            return res;
         }
 
-     
-
-        public async Task<int> SaveChangeAsync()
+        public void UpdateAsync(T entity)
         {
-            return await _context.SaveChangesAsync();
-        }
-
-        public  void UpdateAsync(T entity)
-        {
-            Table.Update(entity);  
+            Table.Update(entity);   
         }
     }
 }

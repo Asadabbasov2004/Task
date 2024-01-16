@@ -10,3 +10,16 @@ C:\Users\II novbe\Desktop\Tempbusiness\Temp.Core\obj\Debug\net6.0\Temp.Core.dll
 C:\Users\II novbe\Desktop\Tempbusiness\Temp.Core\obj\Debug\net6.0\refint\Temp.Core.dll
 C:\Users\II novbe\Desktop\Tempbusiness\Temp.Core\obj\Debug\net6.0\Temp.Core.pdb
 C:\Users\II novbe\Desktop\Tempbusiness\Temp.Core\obj\Debug\net6.0\ref\Temp.Core.dll
+C:\Users\Asus\Desktop\Task\Tempbusiness\Temp.Core\bin\Debug\net6.0\Temp.Core.deps.json
+C:\Users\Asus\Desktop\Task\Tempbusiness\Temp.Core\bin\Debug\net6.0\Temp.Core.dll
+C:\Users\Asus\Desktop\Task\Tempbusiness\Temp.Core\bin\Debug\net6.0\Temp.Core.pdb
+C:\Users\Asus\Desktop\Task\Tempbusiness\Temp.Core\obj\Debug\net6.0\Temp.Core.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\Task\Tempbusiness\Temp.Core\obj\Debug\net6.0\Temp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\Task\Tempbusiness\Temp.Core\obj\Debug\net6.0\Temp.Core.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\Task\Tempbusiness\Temp.Core\obj\Debug\net6.0\Temp.Core.AssemblyInfo.cs
+C:\Users\Asus\Desktop\Task\Tempbusiness\Temp.Core\obj\Debug\net6.0\Temp.Core.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\Task\Tempbusiness\Temp.Core\obj\Debug\net6.0\Temp.Core.sourcelink.json
+C:\Users\Asus\Desktop\Task\Tempbusiness\Temp.Core\obj\Debug\net6.0\Temp.Core.dll
+C:\Users\Asus\Desktop\Task\Tempbusiness\Temp.Core\obj\Debug\net6.0\refint\Temp.Core.dll
+C:\Users\Asus\Desktop\Task\Tempbusiness\Temp.Core\obj\Debug\net6.0\Temp.Core.pdb
+C:\Users\Asus\Desktop\Task\Tempbusiness\Temp.Core\obj\Debug\net6.0\ref\Temp.Core.dll

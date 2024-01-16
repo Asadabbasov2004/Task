@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Temp.Business.Helpers;
 using Temp.Business.Service.Interfaces;
 using Temp.Business.ViewModels.BlogVm;
 using Temp.Core.Entities;
@@ -14,53 +16,55 @@ namespace Temp.Business.Service.Implementations
 {
     public class BlogService : IBlogService
     {
-        private readonly IBlogRepsoitory _repsoitory;
+        private readonly IBlogRepsoitory _repository;
         private readonly IMapper _mapper;
+        private readonly IWebHostEnvironment _environment;
 
-        public BlogService(IBlogRepsoitory repsoitory,IMapper mapper)
+        public BlogService(IBlogRepsoitory repsoitory,IMapper mapper, IWebHostEnvironment environment)
         {
-            _repsoitory = repsoitory;
+            _repository = repsoitory;
             _mapper = mapper;
+            _environment = environment;
+        }
+
+        public async Task CreateAsync(BlogCreateVm blogCreateVm)
+        {
+            Blog blog = _mapper.Map<Blog>(blogCreateVm);
+            string ImageUrl = await blogCreateVm.Url.UploadFile(_environment.WebRootPath, "Upload");
+            blog.Url = ImageUrl;
+            await _repository.CreateAsync(blog);
+            await _repository.SaveChangeAsync();
+
+        }
+
+        public async Task Delete(int id)
+        {
+            Blog blog = await _repository.GetbyIdAsync(id);
+            _repository.Delete(blog);
+            await _repository.SaveChangeAsync();
+
         }
 
         public async Task<IEnumerable<BlogListItemVm>> GetAllAsync()
         {
-          IEnumerable<Blog> entities = await _repsoitory.GetAllAsync();
-            List<BlogListItemVm> list = new List<BlogListItemVm>(); 
-            foreach (var item in entities)
+            IList<BlogListItemVm> ListAll;
+            var GetAll = await _repository.GetAllAsync();
+            foreach (var item in GetAll)
             {
-              BlogListItemVm blogListItem=_mapper.Map<BlogListItemVm>(item);
-                list.Add(blogListItem);
+                ListAll.Add(_mapper.Map<BlogListItemVm>(item));
             }
-            return list;
+            return ListAll;
         }
 
         public async Task<BlogGetVm> GetByIdAsync(int id)
         {
-            var entity = await _repsoitory.GetbyIdAsync(id);
-            return _mapper.Map<BlogGetVm>(entity);
-        }
-        public async Task CreateAsync(BlogCreateVm blogCreateVm)
-        {
-            var entity = _mapper.Map<Blog>(blogCreateVm);
-            await _repsoitory.CreateAsync(entity);
-            await _repsoitory.SaveChangeAsync();
+            throw new NotImplementedException();
+
         }
 
-        public async Task DeleteAsync(int id)
+        public Task UpdateAsync(BlogUpdateVm blogUpdateVm)
         {
-            var entity = await _repsoitory.Table.FirstOrDefaultAsync(x => x.Id == id);
-             _repsoitory.DeleteAsync(entity);
-            await _repsoitory.SaveChangeAsync();
+            throw new NotImplementedException();
         }
-
-        
-
-        public async Task UpdateAsync(BlogUpdateVm blogUpdateVm)
-        {
-            var entity = _mapper.Map<Blog>(blogUpdateVm);
-            _repsoitory.UpdateAsync(entity);
-            await _repsoitory.SaveChangeAsync();
-         }
     }
 }

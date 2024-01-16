@@ -13,39 +13,37 @@ namespace AppBay.Business.Services.Implementations
 {
     public class FeatureService : IFeatureService
     {
-        private readonly IFeatureRepository _repo;
         private readonly IMapper _mapper;
+        private readonly IFeatureRepository _repository;
 
-        public FeatureService(IFeatureRepository repo, IMapper mapper)
+        public FeatureService(IMapper mapper, IFeatureRepository repository)
         {
-            _repo = repo;
             _mapper = mapper;
+            _repository = repository;
         }
-        public async void Create(FeatureCreateVm vm)
+        public async Task<IEnumerable<Feature>> GetAllAsync()
         {
-            Feature entity = new Feature();
-            var feature= _mapper.Map<Feature>(vm);
-            await _repo.CreateAsync(feature);
-            await _repo.SaveChangeAsync();
-            
+            return await _repository.GetAllAsync();
         }
 
-        public async Task Delete(int id)
+        public async Task<Feature> GetAsync(int id)
         {
-           
+            var entity =await _repository.GetByIdAsync(id);
+            return entity;
         }
 
-        public Task<List<FeatureGetVm>> GetAllAsync()
+        public Task CreateAsync(FeatureCreateVm featureCreateVm)
         {
-            throw new NotImplementedException();
+
         }
 
-        public Task<FeatureListItemVm> GetByIdAsync(int id)
+        public Task DeleteAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(FeatureUpdateVm entity)
+
+        public Task UpdateAsync(FeatureUpdateVm featureUpdateVm)
         {
             throw new NotImplementedException();
         }

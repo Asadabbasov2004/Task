@@ -11,50 +11,52 @@ using Temp.DAL.Repository.Interfaces;
 
 namespace Temp.DAL.Repository.Implementations
 {
-    public class Repository<T>: IRepository<T> where T : BaseAudiTable, new()
+    public class Repository<T> : IRepository<T> where T : BaseAudiTable, new()
     {
         private readonly AppDbcontext _context;
 
-        public Repository(AppDbcontext  context)
+        public Repository(AppDbcontext context)
         {
-          _context = context;
+            _context = context;
         }
-        public DbSet<T> Table =>_context.Set<T>();
+        public DbSet<T> Table =>_context.Set<T>() ;
 
         public async Task CreateAsync(T entity)
         {
-            entity.CreatedAt = DateTime.UtcNow;
-           await Table.AddAsync(entity);
+            entity.CreatedAt = DateTime.Now;
+            entity.UpdatedAt = DateTime.Now;
+             await Table.AddAsync(entity);
         }
 
-        public  async void DeleteAsync(T entity)
+        public async void Delete(T entity)
         {
             entity.IsDeleted = true;
-            entity.UpdatedAt = DateTime.UtcNow;
+            entity.UpdatedAt = DateTime.Now;
             Table.Update(entity);
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()
         {
-            IQueryable<T> entities = Table;
-            return await entities.ToListAsync();
-         }
+            IQueryable<T> query = Table.Where(e => !e.IsDeleted);
+            return await query.ToListAsync();
+        }
 
         public async Task<T> GetbyIdAsync(int id)
         {
-            T entity = await Table.FirstOrDefaultAsync(x => x.Id == id);
-            return  entity;
+            IQueryable<T> query = Table.Where(e => !e.IsDeleted);
+            return await query.FirstOrDefaultAsync(e => e.Id == id);
         }
 
         public async Task<int> SaveChangeAsync()
         {
-            var res = await _context.SaveChangesAsync();
+            var res =await _context.SaveChangesAsync();
             return res;
         }
 
-        public async void UpdateAsync(T entity)
+        public void Update(T entity)
         {
-             Table.Update(entity);
+            entity.UpdatedAt= DateTime.Now;
+            Table.Update(entity);
         }
     }
 }

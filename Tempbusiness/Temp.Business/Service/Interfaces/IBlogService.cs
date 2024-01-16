@@ -14,6 +14,6 @@ namespace Temp.Business.Service.Interfaces
         public Task<BlogGetVm> GetByIdAsync(int id);
         public Task CreateAsync(BlogCreateVm blogCreateVm);
         public Task UpdateAsync(BlogUpdateVm blogUpdateVm);
-        public Task DeleteAsync(int id);
+        public Task Delete(int id);
     }
 }

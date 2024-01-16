@@ -14,8 +14,8 @@ namespace Temp.DAL.Repository.Interfaces
         public Task<IEnumerable<T>> GetAllAsync();
         public Task<T> GetbyIdAsync(int id);
         public Task CreateAsync(T entity);
-        public void UpdateAsync(T entity);
-        public void DeleteAsync(T entity);
+        public void Update(T entity);
+        public void Delete(T entity);
 
         public Task<int> SaveChangeAsync();
     }

@@ -1,4 +1,5 @@
 ﻿using AppBay.Business.ViewModels.Feature;
+using AppBay.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,11 @@ namespace AppBay.Business.Services.Interfaces
 {
     public interface IFeatureService
     {
-        Task<List<FeatureGetVm>> GetAllAsync();
-        Task<FeatureListItemVm> GetByIdAsync(int id);
-        void Create(FeatureCreateVm entity);
-        void Update(FeatureUpdateVm entity);
-        Task Delete(int id);
+        public Task<IEnumerable<Feature>> GetAllAsync();
+        public Task<Feature> GetAsync(int id);
+        public Task CreateAsync(FeatureCreateVm featureCreateVm);
+        public Task UpdateAsync(FeatureUpdateVm featureUpdateVm);
+        public Task DeleteAsync(int id);
+
     }
 }
