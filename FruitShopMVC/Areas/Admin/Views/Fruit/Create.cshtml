@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+@using FruitShopMVC.ViewModels;
+@model CreateVm;
+
+<form method="post" asp-controller="Fruit" asp-action="Create" enctype="multipart/form-data">
+    <div class="bg-secondary rounded h-100 p-4">
+    <h6 class="mb-4">File Input</h6>
+        <div class="mb-3">
+        <label asp-for="ImageUrl" class="form-label">Default file input example</label>
+        <input class="form-control bg-dark" type="file" id="formFile">
+         </div>
+        <div class="mb-3">
+            <label asp-for="Name" for="exampleInputEmail1" class="form-label">Name</label>
+            <input asp-for="Name">
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Header" for="exampleInputEmail1" class="form-label">Header</label>
+            <input asp-for="Header">
+            <span asp-validation-for="Header"></span>
+        </div>
+        <button type="submit">Create</button>
+    </div>
+
+</form>
