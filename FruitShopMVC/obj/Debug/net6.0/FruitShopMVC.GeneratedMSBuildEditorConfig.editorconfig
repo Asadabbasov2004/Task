@@ -5,67 +5,64 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FruitShopMVC
 build_property.RootNamespace = FruitShopMVC
-build_property.ProjectDir = C:\Users\exam\Desktop\FruitShopMVC\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\II novbe\Desktop\Task\FruitShopMVC\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\exam\Desktop\FruitShopMVC
+build_property.MSBuildProjectDirectory = C:\Users\II novbe\Desktop\Task\FruitShopMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/exam/Desktop/FruitShopMVC/Areas/Admin/Views/Fruit/Create.cshtml]
+[C:/Users/II novbe/Desktop/Task/FruitShopMVC/Areas/Admin/Views/Fruit/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRnJ1aXRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/exam/Desktop/FruitShopMVC/Areas/Admin/Views/Fruit/Index.cshtml]
+[C:/Users/II novbe/Desktop/Task/FruitShopMVC/Areas/Admin/Views/Fruit/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRnJ1aXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/exam/Desktop/FruitShopMVC/Areas/Admin/Views/Fruit/Update.cshtml]
+[C:/Users/II novbe/Desktop/Task/FruitShopMVC/Areas/Admin/Views/Fruit/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRnJ1aXRcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/exam/Desktop/FruitShopMVC/Areas/Admin/Views/Home/Index.cshtml]
+[C:/Users/II novbe/Desktop/Task/FruitShopMVC/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/exam/Desktop/FruitShopMVC/Areas/Admin/Views/Shared/_Layout.cshtml]
+[C:/Users/II novbe/Desktop/Task/FruitShopMVC/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/exam/Desktop/FruitShopMVC/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/II novbe/Desktop/Task/FruitShopMVC/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/exam/Desktop/FruitShopMVC/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/II novbe/Desktop/Task/FruitShopMVC/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/exam/Desktop/FruitShopMVC/Views/Account/Login.cshtml]
+[C:/Users/II novbe/Desktop/Task/FruitShopMVC/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/exam/Desktop/FruitShopMVC/Views/Account/Register.cshtml]
+[C:/Users/II novbe/Desktop/Task/FruitShopMVC/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/exam/Desktop/FruitShopMVC/Views/Home/Index.cshtml]
+[C:/Users/II novbe/Desktop/Task/FruitShopMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/exam/Desktop/FruitShopMVC/Views/_ViewImports.cshtml]
+[C:/Users/II novbe/Desktop/Task/FruitShopMVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/exam/Desktop/FruitShopMVC/Views/_ViewStart.cshtml]
+[C:/Users/II novbe/Desktop/Task/FruitShopMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/exam/Desktop/FruitShopMVC/Views/Shared/_Layout.cshtml]
+[C:/Users/II novbe/Desktop/Task/FruitShopMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-63d74wygj5

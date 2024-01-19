@@ -24,7 +24,7 @@ namespace we.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Register(RegisterVm vm)
+        public  async Task<IActionResult> Register(RegisterVm vm)
         {
             if (!ModelState.IsValid)
             {
@@ -37,27 +37,15 @@ namespace we.Controllers
                 Email = vm.Email,
                 UserName = vm.UserName,
             };
-            var passwordResult = await _userManager.AddPasswordAsync(user, vm.Password);
-
-            if (!passwordResult.Succeeded)
+          
+           var  res = await _userManager.CreateAsync(user, vm.Password);
+            if (!res.Succeeded)
             {
-                foreach (var error in passwordResult.Errors)
-                {
-                    // Add errors to the ModelState for password-related issues
-                    ModelState.AddModelError("Password", error.Description);
-                }
-
-                // Return the view with model errors
-                return View();
-            }
-
-            var result = await _userManager.CreateAsync(user);
-            if (!result.Succeeded)
-            {
-                foreach (var item in result.Errors)
+                foreach (var item in res.Errors)
                 {
                     ModelState.AddModelError("", item.Description);
-                        }
+                }
+                return View();
             }
             return RedirectToAction(nameof(Login));
         }
@@ -72,23 +60,32 @@ namespace we.Controllers
             {
                 return View();
             }
-            var user = await _userManager.FindByEmailAsync(vm.UsernameOrEmail);
-            if (user == null)
+            var user = await _userManager.FindByEmailAsync(vm.UsernameOrEmail)?? (await _userManager.FindByNameAsync(vm.UsernameOrEmail));
+            if(user == null)
             {
-                user =await _userManager.FindByNameAsync(vm.UsernameOrEmail);
-                if (user == null) throw new UserNotFoundException();
+                ModelState.AddModelError("", "urhquwe");
+                return View();
             }
-            var res = await _signInManager.CheckPasswordSignInAsync(user,vm.Password ,false);
-            if (!res.Succeeded) throw new UserNotFoundException();
-            await _signInManager.SignInAsync(user, false);
-            return View();
+            var res = await _signInManager.PasswordSignInAsync(user, vm.Password,true,false);
+            if (!res.Succeeded)
+            {
+                ModelState.AddModelError("", "urhquwe");
+                return View();
+            }
+            await _signInManager.SignInAsync(user,true);
+            return RedirectToAction("Index","Home");
         }
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home"); 
+            return RedirectToAction("Index", "Home");
         }
+        //public async Task<IActionResult> CreateRole()
+        //{
 
+
+        //};
     }
-}
+    }
+
 

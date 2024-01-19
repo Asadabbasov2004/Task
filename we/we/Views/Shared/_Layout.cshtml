@@ -88,8 +88,13 @@
 								<li class="scroll"><a href="#new-cars">new cars</a></li>
 								<li class="scroll"><a href="#brand">brands</a></li>
 								<li class="scroll"><a href="#contact">contact</a></li>
+								@if(User.Identity.IsAuthenticated){
+									<a asp-action="Logout" asp-controller="Account" style="btn">Logout</a>
+								}
+								else{
 								<a asp-action="Login" asp-controller="Account" style="btn">Login</a>
 								<a asp-action="Register" asp-controller="Account" style="btn">Register</a>
+								}
 
 							</ul><!--/.nav -->
 						</div><!-- /.navbar-collapse -->

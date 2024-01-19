@@ -40,6 +40,7 @@ namespace FruitShopMVC.Areas.Admin.Controllers
             {
                 Name = createVm.Name,
                 Header = createVm.Header,
+                ImageUrl =createVm.ImageUrl
             };
             await _context.fruits.AddAsync(fruit);
             await _context.SaveChangesAsync();
@@ -49,7 +50,14 @@ namespace FruitShopMVC.Areas.Admin.Controllers
         public ActionResult Update(int id)
         {
             var fruit =_context.fruits.FirstOrDefault(x => x.Id == id);
-            return View(fruit);
+            UpdateVm vm = new UpdateVm()
+            {
+                Id = id,
+                Name = fruit.Name,
+                Header = fruit.Header,
+                ImageUrl = fruit.ImageUrl,
+            };
+            return View(vm);
         }
 
         [HttpPost]
@@ -59,19 +67,15 @@ namespace FruitShopMVC.Areas.Admin.Controllers
             {
                 return View();
             }
-            Fruit fruit = new Fruit()
-            {
-                Id=vm.Id,
-                Name=vm.Name,
-                Header=vm.Header,
-                ImageUrl=vm.ImageUrl,
-            };
-            _context.fruits.Update(fruit);
+            Fruit updated =await _context.fruits.FirstOrDefaultAsync(x => x.Id == vm.Id);
+            updated.Name =vm.Name;
+            updated.Header = vm.Header;
+            updated.ImageUrl = vm.ImageUrl;
              await _context.SaveChangesAsync(); 
             return RedirectToAction("Index");   
         }
 
-        [HttpPost]
+    
         public async Task<ActionResult> Delete(int id)
         {
             var fruit= _context.fruits.FirstOrDefault(y => y.Id == id);
