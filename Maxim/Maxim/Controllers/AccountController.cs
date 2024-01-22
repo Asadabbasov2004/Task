@@ -1,4 +1,5 @@
-﻿using Maxim.Models;
+﻿using Maxim.Helper;
+using Maxim.Models;
 using Maxim.ViewModels.AccountVm;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -28,7 +29,7 @@ namespace Maxim.Controllers
         {
                 if (!ModelState.IsValid)
                 {
-                    return View();
+                    return View(vm);
                 }
                 AppUser user = new AppUser()
                 {
@@ -37,12 +38,17 @@ namespace Maxim.Controllers
                     Surname = vm.Surname,
                     UserName = vm.UserName,
                 };
-                //var result = await _userManager.CreateAsync(user);
-                //if (!result.Succeeded) throw new Exception();
                var result = await _userManager.CreateAsync(user, vm.Password);
-                if (result == null) throw new Exception();
+            if (!result.Succeeded)
+            {
+                foreach(var item in result.Errors)
+                {
+                    ModelState.AddModelError("",item.Description);
+                };
+                return View(vm);
+            }
+            await _userManager.AddToRoleAsync(user,"Member");
                 return RedirectToAction("Login");
-
         }
         public IActionResult Login()
         {
@@ -50,21 +56,25 @@ namespace Maxim.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(LoginVm vm)
+        public async Task<IActionResult> Login(LoginVm vm,string? returnUrl)
         {
             if (!ModelState.IsValid)
             {
-                return View();
+                return View(vm);
             }
-            var user = await _userManager.FindByNameAsync(vm.UserNameOrEmail);
-            if(user is null)
+            var user = await _userManager.FindByNameAsync(vm.UserNameOrEmail) ?? await _userManager.FindByEmailAsync(vm.UserNameOrEmail);
+            if (user == null) 
+            { 
+                ModelState.AddModelError("", "Username/Email or password"); 
+                return View(vm);
+            }
+            var res = await _signInManager.PasswordSignInAsync(user, vm.Password, true, false);
+            if (!res.Succeeded)
             {
-                user = await _userManager.FindByEmailAsync(vm.UserNameOrEmail);
-                if (user == null) throw new Exception("parametr is false");
-                if( !await _userManager.CheckPasswordAsync(user, vm.Password)) throw new Exception();
+                ModelState.AddModelError("", "Username/Email or password");
+                return View(); 
             }
-            await _signInManager.SignInAsync(user,false);
-            return RedirectToAction("Index","Home");
+            return (returnUrl is not null && returnUrl.Contains("Login")) ? RedirectToAction(nameof(Index), "Home") : Redirect(returnUrl);
         }
         public async Task<IActionResult> LogOut()
         {

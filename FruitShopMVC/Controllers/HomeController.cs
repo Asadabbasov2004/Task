@@ -1,5 +1,6 @@
 ﻿using FruitShopMVC.DAL;
 using FruitShopMVC.Models;
+using FruitShopMVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
@@ -19,7 +20,5 @@ namespace FruitShopMVC.Controllers
             IEnumerable<Fruit> fruitList = await _context.fruits.ToListAsync();
             return View(fruitList);
         }
-
-      
     }
 }

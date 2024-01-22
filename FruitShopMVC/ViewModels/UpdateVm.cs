@@ -11,6 +11,7 @@ namespace FruitShopMVC.ViewModels
         [Required]
         [MinLength(3, ErrorMessage = "must be at least 3 letters")]
         public string Name { get; set; }
-        public string? ImageUrl { get; set; }
+        public IFormFile? Image { get; set; }
+        public string ImageUrl {  get; set; }
     }
 }

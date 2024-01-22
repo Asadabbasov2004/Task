@@ -4,7 +4,7 @@ namespace FruitShopMVC.ViewModels
 {
     public class CreateVm
     {
-        public string? ImageUrl { get; set; }
+        public IFormFile? Image { get; set; }
         [Required]
         [MinLength(3, ErrorMessage = "must be at least 3 letters")]
         public string Header { get; set; }

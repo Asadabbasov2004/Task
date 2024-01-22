@@ -1,6 +1,8 @@
 ﻿using FruitShopMVC.DAL;
+using FruitShopMVC.Helper;
 using FruitShopMVC.Models;
 using FruitShopMVC.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,13 +10,16 @@ using Microsoft.EntityFrameworkCore;
 namespace FruitShopMVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles ="Admin")]
     public class FruitController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly IWebHostEnvironment _env;
 
-        public FruitController(AppDbContext context)
+        public FruitController(AppDbContext context,IWebHostEnvironment env)
         {
             _context = context;
+            _env = env;
         }
         public async Task<ActionResult> Index()
         {
@@ -25,7 +30,6 @@ namespace FruitShopMVC.Areas.Admin.Controllers
       
         public ActionResult Create()
         {
-
             return View();
         }
 
@@ -36,26 +40,37 @@ namespace FruitShopMVC.Areas.Admin.Controllers
             {
                 return View(createVm);
             }
-            Fruit fruit= new Fruit()
+            if (!createVm.Image.CheckType("image"))
+            {
+                ModelState.AddModelError("Image", "only image");
+                return View(createVm);
+            }
+            if (!createVm.Image.CheckLength(3000))
+            {
+                ModelState.AddModelError("Image", "only image-3mb");
+                return View(createVm);
+            }
+            Fruit fruit = new Fruit()
             {
                 Name = createVm.Name,
                 Header = createVm.Header,
-                ImageUrl =createVm.ImageUrl
+                ImageUrl =createVm.Image.Upload(_env.WebRootPath,@"\Upload\Images")
             };
             await _context.fruits.AddAsync(fruit);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
-        public ActionResult Update(int id)
+        public async Task<ActionResult> Update(int id)
         {
-            var fruit =_context.fruits.FirstOrDefault(x => x.Id == id);
+            if (id <= 0) return BadRequest();
+            Fruit fruit =await _context.fruits.Where(x=>x.Id==id).FirstOrDefaultAsync();
+            if(fruit==null) return BadRequest();
             UpdateVm vm = new UpdateVm()
             {
-                Id = id,
-                Name = fruit.Name,
+                Name= fruit.Name,
                 Header = fruit.Header,
-                ImageUrl = fruit.ImageUrl,
+                ImageUrl=fruit.ImageUrl
             };
             return View(vm);
         }
@@ -67,12 +82,24 @@ namespace FruitShopMVC.Areas.Admin.Controllers
             {
                 return View();
             }
-            Fruit updated =await _context.fruits.FirstOrDefaultAsync(x => x.Id == vm.Id);
-            updated.Name =vm.Name;
-            updated.Header = vm.Header;
-            updated.ImageUrl = vm.ImageUrl;
-             await _context.SaveChangesAsync(); 
-            return RedirectToAction("Index");   
+            Fruit fruit = await _context.fruits.Where(x => x.Id == vm.Id).FirstOrDefaultAsync();
+            if (!vm.Image.CheckType("image"))
+            {
+                ModelState.AddModelError("Image", "only image");
+                return View(vm);
+            }
+            if (!vm.Image.CheckLength(3000))
+            {
+                ModelState.AddModelError("Image", "only image-3mb");
+                return View(vm);
+            }
+
+            fruit.Header= vm.Header;
+            fruit.Name= vm.Name;
+            fruit.ImageUrl= vm.Image.Upload(_env.WebRootPath,@"\Upload\Images\");
+           _context.fruits.Update(fruit);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index");
         }
 
     

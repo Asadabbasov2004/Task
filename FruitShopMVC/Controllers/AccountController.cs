@@ -1,4 +1,5 @@
-﻿using FruitShopMVC.Models;
+﻿using FruitShopMVC.Helper;
+using FruitShopMVC.Models;
 using FruitShopMVC.ViewModels.AccountVm;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -10,11 +11,13 @@ namespace FruitShopMVC.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
-        
-        public AccountController(UserManager<AppUser> userManager,SignInManager<AppUser> signInManager)
+        private readonly RoleManager<IdentityRole> _roleManager;
+
+        public AccountController(UserManager<AppUser> userManager,SignInManager<AppUser> signInManager,RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
         }
         public IActionResult Register()
         {
@@ -24,7 +27,7 @@ namespace FruitShopMVC.Controllers
         public async  Task<IActionResult> Register(RegisterVm vm) {
             if (!ModelState.IsValid)
             {
-                return View(vm);
+                return View();
             }     
             AppUser user = new AppUser()
             {
@@ -42,7 +45,7 @@ namespace FruitShopMVC.Controllers
                 }
                 return View(vm);
             };
-             //await _userManager.AddToRoleAsync(user, "Admin");
+            await _userManager.AddToRoleAsync(user,UserRole.Admin.ToString());
             return RedirectToAction("Login");
         }
         public IActionResult Login()
@@ -68,6 +71,7 @@ namespace FruitShopMVC.Controllers
                 ModelState.AddModelError("", "Username/email or password is wrong");
                 return View(vm);
             }
+
             return RedirectToAction("Index","Home");
         }
 
@@ -76,6 +80,20 @@ namespace FruitShopMVC.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
-
+        public async Task<IActionResult> CreateRole()
+        {
+            foreach (var item in Enum.GetValues(typeof(UserRole)))
+            {
+                if( await _roleManager.FindByNameAsync(item.ToString()) == null)
+                {
+                    await _roleManager.CreateAsync(new IdentityRole()
+                    {
+                        Name = item.ToString()
+                    });   
+                }
+            } 
+            return RedirectToAction("Index", "Home");
+        }
+         
     }
 }
